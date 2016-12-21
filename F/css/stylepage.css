@@ -7,7 +7,7 @@
 
 html, body{
     box-sizing: border-box;
-    width: 100vw;
+    width: 98.9vw;
     margin: 0 auto;
     line-height: 1; 
 }
@@ -19,7 +19,6 @@ html, body{
 [class*="col_"] {
     float: left;
     min-height: 100px;
-    margin-right: 5px;
 }
 
 .row:before, .row:after {
@@ -194,6 +193,82 @@ video#pvid {
     background-size: cover; 
 }
 
+header{
+    height: 80vh;
+}
+
+.gradiend{
+    background-color:black; 
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, 
+    left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 10em;
+}
+
+.preto{
+    background-color: black;
+}
+
+.preto_{
+    background-color: black;
+}
+
+.bacanal{
+    margin-top: 10%;
+    width: 100%;
+}
+
+.ultimastitulo{
+    font-size: 3em;
+    color: white;
+    width: 100%;
+    margin-top: 15%;
+}
+
+.newsfeed{
+    padding:2%;
+    margin-top: 5%;
+}
+
+.new_content, .new_content_, .new_content_1, .new_content_2{
+    color: white;
+    display: inline-block;
+    padding: 5%;
+    width: 39%;
+}
+
+footer{
+    background-color: black;
+}
+
+.separador{
+    background-color: white;
+    min-height: 5px;
+    margin-top: 5%;
+}
+
+.fim{
+    color: white;
+    text-align: center;
+}
+
+.fimnome{
+    font-family: verdana, geneva, "sans-serif";
+    margin-top: 2%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #e32436;
+    font-size: 2em;
+}
+
+.fimcopy{
+    font-family: Georgia,Times,serif;
+    font-weight: normal;
+    margin-top: 2%;
+    color: dimgrey;
+    font-size: 0.75em;
+}
+
+/*provisório*/
 
 
 @media screen and (min-width: 991px) {
