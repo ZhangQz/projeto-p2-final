@@ -7,7 +7,6 @@
 
 html, body{
     box-sizing: border-box;
-    width: 98.9vw;
     margin: 0 auto;
     line-height: 1; 
 }
@@ -64,14 +63,19 @@ body{
     display: inline-block;
 }
 
+
+.universidade, .cultura, .desporto, .coimbra, .nacional, .internacional, .programas, .cronicas, .tecnicos, .equipamentos, .publicidade, .pessoas, .historia, .tecnica, .informacao, .ultimas, .grelha, .producao, .locucao,  .contactos{
+    padding-top: 10%;
+    display: block;
+}
+
 .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content {
     margin-top: 2%;
     padding-top: 1em;
     padding-left: 10%;
-    padding-right: 5%;
+    padding-right: 10%;
     padding-bottom: 5%;
     text-align: left;
-    line-height: 2;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -106,6 +110,7 @@ body{
 nav{
     text-align: center;
     margin-top: 1.5%;
+    line-height: 1.2;
 }
 
 nav a:hover{
@@ -329,8 +334,25 @@ footer{
         top: 20%;
     }
     
+    .gradiend{
+        height: 0;
+        
+    }
+    
+    header{
+        height: 40vh;
+    }
+    
     .titulo{
         top: 0;
         font-size: 0.6em;
+    }
+    
+    .radiouni{
+        margin-top:60%;
+    }
+    
+    nav a{
+        display: none;
     }
 }
