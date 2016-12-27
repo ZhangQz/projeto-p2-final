@@ -17,7 +17,7 @@ html, body{
 
 [class*="col_"] {
     float: left;
-    min-height: 100px;
+    min-height: 50px;
 }
 
 .row:before, .row:after {
@@ -30,6 +30,10 @@ body{
     background-color: black;
 }
 
+.icon_ham{
+    display: none;
+}
+
 .preta{
     background-color: white;
     display:inline-block;
@@ -40,12 +44,11 @@ body{
     z-index: 1;
 }
 
-.logoc{
-    display: inline-block;
-    position: absolute;
-    top: 15%;  
+.logod{
+    display: inline-block;  
 }
 .logo{
+    margin-top: 10%;
     height: 40px;
     cursor:pointer;
 }
@@ -72,7 +75,6 @@ body{
     padding: 1em;
     text-align: left;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     content: "";
@@ -195,18 +197,18 @@ header{
 }
 
 .gradiend{
-    background-color:black; 
+    background-color:#0f0f0f; 
     -webkit-mask-image: -webkit-gradient(linear, left bottom, 
     left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    height: 10em;
+    height: 15vh;
 }
 
 .preto{
-    background-color: black;
+    background-color: #0f0f0f;
 }
 
 .preto_{
-    background-color: black;
+    background-color: #0f0f0f;
 }
 
 .bacanal{
@@ -214,20 +216,42 @@ header{
     width: 100%;
 }
 
-.ultimastitulo{
-    font-size: 3em;
-    color: white;
-    width: 100%;
-    margin-top: 15%;
+.ulinf{
+    background-color: #0f0f0f;
 }
 
-.newsfeed{
-    padding:2%;
-    margin-top: 5%;
+.widgets{
+}
+
+.grelha_actual{
+    background-color: whitesmoke;
+    height: 350px;
+}
+
+.fb_feed{
+    height: 280px;
+    margin-top: 10%;
+    background-color: whitesmoke;
+}
+
+.ultimastitulo{
+    font-size: 1.5em;
+    color: white;
+    font-family: Verdana;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+}
+
+.ultimastitulo a{
+    color: #e32436;
 }
 
 .newsfeed div{
     color: white;
+    margin-right: 4%;
     display: inline-block;
 }
 
@@ -239,21 +263,67 @@ header{
     color: black;
 }
 
-.new_content, .new_content_, .new_content_1, .new_content_2{
-    background-color: white;
-    padding:5%;
-    margin-top: 5%;
+.new_content, .new_content_, .new_content_1{
+    background-color: #f9f9f9;
+    padding:4%;
     line-height: 1.5;
 }
 
+.new_content_, .new_content_1{
+    margin-top: 4%;
+}
+
+.new_content_1{
+    margin-bottom: 5%;
+}
+
+.content_title{
+    font-weight: bold;
+    padding-bottom:2%;
+}
+
+.social{
+    margin-top: 7%; 
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.ler_mais{
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
+}
+
+.ler_mais p{
+    color: black;
+    font-family: Verdana, gevena, 'sans-serif';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ler_mais p:hover{
+    color:red;
+}
+
+.social img{
+    width: 13%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 footer{
-    background-color: black;
+    background-color: #0f0f0f;
 }
 
 .separador{
     background-color: white;
     min-height: 5px;
-    margin-top: 5%;
+}
+
+.radiofim{
 }
 
 .fim{
@@ -261,9 +331,13 @@ footer{
     text-align: center;
 }
 
+.e_separador{
+    display:in;
+    height: 5px;
+}
+
 .fimnome{
     font-family: verdana, geneva, "sans-serif";
-    margin-top: 2%;
     font-weight: bolder;
     text-transform: uppercase;
     color: #e32436;
@@ -300,6 +374,11 @@ footer{
     [class*="col_"]:last-child {margin-right: 0;}
 
     [class*="col_"] {float:left;}
+    
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        position: absolute;
+    }
     
 }
 
@@ -355,9 +434,109 @@ footer{
     
     .radiouni{
         margin-top:60%;
+        margin-bottom: 10%;
+    }
+    
+    nav{
+        display: ;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        margin-top: 15%;
+        opacity: 1;
+    }
+    
+    .icon_ham{
+        display: block;
+        width: 35px;
+        padding: 20%;
     }
     
     nav a{
+        width: 100%;
+        display: inline-block;
+        line-height: 2;
+        font-size: 1em;
+    }
+    
+    .info{
+        margin-top: 5%;
+    }
+    
+    .infod, .progd, .tecnd, .cursosd{
+        border-right: 0px;
+    }
+    
+    .logod{
+        position: relative;
+        text-align: center;
+    }
+    
+    .logo{
+        margin-top: 4%;
+    }
+    
+    .emissao{
+        margin-top: 6%;
+    }
+    
+    .traco{
         display: none;
+    }
+    
+    .ultimastitulo{
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .bacanal{
+        margin-top: 0;
+    }
+    
+    .new_content, .new_content_1, .new_content_{
+        margin-left: 4%;
+    }
+    
+    .separador{
+        width: 80%;
+        margin-bottom: 10%;
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .ler_mais{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .info-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .prog-content a{
+        padding-top: 1%;
+    }
+    
+    .tecn-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .cursos-content a{
+        padding-top: 1%;
+    }
+    
+    .ruc-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        box-shadow: none;
+        font-size: 0.8em;
+        width: 100vw;
+        text-align: center;
     }
 }
