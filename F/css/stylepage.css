@@ -30,9 +30,9 @@ body{
     background-color: black;
 }
 
-.icon_ham{
+/*.icon_ham, .cross{
     display: none;
-}
+}*/
 
 .preta{
     background-color: white;
@@ -160,7 +160,6 @@ nav a:hover{
 
 .titulo{
     text-align: center;
-    top: 25em;
     position: relative; 
 }
 
@@ -304,7 +303,11 @@ header{
     text-transform: uppercase;
 }
 
-.ler_mais p:hover{
+.ler_mais:hover{
+    cursor: pointer;
+}
+
+.ler_mais:hover p{
     color:red;
 }
 
@@ -438,7 +441,6 @@ footer{
     }
     
     nav{
-        display: ;
         height: 100vh;
         background-color: white;
         position: absolute;
@@ -446,10 +448,18 @@ footer{
         opacity: 1;
     }
     
-    .icon_ham{
-        display: block;
+    .icon_ham, .cross{
+        display: inline-block;
         width: 35px;
+    }
+    
+    .icon_ham{
+        position: relative;
         padding: 20%;
+    }
+    
+    .cross{
+        position: absolute;
     }
     
     nav a{
@@ -530,8 +540,11 @@ footer{
     
     .ruc-content a{
         padding-top: 1%;
-    }
+    }   
     
+    .social{
+        margin-bottom: 0;
+    }
     
     .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
         box-shadow: none;

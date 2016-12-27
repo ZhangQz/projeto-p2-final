@@ -1,6 +1,13 @@
 $(document).ready(function () {
-	$('#menu').click(function () {
-		$(this).toggleClass('open');
-        $(this).css("display", "block");
-	});
+    $(".icon_ham").click(function () {
+        $("#menu").animate({
+            height: 'toggle'
+        });
+    });
+    $(".cross").click(function () {
+        $("#menu").slideToggle("slow", function () {
+            $(".cross").hide();
+            $(".icon_ham").show();
+        });
+    });
 });
