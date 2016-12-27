@@ -1,6 +1,15 @@
 $(document).ready(function () {
     $(".cross").hide();
     $(".parar").hide();
+    $("#slideshow > div:gt(0)").hide();
+    setInterval(function () {
+        $('#slideshow > div:first')
+            .fadeOut(500)
+            .next()
+            .fadeIn(500)
+            .end()
+            .appendTo('#slideshow');
+    }, 3000);
     $(".icon_ham").click(function () {
         $("#menu").animate({
             height: 'toggle'
