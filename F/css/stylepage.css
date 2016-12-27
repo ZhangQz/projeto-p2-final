@@ -139,7 +139,7 @@ nav a:hover{
 .ligar:hover{
     text-decoration:underline;
     cursor: pointer;
-    color: red;
+    color: #e32436;
 }
 
 .parar{
@@ -153,7 +153,7 @@ nav a:hover{
 .parar:hover{
     text-decoration:line-through;
     cursor: pointer;
-    color: red;
+    color: #e32436;
 }
 
 .titulo{
@@ -229,14 +229,14 @@ header{
 }
 
 .grelha_actual{
-    background-color: whitesmoke;
+    background-color: #f9f9f9;
     height: 350px;
 }
 
 .fb_feed{
     height: 280px;
     margin-top: 10%;
-    background-color: whitesmoke;
+    background-color: #f9f9f9;
 }
 
 .fb_feed iframe{
@@ -262,7 +262,7 @@ header{
 }
 
 .newsfeed div{
-    color: white;
+    color: #f9f9f9;
     margin-right: 4%;
     display: inline-block;
 }
@@ -296,7 +296,7 @@ header{
 }
 
 .ler_mais{
-    background-color: white;
+    background-color: #f9f9f9;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 5%;
@@ -316,7 +316,7 @@ header{
 }
 
 .ler_mais:hover p{
-    color:red;
+    color:#e32436;
 }
 
 .social{
@@ -359,7 +359,7 @@ footer{
 }
 
 .separador{
-    background-color: white;
+    background-color: #f9f9f9;
     min-height: 5px;
 }
 
@@ -367,7 +367,7 @@ footer{
 }
 
 .fim{
-    color: white;
+    color: #f9f9f9;
     text-align: center;
 }
 
@@ -388,7 +388,7 @@ footer{
     font-family: Georgia,Times,serif;
     font-weight: normal;
     margin-top: 2%;
-    color: dimgrey;
+    color: #f9f9f9;
     font-size: 0.75em;
 }
 
@@ -472,7 +472,7 @@ footer{
     }
     
     .gradiend{
-        height: 0;
+        height: 3vh;
         
     }
     
@@ -552,7 +552,7 @@ footer{
         line-height: 1.2;
     }
     
-    .preto{
+    .preto_slide{
         margin-left: 2.5%;
         margin-right: 2.5%;
     }
