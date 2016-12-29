@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $(".cross").hide();
     $(".parar").hide();
-    $(".info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content").hide();
     /*$(".inform").mouseover(function () {
         $(".info-content").show();
     });

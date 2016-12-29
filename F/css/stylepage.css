@@ -452,8 +452,12 @@ footer{
 
     [class*="colt_"] {float:left;}
     
-    html, body, main{
-        width: 100vw;
+    video#pvid{
+        top: 25%;
+    }
+    
+    header{
+        height: 20em;
     }
     
     nav{
@@ -462,22 +466,16 @@ footer{
         position: fixed;
         text-align: left;
         background-color: white;
-        margin-top: 15%;
         opacity: 1;
         display: none;
-        display: block;
         font-size:1em;
         font-weight: bold;
-    }
-    
-    .menud{
-        display: none;
+        margin-top: 7.7%;
     }
     
     .info-content a{
         padding-top: 1%;
     }
-    
     
     .prog-content a{
         padding-top: 1%;
@@ -486,7 +484,6 @@ footer{
     .tecn-content a{
         padding-top: 1%;
     }
-    
     
     .cursos-content a{
         padding-top: 1%;
@@ -514,14 +511,14 @@ footer{
     }
     
     .icon_ham{
-        margin-top: 20%;
+        margin-top: 15%;
         margin-left: 20%;
     }
     
     .cross{
         position: absolute;
-        margin-top: 4%;
-        margin-left: 4%;
+        margin-top: 1.5%;
+        margin-left: 2%;
     }
     
     nav a{
@@ -530,10 +527,6 @@ footer{
         line-height: 2;
         font-size: 1em;
         text-align: left;
-    }
-    
-    .info{
-        margin-top: 5%;
     }
     
     .infod, .progd, .tecnd, .cursosd{
@@ -546,12 +539,12 @@ footer{
     }
     
     .logo{
-        margin-top: 4%;
+        margin-top: 2%;
     }
     
     .emissao{
         margin-right: 2%;
-        margin-top: 6%;
+        margin-top: 3%;
     }
     
     
@@ -566,6 +559,11 @@ footer{
     #slideshow{
         height: auto;
         margin-top: 5%;
+    }
+    
+    .social img{
+        width: 8%;
+        margin-bottom: 5%;  
     }
     
     
@@ -612,7 +610,7 @@ footer{
         position: fixed;
         text-align: left;
         background-color: white;
-        margin-top: 12%;
+        margin-top: 14.1%;
         opacity: 1;
         display: none;
     }
@@ -688,7 +686,7 @@ footer{
     }
     
     .logo{
-        margin-top: 4%;
+        margin-top: 3%;
     }
     
     .emissao{
