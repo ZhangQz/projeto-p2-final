@@ -63,44 +63,17 @@ body{
     display: block;
     width: 100%;
     padding-top: 10%;
-    
-    
-}
-
-.info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
-    padding: 1em;
-    text-align: left;
-    display: none;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    content: "";
-    clear: both;
-}
-
-.infod:hover .info-content {
-    display: block;
-}
-
-.rucd:hover .ruc-content {
-    display: block;
-}
-
-.cursosd:hover .cursos-content {
-    display: block;
-}
-
-.progd:hover .prog-content {
-    display: block;
-}
-
-.tecnd:hover .tecn-content {
-    display: block;
 }
 
 nav{
     text-align: center;
     margin-top: 1.5%;
     line-height: 1.2;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
 }
 
 nav a:hover{
@@ -424,6 +397,37 @@ footer{
     .icon_ham, .cross{
         display: none;
     }
+
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        padding: 1em;
+        text-align: left;
+        display: none;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        content: "";
+        clear: both;
+    }
+
+    .infod:hover .info-content {
+        display: block;
+    }
+
+    .rucd:hover .ruc-content {
+        display: block;
+    }
+
+    .cursosd:hover .cursos-content {
+        display: block;
+    }
+
+    .progd:hover .prog-content {
+        display: block;
+    }
+
+    .tecnd:hover .tecn-content {
+        display: block;
+    }
+
     
 }
 
@@ -446,6 +450,8 @@ footer{
     
     nav{
         display: block;
+        font-size:1em;
+        font-weight: bold;
     }
     
     .menud{
@@ -491,8 +497,10 @@ footer{
     
     nav{
         height: 100vh;
+        overflow: auto;
+        position: fixed;
+        text-align: left;
         background-color: white;
-        position: absolute;
         margin-top: 15%;
         opacity: 1;
         display: none;
@@ -519,6 +527,7 @@ footer{
         display: inline-block;
         line-height: 2;
         font-size: 1em;
+        text-align: left;
     }
     
     .info{
