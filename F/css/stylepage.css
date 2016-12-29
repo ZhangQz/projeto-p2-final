@@ -8,7 +8,8 @@
 html, body{
     box-sizing: border-box;
     margin: 0 auto;
-    line-height: 1; 
+    line-height: 1;
+    width: 100vw; 
 }
 
 [class*="col_"]:first-child {
@@ -28,6 +29,9 @@ html, body{
 
 body{
     background-color: black;
+}
+
+main{
 }
 
 .preta{
@@ -69,6 +73,7 @@ nav{
     text-align: center;
     margin-top: 1.5%;
     line-height: 1.2;
+    padding-left: 2%;
 }
 
 nav a{
@@ -203,7 +208,6 @@ header{
 
 .grelha_actual{
     background-color: #f9f9f9;
-    height: 350px;
 }
 
 .fb_feed{
@@ -448,7 +452,19 @@ footer{
 
     [class*="colt_"] {float:left;}
     
+    html, body, main{
+        width: 100vw;
+    }
+    
     nav{
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+        text-align: left;
+        background-color: white;
+        margin-top: 15%;
+        opacity: 1;
+        display: none;
         display: block;
         font-size:1em;
         font-weight: bold;
@@ -457,6 +473,101 @@ footer{
     .menud{
         display: none;
     }
+    
+    .info-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .prog-content a{
+        padding-top: 1%;
+    }
+    
+    .tecn-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .cursos-content a{
+        padding-top: 1%;
+    }
+    
+    .ruc-content a{
+        padding-top: 1%;
+    }   
+    
+    .social{
+        margin-bottom: 0;
+    }
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        box-shadow: none;
+        font-size: 0.8em;
+        width: 100vw;
+        text-align: center;
+        margin-left: 2%;
+    }
+    
+    .icon_ham, .cross{
+        display: inline-block;
+        width: 35px;
+    }
+    
+    .icon_ham{
+        margin-top: 20%;
+        margin-left: 20%;
+    }
+    
+    .cross{
+        position: absolute;
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+    
+    nav a{
+        width: 100%;
+        display: inline-block;
+        line-height: 2;
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    .info{
+        margin-top: 5%;
+    }
+    
+    .infod, .progd, .tecnd, .cursosd{
+        border-right: 0px;
+    }
+    
+    .logod{
+        position: relative;
+        text-align: center;
+    }
+    
+    .logo{
+        margin-top: 4%;
+    }
+    
+    .emissao{
+        margin-right: 2%;
+        margin-top: 6%;
+    }
+    
+    
+    .ultimastitulo, .grelhap{
+        font-size: 1.2em;
+    }
+    
+    .preto_slide{
+        min-height: 220px;
+    }
+    
+    #slideshow{
+        height: auto;
+        margin-top: 5%;
+    }
+    
     
 }
 
@@ -506,6 +617,39 @@ footer{
         display: none;
     }
     
+    .info-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .prog-content a{
+        padding-top: 1%;
+    }
+    
+    .tecn-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .cursos-content a{
+        padding-top: 1%;
+    }
+    
+    .ruc-content a{
+        padding-top: 1%;
+    }   
+    
+    .social{
+        margin-bottom: 0;
+    }
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        box-shadow: none;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 2%;
+    }
+    
     .icon_ham, .cross{
         display: inline-block;
         width: 35px;
@@ -523,10 +667,10 @@ footer{
     }
     
     nav a{
-        width: 100%;
         display: inline-block;
         line-height: 2;
         font-size: 1em;
+        width: 100%;
         text-align: left;
     }
     
@@ -548,7 +692,6 @@ footer{
     }
     
     .emissao{
-        margin-right: 2%;
         margin-top: 6%;
     }
     
@@ -559,17 +702,20 @@ footer{
     .ultimastitulo{
         text-align: center;
         line-height: 1.2;
+        font-size: 1em;
+    }
+    
+    .content_title{
+        font-size: 1em;
     }
     
     .preto_slide{
-        margin-left: 2.5%;
-        margin-right: 2.5%;
     }
     
     #slideshow{
         width: 95vw;
         height: auto;
-        height: 20vh;
+        margin-bottom: 25%;
     }
     
     .widgets{
@@ -607,38 +753,5 @@ footer{
         margin-right: 4%;
         margin-left: 4%;
         margin-top: 10%;
-    }
-    
-    .info-content a{
-        padding-top: 1%;
-    }
-    
-    
-    .prog-content a{
-        padding-top: 1%;
-    }
-    
-    .tecn-content a{
-        padding-top: 1%;
-    }
-    
-    
-    .cursos-content a{
-        padding-top: 1%;
-    }
-    
-    .ruc-content a{
-        padding-top: 1%;
-    }   
-    
-    .social{
-        margin-bottom: 0;
-    }
-    
-    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
-        box-shadow: none;
-        font-size: 0.8em;
-        width: 100vw;
-        text-align: center;
     }
 }
