@@ -612,7 +612,7 @@ footer{
         position: fixed;
         text-align: left;
         background-color: white;
-        margin-top: 15%;
+        margin-top: 12%;
         opacity: 1;
         display: none;
     }
@@ -670,16 +670,16 @@ footer{
         display: inline-block;
         line-height: 2;
         font-size: 1em;
-        width: 100%;
         text-align: left;
     }
     
-    .info{
-        margin-top: 5%;
+    .info, .rucd{
+        padding-top: 5%;
     }
     
     .infod, .progd, .tecnd, .cursosd{
         border-right: 0px;
+        width: 100%;
     }
     
     .logod{
@@ -703,19 +703,19 @@ footer{
         text-align: center;
         line-height: 1.2;
         font-size: 1em;
+        margin-bottom: 5%;
+        margin-top: 10%;
     }
     
     .content_title{
         font-size: 1em;
     }
     
-    .preto_slide{
-    }
-    
     #slideshow{
+        margin-left: 2.5%;
         width: 95vw;
         height: auto;
-        margin-bottom: 25%;
+        margin-bottom: 30%;
     }
     
     .widgets{
