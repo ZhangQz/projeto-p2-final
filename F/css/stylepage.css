@@ -144,6 +144,7 @@ nav a:hover{
 }
 
 .radiouni{
+    margin-top: 75%;
     font-size: 2em;
     font-family: verdana, geneva, "sans-serif";
     color: white;
@@ -168,6 +169,10 @@ video#pvid {
 }
 
 header{
+    height: 100%;
+}
+
+.ploco{
     height: 80vh;
 }
 
@@ -197,7 +202,14 @@ header{
 .bacanal, .bacanal_, .bacanal_1{
     position: absolute;
     width: 100%;
+    filter: saturate(0%);
 }
+
+.bacanal:hover, .bacanal_:hover, .bacanal_1:hover{
+    filter: saturate(100%);
+    transition: 2s;
+}
+    
 
 .ulinf{
     background-color: #0f0f0f;
@@ -234,7 +246,7 @@ header{
     display: inline-block;
 }
 
-.ultimastitulo a{
+.ultimastitulo{
     color: #e32436;
 }
 
@@ -369,7 +381,63 @@ footer{
     font-size: 0.75em;
 }
 
-/*provisório*/
+/*Secção info*/
+
+#slideshowInfo img{
+    width: 99vw;
+    filter: opacity(0.8);
+    z-index: -100;
+}
+
+.radioni_info{
+    color: white;
+    font-size: 2.5em;
+    font-family: Verdana, geneva, "sans-serif";
+    font-weight: bold;
+    text-align: center;
+}
+
+.newsfeed{
+    width: 100%;
+}
+
+.new_content_info, .new_content__info, .new_content_1_info{
+    background-color: white;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+.informacaorow1{
+    font-size: 3em;
+    display: block;
+    color: #e32436;
+    margin-top: 2%;
+    font-family: Verdana, geneva, "sans-serif";
+    font-weight: bold;
+    text-align: center;
+}
+
+.data_noticia{
+    font-size: 0.8em;
+    padding: 2%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, "sans-serif";
+}
+
+.noticias_ultimas{
+    color:white;
+    font-size: 2em;
+    font-family: Verdana, Geneva,"sans-serif";
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.titulo_info{
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
 
 @media screen and (min-width: 991px) {
@@ -456,8 +524,8 @@ footer{
         top: 25%;
     }
     
-    header{
-        height: 20em;
+    .ploco{
+        height: 25em;
     }
     
     nav{
@@ -566,6 +634,9 @@ footer{
         margin-bottom: 5%;  
     }
     
+    .radiouni{
+        margin-top: 60%;
+    }
     
 }
 
@@ -591,17 +662,13 @@ footer{
         
     }
     
-    header{
-        height: 40vh;
+    .ploco{
+        height: auto;
     }
     
     .titulo{
         top: 0;
         font-size: 0.6em;
-    }
-    
-    .radiouni{
-        margin-bottom: 10%;
     }
     
     nav{
