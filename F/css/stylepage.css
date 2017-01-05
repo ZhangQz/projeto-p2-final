@@ -483,7 +483,7 @@ footer{
     font-size: 0.9em;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: -8px;
+    letter-spacing: -1px;
 }
 
 .grelha_geral li:hover a{
@@ -498,14 +498,24 @@ footer{
 
 .prog_seg li{
     background-color: white;
-    padding: 1%;
 }
 
 .prog_seg p{
     display: inline-block;
-    margin-right: 5%;
     font-size:1.2em;
     font-family: verdana, geneva, "sans-serif";
+}
+
+.seg_hora, .seg_prog, .seg_autor{
+    padding: 0.5%;
+    padding-right: 5%;
+    margin: 1%;
+}
+
+/* adicionar um hover ao prog e as pessoas*/
+
+.seg_hora, .seg_prog{
+    border-right: 5px solid black;
 }
 
 @media screen and (min-width: 991px) {
