@@ -103,7 +103,9 @@ nav a:hover{
 }
 
 .emissao{
-    margin-top: 1.6%;
+    margin-top: 1%;
+    text-align: center;
+    line-height: 1.1;
 }
 
 .ligar{
@@ -442,6 +444,8 @@ footer{
 
 /*Secção grelha/prog*/
 
+
+
 /*.tabela_grelha{
     width: 100%;
 }
@@ -462,24 +466,46 @@ footer{
 
 .grelha_geral{
     list-style: none;
+    text-align: center;
 }
 
 .grelha_geral li{
     display: inline-block;
-    padding: 1%;
+    padding: 0.5%;
+    width: 11.5%;
+    text-align: center;
     background-color: white;
 }
 
 .grelha_geral a{
     font-family: verdana, geneva, "sans-serif";
     color:black;
+    font-size: 0.9em;
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: -8px;
 }
 
 .grelha_geral li:hover a{
     color: #e32436;
     text-decoration:line-through;
     cursor: pointer;
+}
+
+.prog_seg{
+    list-style: none;
+}
+
+.prog_seg li{
+    background-color: white;
+    padding: 1%;
+}
+
+.prog_seg p{
+    display: inline-block;
+    margin-right: 5%;
+    font-size:1.2em;
+    font-family: verdana, geneva, "sans-serif";
 }
 
 @media screen and (min-width: 991px) {
