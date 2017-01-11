@@ -72,7 +72,6 @@ nav{
     text-align: center;
     margin-top: 1.5%;
     line-height: 1.2;
-    padding-left: 2%;
 }
 
 nav a{
@@ -102,21 +101,21 @@ nav a:hover{
 }
 
 .account{
-    margin-top: 1%;
     text-align: center;
+    padding-top: 1%;
 }
 
-.login{
+.loggedin{
     position: absolute;
 }
 
-.logout{
+.loggedout{
     position: relative;
 }
 
 .log_in_cont{
+    margin-top: 10px;
     right: 4%;
-    margin-top: 1%;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 0.5%;
@@ -137,9 +136,16 @@ nav a:hover{
     text-transform: uppercase;
     font-weight: bold;
     display: inline-block;
-    padding: 5%;
+    padding: 3%;
     font-size: 0.9em;
-    border: 4px solid black;
+    border: 2px solid black;
+    margin-top: 5%;
+}
+
+.acesso:hover, .sign_submit:hover, .log_submit:hover{
+    background-color:#e32436;
+    color: white;
+    cursor: pointer;
 }
 
 .sign_form p, .log_form p{
@@ -154,11 +160,13 @@ nav a:hover{
 
 .sign_submit, .log_submit{
     background-color: white;
-    padding: 3%;
     text-transform: uppercase;
     text-shadow: 0;
+    text-align: center;
+    padding: 2%;
+    font-size: 0.9em;
     box-shadow: 0;
-    border: 4px solid black;
+    border: 2px solid black;
     width: 30%;
     font-family: verdana, geneva, "sans-serif";
     font-weight: bold;
@@ -166,6 +174,7 @@ nav a:hover{
 
 .sign_form input, .log_form input{
     margin: 2%;
+    margin-top: 5%;
 }
 
 .ligar{
