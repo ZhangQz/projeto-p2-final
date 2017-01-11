@@ -652,6 +652,53 @@ footer{
     
 }
 
+/* Estilo Backoffice */
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    position: relative;
+   
+    padding-right: 2%;
+}
+
+
+_nav{
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    padding-left: 1%;
+}
+
+_nav a:hover{
+    color: #e32436;
+    cursor:pointer;
+    text-decoration: underline; 
+}
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    border-bottom: 3px solid black;
+    padding: 5%;
+    text-align: center;
+}
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    color: black;
+    text-transform:uppercase;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+._info, ._prog, ._tecn, ._cursos, ._ruc {
+    display: block;
+    text-align: left;
+    padding-top: 5%;
+}
+
+
 @media screen and (min-width: 480px) and (max-width: 990px) {
     
     .colt_1 {width: calc(11.1%);}
