@@ -472,7 +472,7 @@ footer{
 .grelha_geral li{
     display: inline-block;
     padding: 0.5%;
-    width: 11.5%;
+    width: 12%;
     text-align: center;
     background-color: white;
 }
@@ -480,9 +480,10 @@ footer{
 .grelha_geral a{
     font-family: verdana, geneva, "sans-serif";
     color:black;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-decoration: none;
     font-weight: bold;
+    text-transform:uppercase;
     letter-spacing: -1px;
 }
 
@@ -492,21 +493,19 @@ footer{
     cursor: pointer;
 }
 
-.prog_seg{
+.prog_seg, .prog_ter, .prog_qua, .prog_qui .prog_sex, .prog_sab, .prog_dom{
     list-style: none;
 }
 
-.prog_seg li{
+.prog_seg li, .prog_ter li, .prog_qua li, .prog_qui li, .prog_sex li, .prog_sab li, .prog_dom li{
     background-color: white;
+    border-top: 2px solid black;
 }
 
-.prog_seg p{
+.prog_seg p, .prog_ter p, .prog_qua p, .prog_qui p, .prog_sex p, .prog_sab p, .prog_dom p{
     display: inline-block;
     font-size:1.2em;
     font-family: verdana, geneva, "sans-serif";
-}
-
-.seg_hora, .seg_prog, .seg_autor{
     padding: 0.5%;
     padding-right: 5%;
     margin: 1%;
@@ -514,8 +513,20 @@ footer{
 
 /* adicionar um hover ao prog e as pessoas*/
 
-.seg_hora, .seg_prog{
+.seg_hora, .seg_prog, .ter_hora, .ter_prog, .qua_hora, .qua_prog, .qui_hora, .qui_prog, .sex_hora, .sex_prog, .sab_hora, .sab_prog, .dom_hora, .dom_prog{
     border-right: 5px solid black;
+}
+
+.seg_prog{
+    width: 25%;
+}
+
+.seg_autor{
+    width: 30%; 
+}
+
+.seg_hora{
+    width: 4%;
 }
 
 @media screen and (min-width: 991px) {

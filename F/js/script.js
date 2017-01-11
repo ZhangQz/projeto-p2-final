@@ -7,12 +7,14 @@ $(document).ready(function () {
     $(".inform").mouseleave(function () {
         $(".info-content").hide();
     });*/
+   /* $("#seg, #ter, #qua, #qui, #sex, #sab, #dom").hide();*/
+    $(".gre_seg, .gre_ter, .gre_qua, .gre_qui, .gre_sex, .gre_sab., .gre_dom").hide();
     $("#slideshow > div:gt(0)").hide();
     setInterval(function () {
         $('#slideshow > div:first')
-            .fadeOut(500)
+            .fadeOut(1000)
             .next()
-            .fadeIn(500)
+            .fadeIn(1000)
             .end()
             .appendTo('#slideshow');
     }, 3000);
