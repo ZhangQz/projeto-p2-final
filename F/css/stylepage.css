@@ -9,7 +9,6 @@ html, body{
     box-sizing: border-box;
     margin: 0 auto;
     line-height: 1;
-    width: 100vw; 
 }
 
 [class*="col_"]:first-child {
@@ -102,10 +101,71 @@ nav a:hover{
     letter-spacing: 0.1em;
 }
 
-.emissao{
+.account{
     margin-top: 1%;
     text-align: center;
-    line-height: 1.1;
+}
+
+.login{
+    position: absolute;
+}
+
+.logout{
+    position: relative;
+}
+
+.log_in_cont{
+    right: 4%;
+    margin-top: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    position: absolute;
+    background-color: white;
+    min-height: 540%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    font-family: Verdana, geneva, "sans-serif";
+}
+
+.sign_in, .log_in{
+    display: inline-block;
+    top: 0;
+}
+
+.acesso{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5%;
+    font-size: 0.9em;
+    border: 4px solid black;
+}
+
+.sign_form p, .log_form p{
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+.sign_name, .sign_email, .sign_password, .sign_confirm, .log_email, .log_password{
+    padding: 5%;
+    font-size: 0.9em;
+}
+
+.sign_submit, .log_submit{
+    background-color: white;
+    padding: 3%;
+    text-transform: uppercase;
+    text-shadow: 0;
+    box-shadow: 0;
+    border: 4px solid black;
+    width: 30%;
+    font-family: verdana, geneva, "sans-serif";
+    font-weight: bold;
+}
+
+.sign_form input, .log_form input{
+    margin: 2%;
 }
 
 .ligar{
@@ -697,13 +757,7 @@ footer{
     
     .logo{
         margin-top: 2%;
-    }
-    
-    .emissao{
-        margin-right: 2%;
-        margin-top: 3%;
-    }
-    
+    }    
     
     .ultimastitulo, .grelhap{
         font-size: 1.2em;

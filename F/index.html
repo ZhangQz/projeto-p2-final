@@ -84,25 +84,44 @@
                         </div>
                     </a>
                 </nav>
-                <div class="col_1 colt_1 colm_1 emissao"> 
+                <div class="col_1 colt_1 colm_1 account"> 
                     <!--<p class="ligar">Ouvir</p>
                     <p class="parar">Parar</p>
                     <audio src="css/Media/emissao.m3u">
                     </audio>-->
-                    <p>login</p>
-                    <div>
-                        <form>
-                            <p>Email</p>
-                            <input type="text" name="Email">
-                            <p>Password</p>
-                            <input type="password" name="password">
-                            <input type="submit" name="Entrar">
-                            <input type="button" name="Inscrever">
-                        </form>
+                    <p class="login">login</p>
+                    <p class="logout">Log Out</p>
+                    <div class="log_in_cont">
+                        <div class="sign_in">
+                            <form class="sign_form">
+                                <p>Email</p>
+                                <input type="text" name="e-mail" placeholder="convidado@ruc.pt" class="sign_email">
+                                <p>Palavra Passe</p>
+                                <input type="password" name="password" placeholder="*****" class="sign_password">
+                                <p>Confirmar <br>Palavra Passe</p>
+                                <input type="password" name="password" placeholder="*****" class="sign_confirm">
+                                <input type="submit" name="Submeter" class="sign_submit">
+                            </form>
+                        </div>
+                        <div class="log_in">
+                            <form class="log_form">
+                                <p>Email</p>
+                                <input type="text" name="Email" placeholder="admin@ruc.pt" class="log_email">
+                                <p>Password</p>
+                                <input type="password" name="password" placeholder="*****" class="log_password">
+                                <input type="submit" name="Entrar" value="ENtrar" class="log_submit">
+                            </form>
+                            <div>
+                                <p class="acesso">Ruc Acessa-te</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col_1"></div>  
+                <div class="col_1">
+                    <p class="gestor">Entrar no Gestor</p>
+                </div>  
             </div>
+            <!-- Login ser substituído pelo nome do usàrio?-->
         </header>
         <main class="row">
         	
@@ -110,7 +129,6 @@
                 <div class="filtro"></div>
                 <video muted autoplay loop id="pvid" alt="video apresentação">
                 <source src="css/Media/ruc.mp4" type="video/mp4">
-                <source src="css/Media/ruc_ogv.ogv" type="video/ogv">
                  Your browser does not support the video tag.
                 </video>
                 <div class="col_3 colt_1"></div>
