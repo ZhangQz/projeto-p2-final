@@ -1,0 +1,1113 @@
+@CHARSET "UTF-8";
+
+* { 
+    margin: 0; 
+    padding: 0;
+}
+
+html, body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    line-height: 1;
+}
+
+[class*="col_"]:first-child {
+    margin-left: 0;
+}
+
+[class*="col_"] {
+    float: left;
+    min-height: 50px;
+}
+
+.row:before, .row:after {
+    content: "";
+    clear: both;
+    display: block;    
+}
+
+body{
+    background-color: black;
+}
+
+main{
+}
+
+.preta{
+    background-color: white;
+    display:inline-block;
+    min-height: 45px;
+    max-height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.logod{
+    display: inline-block;  
+}
+.logo{
+    margin-top: 10%;
+    height: 40px;
+    cursor:pointer;
+}
+.infod, .progd, .tecnd, .cursosd, .rucd{
+    position: relative;
+    display: inline-block;
+    padding-right: 2%;
+}
+
+.info-content a:hover, .prog-content a:hover, .tecn-content a:hover, .cursos-content a:hover, .ruc-content a:hover {
+    text-decoration: underline;
+}
+
+
+.universidade, .cultura, .desporto, .coimbra, .nacional, .internacional, .programas, .cronicas, .tecnicos, .equipamentos, .publicidade, .pessoas, .historia, .tecnica, .informacao, .ultimas, .grelha, .producao, .locucao,  .contactos{
+    display: block;
+    width: 100%;
+    padding-top: 10%;
+}
+
+nav{
+    text-align: center;
+    margin-top: 1.5%;
+    line-height: 1.2;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #e32436;
+    cursor:pointer;
+    text-decoration: underline; 
+}
+
+.infod, .progd, .tecnd, .cursosd{
+    border-right: 3px solid black;
+}
+
+.infod, .progd, .tecnd, .cursosd, .rucd{
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    color: black;
+    text-transform:uppercase;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.account{
+    text-align: center;
+}
+
+.user_icon{
+    width: 10%;
+    padding: 2%;
+    margin-top: 5%;
+    border: 2px solid black;
+    border-radius: 100%;  
+}
+
+.user_icon:hover{
+    cursor: pointer;
+}
+
+.user_cont{
+    background-color: white;
+    position: absolute;
+    padding: 2%;
+    font-family: verdana, geneva, "sans-serif";
+    display: none;
+}
+
+.bem_vindo{
+    font-weight: bold;
+}
+
+.entrar_gestor, .log_out{
+    margin-top: 10%;
+    padding: 5%;
+    display: inline-block;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.entrar_gestor:hover, .log_out:hover{
+    background-color: #e32436;
+    color: white;
+    cursor: pointer;
+}
+
+.loggedin{
+    position: absolute;
+    padding-top: 1.5%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.loggedout{
+    position: relative;
+    text-align: left;
+    left: 0;
+    display: none;
+}
+
+.loggedout p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: verdana, gerneva, "sans-serif";
+    left: 0;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.log_in_cont{
+    margin-top: 3.5%;
+    right: 4%;
+    padding-top: 1.5%;
+    position: absolute;
+    background-color: white;
+    min-height: 540%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    font-family: Verdana, geneva, "sans-serif";
+}
+
+.log_in_cont{
+    display: none;
+}
+
+.exit{
+    width: 15%;
+    margin-bottom: 2%;
+}
+
+.login{
+    font-family: verdana, geneva, "sans-serif";
+}
+
+.login:hover{
+    cursor: pointer;
+}
+
+.exit_{
+    display: inline-block;
+    width: 50%;
+}
+
+.exit:hover{
+    cursor: pointer;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+
+.sign_in{
+    top:0;
+    position: absolute;
+    background-color: white;
+    padding: 10%;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.log_submit{
+}
+
+.acesso{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding: 2%;
+    text-align: center;
+    font-size: 1em;
+    border: 3px solid black;
+    margin-top: 5%;
+}
+
+.acesso:hover, .sign_submit:hover, .log_submit:hover{
+    background-color:#e32436;
+    color: white;
+    cursor: pointer;
+}
+
+.sign_form label, .log_form label{
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    display: block;
+}
+
+.sign_name, .sign_email, .sign_password, .sign_confirm, .log_email, .log_password{
+    padding: 5%;
+    font-size: 0.9em;
+}
+
+.sign_submit, .log_submit{
+    background-color: white;
+    text-transform: uppercase;
+    text-shadow: 0;
+    padding: 3%;
+    display: inherit;
+    font-size: 0.9em;
+    box-shadow: 0;
+    border: 3px solid black;
+    font-family: verdana, geneva, "sans-serif";
+    font-weight: bold;
+}
+
+.sign_form input, .log_form input{
+    margin: 2%;
+    margin-top: 5%;
+}
+
+.ligar{
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-transform:uppercase;
+    position: absolute;
+}
+
+.ligar:hover{
+    text-decoration:underline;
+    cursor: pointer;
+    color: #e32436;
+}
+
+.parar{
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-transform:uppercase;
+    position: relative;
+}
+
+.parar:hover{
+    text-decoration:line-through;
+    cursor: pointer;
+    color: #e32436;
+}
+
+.titulo{
+    text-align: center;
+    position: relative; 
+}
+
+.filtro{
+    position: absolute;
+}
+
+.radiouni{
+    margin-top: 75%;
+    font-size: 2em;
+    font-family: verdana, geneva, "sans-serif";
+    color: white;
+    font-weight: bold;   
+}
+
+.centoesete{
+    color: #e32437
+}
+
+video#pvid { 
+    top: 50%;
+    left: 50%;
+    position:fixed;
+    width: 100vw;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+
+header{
+    height: 100%;
+}
+
+.ploco{
+    height: 80vh;
+}
+
+.gradiend{
+    background-color:#0f0f0f; 
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, 
+    left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 15vh;
+}
+
+.preto{
+    background-color: #0f0f0f;
+}
+
+.preto_{
+    background-color: #0f0f0f;
+}
+
+
+#slideshow {
+    height: 45vh;
+    margin-top: 5%;
+    position: relative;
+}
+
+.bacanal, .bacanal_, .bacanal_1{
+    position: absolute;
+    width: 100%;
+    filter: saturate(0%);
+}
+
+.bacanal:hover, .bacanal_:hover, .bacanal_1:hover{
+    filter: saturate(100%);
+    transition: 2s;
+}
+    
+
+.ulinf{
+    background-color: #0f0f0f;
+}
+
+.widgets{
+}
+
+.grelha_actual{
+    background-color: #f9f9f9;
+}
+
+.fb_feed{
+    height: 280px;
+    margin-top: 10%;
+    background-color: #f9f9f9;
+}
+
+.fb_feed iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.ultimastitulo, .grelhap{
+    font-size: 1.5em;
+    color: white;
+    font-family: Verdana;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ultimastitulo{
+    color: #e32436;
+}
+
+.newsfeed div{
+    color: #f9f9f9;
+    margin-right: 4%;
+    display: inline-block;
+}
+
+.newsfeed a{
+    color: #e32436;
+}
+
+.newsfeed p{
+    color: black;
+}
+
+.new_content, .new_content_, .new_content_1{
+    background-color: #f9f9f9;
+    padding:4%;
+    line-height: 1.5;
+}
+
+.new_content_, .new_content_1{
+    margin-top: 4%;
+}
+
+.new_content_1{
+    margin-bottom: 5%;
+}
+
+.content_title{
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Georgia, serf;
+    padding-bottom:2%;
+}
+
+.ler_mais{
+    background-color: #f9f9f9;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
+}
+
+.ler_mais p{
+    color: black;
+    font-family: Verdana, gevena, 'sans-serif';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ler_mais:hover{
+    cursor: pointer;
+}
+
+.ler_mais:hover p{
+    color:#e32436;
+}
+
+.social{
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.social img{
+    display: inline-block;
+    height: 5%;
+    width: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 100%;
+}
+
+.logo_fb:hover{
+    background-color:#3b5998;   
+    cursor: pointer;
+}
+
+.logo_tw:hover{
+    background-color: #0084b4;
+    cursor: pointer;
+}
+
+.logo_yt:hover{
+    cursor: pointer;
+    background-color: #b31217;
+}
+
+.logo_tu:hover{
+    cursor: pointer;
+    background-color: #1eb6a8;
+}
+
+footer{
+    background-color: #0f0f0f;
+}
+
+.separador{
+    background-color: #f9f9f9;
+    min-height: 5px;
+}
+
+.radiofim{
+}
+
+.fim{
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.e_separador{
+    display:in;
+    height: 5px;
+}
+
+.fimnome{
+    font-family: verdana, geneva, "sans-serif";
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #e32436;
+    font-size: 2em;
+}
+
+.fimcopy{
+    font-family: Georgia,Times,serif;
+    font-weight: normal;
+    margin-top: 2%;
+    color: #f9f9f9;
+    font-size: 0.75em;
+}
+
+/*Secção info*/
+
+#slideshowInfo img{
+    width: 100%;
+    filter: opacity(0.8);
+    z-index: -100;
+}
+
+.radioni_info{
+    color: white;
+    font-size: 2.5em;
+    font-family: Verdana, geneva, "sans-serif";
+    font-weight: bold;
+    text-align: center;
+}
+
+.newsfeed{
+    width: 100%;
+}
+
+.new_content_info, .new_content__info, .new_content_1_info{
+    background-color: white;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+.informacaorow1{
+    font-size: 3em;
+    display: block;
+    color: #e32436;
+    margin-top: 2%;
+    font-family: Verdana, geneva, "sans-serif";
+    font-weight: bold;
+    text-align: center;
+}
+
+.data_noticia{
+    font-size: 0.8em;
+    padding: 2%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, "sans-serif";
+}
+
+.noticias_ultimas{
+    color:white;
+    font-size: 2em;
+    font-family: Verdana, Geneva,"sans-serif";
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.titulo_info{
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+
+/*Secção grelha/prog*/
+
+
+
+/*.tabela_grelha{
+    width: 100%;
+}
+
+.tabela_grelha td{
+    border: 2px solid white;
+    padding: 1%;
+    font-size: 1em;
+    color:white;
+    font-family: verdana, geneva, "sans-serif";
+}
+
+.tabela_grelha p:hover{
+    color: #e32436;
+    text-decoration:line-through;
+}
+*/
+
+.grelha_geral{
+    list-style: none;
+    text-align: center;
+}
+
+.grelha_geral li{
+    display: inline-block;
+    padding: 0.5%;
+    width: 12%;
+    text-align: center;
+    background-color: white;
+}
+
+.grelha_geral a{
+    font-family: verdana, geneva, "sans-serif";
+    color:black;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform:uppercase;
+    letter-spacing: -1px;
+}
+
+.grelha_geral li:hover a{
+    color: #e32436;
+    text-decoration:line-through;
+    cursor: pointer;
+}
+
+.prog_seg, .prog_ter, .prog_qua, .prog_qui .prog_sex, .prog_sab, .prog_dom{
+    list-style: none;
+}
+
+.prog_seg li, .prog_ter li, .prog_qua li, .prog_qui li, .prog_sex li, .prog_sab li, .prog_dom li{
+    background-color: white;
+    border-top: 2px solid black;
+}
+
+.prog_seg p, .prog_ter p, .prog_qua p, .prog_qui p, .prog_sex p, .prog_sab p, .prog_dom p{
+    display: inline-block;
+    font-size:1.2em;
+    font-family: verdana, geneva, "sans-serif";
+    padding: 0.5%;
+    padding-right: 5%;
+    margin: 1%;
+}
+
+/* adicionar um hover ao prog e as pessoas*/
+
+.seg_hora, .seg_prog, .ter_hora, .ter_prog, .qua_hora, .qua_prog, .qui_hora, .qui_prog, .sex_hora, .sex_prog, .sab_hora, .sab_prog, .dom_hora, .dom_prog{
+    border-right: 5px solid black;
+}
+
+.seg_prog{
+    width: 25%;
+}
+
+.seg_autor{
+    width: 30%; 
+}
+
+.seg_hora{
+    width: 4%;
+}
+
+@media screen and (min-width: 991px) {
+    
+    .col_1 {width: 8.33%;}
+    .col_2 {width: 16.66%;}
+    .col_3 {width: 25%;}
+    .col_4 {width: 33.33%;}
+    .col_5 {width: 41.66%;}
+    .col_6 {width: 50%;}
+    .col_7 {width: 58.33%;}
+    .col_8 {width: 66.66%;}
+    .col_9 {width: 75%;}
+    .col_10 {width: 83.33%;}
+    .col_11 {width: 91.66%;}
+    .col_12 {width: 100%;}
+    
+    [class*="col_"]:first-child {margin-left: 0;}
+    [class*="col_"]:last-child {margin-right: 0;}
+
+    [class*="col_"] {float:left;}
+    
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        position: absolute;
+    }
+    
+
+    .icon_ham, .cross{
+        display: none;
+    }
+
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        padding: 1em;
+        text-align: left;
+        display: none;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        content: "";
+        clear: both;
+    }
+
+    .infod:hover .info-content {
+        display: block;
+    }
+
+    .rucd:hover .ruc-content {
+        display: block;
+    }
+
+    .cursosd:hover .cursos-content {
+        display: block;
+    }
+
+    .progd:hover .prog-content {
+        display: block;
+    }
+
+    .tecnd:hover .tecn-content {
+        display: block;
+    }
+
+    
+}
+
+/* Estilo Backoffice */
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    position: relative;
+   
+    padding-right: 2%;
+}
+
+
+_nav{
+    text-align: center;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    padding-left: 1%;
+}
+
+_nav a:hover{
+    color: #e32436;
+    cursor:pointer;
+    text-decoration: underline; 
+}
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    border-bottom: 3px solid black;
+    padding: 5%;
+    text-align: center;
+}
+
+._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
+    font-family:Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    color: black;
+    text-transform:uppercase;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+._info, ._prog, ._tecn, ._cursos, ._ruc {
+    display: block;
+    text-align: left;
+    padding-top: 5%;
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 990px) {
+    
+    .colt_1 {width: calc(11.1%);}
+    .colt_2 {width: calc(23.8%);}
+    .colt_3 {width: calc(36.5%);}
+    .colt_4 {width: calc(49.2%);}
+    .colt_5 {width: calc(61.9%);}
+    .colt_6 {width: calc(74.6%);}
+    .colt_7 {width: calc(87.3%);}
+    .colt_8 {width: calc(100%);}
+
+    
+    [class*="colt_"]:first-child {margin-left: 0;}
+    [class*="colt_"]:last-child {margin-right: 0;}
+
+    [class*="colt_"] {float:left;}
+    
+    video#pvid{
+        top: 25%;
+    }
+    
+    .ploco{
+        height: 25em;
+    }
+    
+    nav{
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+        text-align: left;
+        background-color: white;
+        opacity: 1;
+        display: none;
+        font-size:1em;
+        font-weight: bold;
+        margin-top: 7.7%;
+    }
+    
+    .info-content a{
+        padding-top: 1%;
+    }
+    
+    .prog-content a{
+        padding-top: 1%;
+    }
+    
+    .tecn-content a{
+        padding-top: 1%;
+    }
+    
+    .cursos-content a{
+        padding-top: 1%;
+    }
+    
+    .ruc-content a{
+        padding-top: 1%;
+    }   
+    
+    .social{
+        margin-bottom: 0;
+    }
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        box-shadow: none;
+        font-size: 0.8em;
+        width: 100vw;
+        text-align: center;
+        margin-left: 2%;
+    }
+    
+    .icon_ham, .cross{
+        display: inline-block;
+        width: 35px;
+    }
+    
+    .icon_ham{
+        margin-top: 15%;
+        margin-left: 20%;
+    }
+    
+    .cross{
+        position: absolute;
+        margin-top: 1.5%;
+        margin-left: 2%;
+    }
+    
+    nav a{
+        width: 100%;
+        display: inline-block;
+        line-height: 2;
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    .infod, .progd, .tecnd, .cursosd{
+        border-right: 0px;
+    }
+    
+    .logod{
+        position: relative;
+        text-align: center;
+    }
+    
+    .logo{
+        margin-top: 2%;
+    }    
+    
+    .ultimastitulo, .grelhap{
+        font-size: 1.2em;
+    }
+    
+    .preto_slide{
+        min-height: 220px;
+    }
+    
+    #slideshow{
+        height: auto;
+        margin-top: 5%;
+    }
+    
+    .social img{
+        width: 8%;
+        margin-bottom: 5%;  
+    }
+    
+    .radiouni{
+        margin-top: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    .colm_1 {width: calc(18.72%);}
+    .colm_2 {width: calc(39.04%);}
+    .colm_3 {width: calc(59.36%);}
+    .colm_4 {width: calc(79.68%);}
+    .colm_5 {width: calc(100%);}
+    
+    [class*="colm_"]:first-child {margin-left: 0;}
+    [class*="colm_"]:last-child {margin-right: 0;}
+
+    [class*="colm_"] {float:left;}
+    
+    video#pvid{
+        top: 25%;
+    }
+    
+    .gradiend{
+        height: 3vh;
+        
+    }
+    
+    .ploco{
+        height: auto;
+    }
+    
+    .titulo{
+        top: 0;
+        font-size: 0.6em;
+    }
+    
+    nav{
+        height: 100vh;
+        overflow: auto;
+        position: fixed;
+        text-align: left;
+        background-color: white;
+        margin-top: 14.1%;
+        opacity: 1;
+        display: none;
+    }
+    
+    .info-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .prog-content a{
+        padding-top: 1%;
+    }
+    
+    .tecn-content a{
+        padding-top: 1%;
+    }
+    
+    
+    .cursos-content a{
+        padding-top: 1%;
+    }
+    
+    .ruc-content a{
+        padding-top: 1%;
+    }   
+    
+    .social{
+        margin-bottom: 0;
+    }
+    
+    .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
+        box-shadow: none;
+        font-size: 0.8em;
+        text-align: center;
+        margin-left: 2%;
+    }
+    
+    .icon_ham, .cross{
+        display: inline-block;
+        width: 35px;
+    }
+    
+    .icon_ham{
+        margin-top: 20%;
+        margin-left: 20%;
+    }
+    
+    .cross{
+        position: absolute;
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+    
+    nav a{
+        display: inline-block;
+        line-height: 2;
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    .info, .rucd{
+        padding-top: 5%;
+    }
+    
+    .infod, .progd, .tecnd, .cursosd{
+        border-right: 0px;
+        width: 100%;
+    }
+    
+    .logod{
+        position: relative;
+        text-align: center;
+    }
+    
+    .logo{
+        margin-top: 3%;
+    }
+    
+    .emissao{
+        margin-top: 6%;
+    }
+    
+    .traco{
+        display: none;
+    }
+    
+    .ultimastitulo{
+        text-align: center;
+        line-height: 1.2;
+        font-size: 1em;
+        margin-bottom: 5%;
+        margin-top: 10%;
+    }
+    
+    .content_title{
+        font-size: 1em;
+    }
+    
+    #slideshow{
+        margin-left: 2.5%;
+        width: 95vw;
+        height: auto;
+        margin-bottom: 30%;
+    }
+    
+    .widgets{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    
+    .bacanal, .bacanal_, .bacanal_1{
+        margin-top: 0;
+    }
+    
+    .new_content, .new_content_1, .new_content_{
+        margin-left: 4%;
+    }
+    
+    .separador{
+        width: 80%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .ler_mais{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    
+    .fb_feed{
+        display: none;
+    }
+
+    .social img{
+        width: 12%;
+        margin-right: 4%;
+        margin-left: 4%;
+        margin-top: 10%;
+    }
+}
