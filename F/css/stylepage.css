@@ -102,19 +102,73 @@ nav a:hover{
 
 .account{
     text-align: center;
-    padding-top: 1%;
+}
+
+.user_icon{
+    width: 10%;
+    padding: 2%;
+    margin-top: 5%;
+    border: 2px solid black;
+    border-radius: 100%;  
+}
+
+.user_icon:hover{
+    cursor: pointer;
+}
+
+.user_cont{
+    background-color: white;
+    position: absolute;
+    padding: 2%;
+    font-family: verdana, geneva, "sans-serif";
+    display: none;
+}
+
+.bem_vindo{
+    font-weight: bold;
+}
+
+.entrar_gestor, .log_out{
+    margin-top: 10%;
+    padding: 5%;
+    display: inline-block;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.entrar_gestor:hover, .log_out:hover{
+    background-color: #e32436;
+    color: white;
+    cursor: pointer;
 }
 
 .loggedin{
     position: absolute;
+    padding-top: 1.5%;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .loggedout{
     position: relative;
+    text-align: left;
+    left: 0;
+    display: none;
+}
+
+.loggedout p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: verdana, gerneva, "sans-serif";
+    left: 0;
+    font-size: 1em;
+    display: inline-block;
 }
 
 .log_in_cont{
-    margin-top: 10px;
+    margin-top: 3.5%;
     right: 4%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -127,9 +181,46 @@ nav a:hover{
     font-family: Verdana, geneva, "sans-serif";
 }
 
-.sign_in, .log_in{
+.log_in_cont{
+    display: none;
+}
+
+.exit{
+    width: 15%;
+    margin-bottom: 2%;
+}
+
+.login{
+    font-family: verdana, geneva, "sans-serif";
+}
+
+.login:hover{
+    cursor: pointer;
+}
+
+.exit_{
     display: inline-block;
-    top: 0;
+    width: 50%;
+}
+
+.exit:hover{
+    cursor: pointer;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+
+.sign_in{
+    top:0;
+    position: absolute;
+    background-color: white;
+    padding: 10%;
+    left: 0;
+    display: none;
+    text-align: center;
 }
 
 .acesso{
@@ -162,12 +253,10 @@ nav a:hover{
     background-color: white;
     text-transform: uppercase;
     text-shadow: 0;
-    text-align: center;
     padding: 2%;
     font-size: 0.9em;
     box-shadow: 0;
     border: 2px solid black;
-    width: 30%;
     font-family: verdana, geneva, "sans-serif";
     font-weight: bold;
 }

@@ -8,7 +8,6 @@ $(document).ready(function () {
         $(".info-content").hide();
     });*/
    /* $("#seg, #ter, #qua, #qui, #sex, #sab, #dom").hide();*/
-    $(".gre_seg, .gre_ter, .gre_qua, .gre_qui, .gre_sex, .gre_sab., .gre_dom").hide();
     $("#slideshow > div:gt(0)").hide();
     setInterval(function () {
         $('#slideshow > div:first')
@@ -69,5 +68,17 @@ $(document).ready(function () {
     $(".parar").click(function () {
         $(".parar").hide();
         $(".ligar").show();
+    });
+    $(".acesso").click(function () {
+        $(".sign_in").toggle("slide");
+    });
+    $(".exit").click(function () {
+        $(".sign_in").toggle("slide");
+    });
+    $(".login").click(function () {
+        $(".log_in_cont").toggle("slide");
+    });
+    $(".user_icon").click(function () {
+        $(".user_cont").toggle("slide");
     });
 });
