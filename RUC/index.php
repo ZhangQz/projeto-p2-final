@@ -1,3 +1,11 @@
+<?php
+	session_start();
+
+	require_once('database.php');
+	require_once('routes.php');
+	require_once('handle.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -17,14 +25,14 @@
                 <div class="col_1 colt_1 colm_1">
                     <div class="menud">
                         <a class="menui">
-                            <img src="css/Media/Hamburger_icon.svg.png" class="icon_ham">
-                            <img src="css/Media/cross-24-512.png" class="cross">
+                            <img src="assets/Images/Hamburger_icon.svg.png" class="icon_ham">
+                            <img src="assets/Images/cross-24-512.png" class="cross">
                         </a>
                     </div>
                 </div>
                 <div class = "col_1 colt_6 colm_3 logod">
                     <div class= "logoc">
-                        <a href="index.html"><img src="css/Media/RUC_LOGO-01.png" class="logo"></a>
+                        <a href="index.html"><img src="assets/Images/RUC_LOGO-01.png" class="logo"></a>
                     </div>
                 </div>
                 <nav class="col_8 colt_4 colm_4" id="menu">
@@ -84,28 +92,113 @@
                         </div>
                     </a>
                 </nav>
-                <div class="col_1 colt_1 colm_1 emissao"> 
-                    <p class="ligar">Ouvir</p>
-                    <p class="parar">Parar</p>
-                    <audio src="css/Media/emissao.m3u">
-                    </audio>
+                <div class="col_2 colt_2 colm_1 account">
+                    <div class="loggedin">
+                        <a class="login">login</a>
+                    </div>
+                    <div class="log_in_cont">
+                        <div class="sign_in" id="sign_in">
+                            <img src="assets/Images/cross-24-512.png" class="exit">
+                            <form class="sign_form">
+                                <label>Email</label>
+                                <input type="text" name="e-mail" placeholder="convidado@ruc.pt" class="sign_email">
+                                <label>Palavra Passe</label>
+                                <input type="password" name="password" placeholder="*****" class="sign_password">
+                                <label>Confirmar <br>Palavra Passe</label>
+                                <input type="password" name="password" placeholder="*****" class="sign_confirm">
+                                <input type="submit" name="Submeter" value="Entrar" class="sign_submit">
+                            </form>
+                        </div>
+                        <div class="log_in">
+                            <form class="log_form">
+                                <label>Email</label>
+                                <input type="text" name="Email" placeholder="user@ruc.pt" class="log_email">
+                                <label>Password</label>
+                                <input type="password" name="password" placeholder="*****" class="log_password">
+                                <input type="submit" name="Entrar" value="Entrar" class="log_submit">
+                                <input class="acesso" name="subscribe" value="Aderuc-te">
+                            </form>
+                        </div>
+                    </div>
+										<?php if( isset($_SESSION['user']) ){ ?>
+                    <div class="loggedout">
+                        <img src="assets/Images/user_icon.png" alt="user icon" class="user_icon">
+                    </div>
+                    <div class="user_cont">
+                        <p class="bem_vindo">Bem vindo Francisco!</p>
+                        <p class="entrar_gestor">Entrar no Gestor</p>
+                        <p class="log_out">Log out</p>
+                    </div>
+										<?php } ?>
                 </div>
-                <div class="col_1"></div>  
             </div>
         </header>
         <main class="row">
-        	<?php 
-        		include 'includes\index_inc.php';
-        	?>
+            <div class="row ploco">
+                <div class="filtro"></div>
+                <video muted autoplay loop id="pvid" alt="video apresentação">
+                <source src="assets/media/ruc.mp4" type="video/mp4">
+                 Your browser does not support the video tag.
+                </video>
+                <div class="col_3 colt_1"></div>
+                <div class="col_6 colt_6 colm_5 titulo">
+                    <p class="radiouni">Rádio Universidade de Coimbra <a class="centoesete">107.9FM</a></p>
+                </div>
+                <div class="col_3 colt_1"></div>
+            </div>
+            <div class="row gradiend"></div>
+            <section class="row preto">
+                <div class="col_2 colt_1"></div>
+                <div class="col_8 colt_6 colm_5 preto_slide">
+                    <div id="slideshow">
+                       <div>
+                         <img src="http://www.ruc.pt/wp-content/uploads/2016/11/14720594_10154256761858393_4201544313377765259_n-600x192.png" class="bacanal">
+                       </div>
+                       <div>
+                         <img src="http://www.ruc.pt/wp-content/uploads/2016/10/14330002_10154544568309530_1286348928535110057_n-600x192.jpg" class="bacanal_">
+                       </div>
+                       <div>
+                         <img src="http://www.ruc.pt/wp-content/uploads/2016/11/amen16-600x192.jpg" class="bacanal_1">
+                       </div>
+                    </div>
+                </div>
+                <div class="col_2 colt_1"></div>
+            </section>
+            <section class="row preto_">
+                <div class="col_2 colt_1"></div>
+                <div class="col_5 colt_4 colm_5">
+                    <div>
+                        <p class="ultimastitulo">Última Hora <a class="traco">-</a> <a>Informação</a></p>
+                    </div>
+                    <div class="newsfeed">
+                        <div class="new_content">
+                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
+                            <p>Ainda assim, existem dúvidas a respeito de como a adoção de políticas descentralizadoras causa impacto indireto na reavaliação dos paradigmas corporativos.</p>
+                        </div>
+                        <div class="new_content_">
+                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
+                            <p>Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. When other websites give you text, they’re not sending the best. They’re not sending you, they’re sending words that have lots of problems and they’re bringing those problems with us. They’re bringing mistakes. They’re bringing misspellings. They’re typists… And some, I assume, are good wo</p>
+                        </div>
+                        <div class="new_content_1">
+                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
+                            <p>The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive. Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.</p>
+                        </div>
+                        <div class="ler_mais">
+                            <p>Ler mais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col_2 colt_1"></div>
+            </section>
         </main>
         <footer class="row">
             <div class="row">
                 <div class="col_2 colt_1"></div>
                 <div class="col_8 colt_6 colm_5 social">
-                    <img src="css/Media/facebook.png" alt="logótipo do facebook" class="logo_fb">
-                    <img src="css/Media/twitter.png" alt="logótipo do twitter" class="logo_tw">
-                    <img src="css/Media/youtube.png" alt="logótipo do youtube" class="logo_yt">
-                    <img src="css/Media/tunein.png" alt="logótipo do Tunein" class="logo_tu">
+                    <img src="assets/Images/facebook.png" alt="logótipo do facebook" class="logo_fb">
+                    <img src="assets/Images/twitter.png" alt="logótipo do twitter" class="logo_tw">
+                    <img src="assets/Images/youtube.png" alt="logótipo do youtube" class="logo_yt">
+                    <img src="assets/Images/tunein.png" alt="logótipo do Tunein" class="logo_tu">
                 </div>
                 <div class="col_2 colt_1"></div>
             </div>

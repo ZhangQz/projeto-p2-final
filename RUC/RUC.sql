@@ -1,3 +1,6 @@
+CREATE DATABASE  IF NOT EXISTS `ruc` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ruc`;
+
 -- phpMyAdmin SQL Dump
 -- version 4.3.1
 -- http://www.phpmyadmin.net
