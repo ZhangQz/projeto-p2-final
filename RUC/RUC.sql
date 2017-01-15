@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jan-2017 às 04:42
+-- Generation Time: 15-Jan-2017 às 05:03
 -- Versão do servidor: 5.6.22
 -- PHP Version: 5.3.29
 
@@ -461,6 +461,19 @@ CREATE TABLE IF NOT EXISTS `programa_locutor` (
   `idlocutor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+`iduser` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `email` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -556,6 +569,12 @@ ALTER TABLE `programa_locutor`
  ADD PRIMARY KEY (`idprograma`,`idlocutor`), ADD KEY `idlocutor` (`idlocutor`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`iduser`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -619,6 +638,11 @@ MODIFY `idprograma` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=82;
 --
 ALTER TABLE `programa_locutor`
 MODIFY `idprograma` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
