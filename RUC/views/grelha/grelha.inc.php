@@ -130,13 +130,13 @@
 
             <?php
             include("Grelha_segunda.inc.php");
-            ?>
+            ?>s
 
             <div class="col_4 container_segunda">
-              <?
+              <?php
                 $grelhas = $controller->getAllGrelhas();
 
-                foreach ($diarias as $diaria) {
+                foreach ($grelhas as $grelha) {
                   $menus = $controller->getGrelhasLocutor($grelhas['id_locutor']);
                   $comidas = $controller->getGrelhasProgramas($grelhas['id_programa']);
               ?>
