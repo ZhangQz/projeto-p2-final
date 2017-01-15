@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jan-2017 às 05:03
+-- Generation Time: 15-Jan-2017 às 06:10
 -- Versão do servidor: 5.6.22
 -- PHP Version: 5.3.29
 
@@ -136,7 +136,32 @@ CREATE TABLE IF NOT EXISTS `equipamento` (
   `marca` varchar(80) DEFAULT NULL,
   `quantidade` text NOT NULL,
   `preco` float NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `equipamento`
+--
+
+INSERT INTO `equipamento` (`idequipamento`, `nome`, `descricao`, `marca`, `quantidade`, `preco`) VALUES
+(1, 'PA HK POWER WORKS', 'Só pode ser requisitada com acompanhamento de um Técnico da RUC', NULL, '1', 60),
+(2, 'Coluna Activa Yamaha MSR 400 ', 'Com Tripés; Só pode ser requisitada com acompanhamento de um Técnico da RUC', NULL, '2', 50),
+(3, 'PA Acustica', '', NULL, '2', 60),
+(4, 'Mesa Yamaha MG 12/4', '12 Canais', NULL, '1', 20),
+(5, 'Mesa Numark DJ', '4 Canais', NULL, '1', 20),
+(6, 'DI 20', '', NULL, '1', 5),
+(7, 'DI BSS AR-133', '', NULL, '1', 15),
+(8, 'Equalizador', '', NULL, '1', 80),
+(9, 'Preamp Stereo', 'Para Giradiscos', NULL, '1', 5),
+(10, 'Fonte de Phantom Power Dupla', '', NULL, '1', 10),
+(11, 'Leitor de CD Sony', NULL, NULL, '1', 10),
+(12, 'Microfono Shure SM 57', NULL, NULL, '1', 10),
+(13, 'Microfone Shure SM 58', NULL, NULL, '1', 10),
+(14, 'Kit Microfones Bateria', NULL, NULL, '1', 30),
+(15, 'Tripé/Suporte de mesa para microfone ', NULL, NULL, '1', 3),
+(16, 'Headphone Superlux HD 681', NULL, NULL, '1', 3),
+(17, 'Cabo RCA, Cabo XLR, Cabo Jack', NULL, NULL, '1', 2),
+(18, 'Adaptadores Diversos', NULL, NULL, '1', 1),
+(19, 'Extensões e Fichas Triplas ', NULL, NULL, '', 2);
 
 -- --------------------------------------------------------
 
@@ -602,7 +627,7 @@ MODIFY `iddia` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `equipamento`
 --
 ALTER TABLE `equipamento`
-MODIFY `idequipamento` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idequipamento` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `equipamento_kit`
 --
