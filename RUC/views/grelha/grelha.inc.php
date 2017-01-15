@@ -33,52 +33,6 @@
                     <div>
                         <p class="noticias_ultimas">Grelha Regular 16/17</p>
                     </div>
-                    <!--<table class="tabela_grelha">
-                        <tr class="hora0">
-                            <td>
-                                <p>00:00</p>
-                            </td>
-                            <td>
-                                <p>Menos zero</p>
-                            </td>
-                            <td>
-                                <p>Catarina Antunes e João Sousa</p>
-                            </td>
-                        </tr>
-                        <tr class="hora1">
-                            <td>
-                                <p>00:00</p>
-                            </td>
-                            <td>
-                                <p>Menos zero</p>
-                            </td>
-                            <td>
-                                <p>Catarina Antunes e João Sousa</p>
-                            </td>
-                        </tr>
-                        <tr class="hora2">
-                            <td>
-                                <p>00:00</p>
-                            </td>
-                            <td>
-                                <p>Menos zero</p>
-                            </td>
-                            <td>
-                                <p>Catarina Antunes e João Sousa</p>
-                            </td>
-                        </tr>
-                        <tr class="hora3">
-                            <td>
-                                <p>00:00</p>
-                            </td>
-                            <td>
-                                <p>Menos zero</p>
-                            </td>
-                            <td>
-                                <p>Catarina Antunes e João Sousa</p>
-                            </td>
-                        </tr>
-                    </table>-->
                     <ul class="grelha_geral">
                         <li class="segunda" id="segunda">
                             <a href="#segunda">Segunda-feira</a>

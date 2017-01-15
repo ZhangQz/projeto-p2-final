@@ -2,7 +2,7 @@
 
 class Grelha
 {
-	protected $tabela = "ementa";
+	protected $tabela = "Grelha";
 	private $db;
 
 	public function __construct($conn)
