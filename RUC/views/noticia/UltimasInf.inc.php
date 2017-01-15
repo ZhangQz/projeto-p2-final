@@ -19,16 +19,14 @@
                         </div>
                         <div class="ler_mais">
                             <p>Ler mais</p>
-                            
+
                         </div>
                     </div>
                 </div>
 								<div class="col_3">
 									<div class="grelha">
-										<?php if (!isset $_SESSION('user')){
-											include('Grelha_segunda.inc.php');
-												
-											})
+										<?php
+											include('../Grelha_segunda.inc.php');
 										?>
 									</div>
 								</div>
