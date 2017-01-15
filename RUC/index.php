@@ -167,15 +167,6 @@
                     <div>
                         <p class="ultimastitulo">Últimas Notícias <a class="traco">-</a> <a>Informação</a></p>
                     </div>
-                                              <?php
-                                strSQL = "SELECT noticia.titulo, noticia.artigo, noticia-data_noticia, noticia.extra, noticia.idcategoria, autor.idautor, categoria.idcategoria
-								FROM categoria, noticia, autor
-								WHERE noticia.idcategoria=categoria.idcategoria
-								ORDER BY ASCE"
-					while($row = mysql_fetch_array()) {
-						echo $row['categoria.nome'] . "".$row['noticia']." " . $row['autor.nome'] . "<br />";
-					}
-                                ?>
                     <div class="newsfeed">
                         <div class="new_content">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
