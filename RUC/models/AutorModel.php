@@ -41,5 +41,38 @@
 					echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
 			}
 		}
+
+		public function AutorDelete($autor)
+		{
+			try
+			{
+				return $this->db->query("DELETE FROM $this->tabela WHERE idautor = $id");
+			} catch(PDOException $e) {
+				echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+			}
+		}
+		
+		public function AutorUpdate($autor)
+		{
+			try
+			{
+				return $this->db->query("UPDATE $this->tabela
+						SET nome = '$dados[autor]',
+						WHERE idautor = '$dados[idautor]'");
+			} catch(PDOException $e) {
+				echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+			}
+		}
+		
+		public function NewAutor($autor)
+		{
+			try
+			{
+				return  $this->db->query("INSERT INTO $this->tabela(nome, idautor)
+						VALUES('$dados[nome]', '$dados[idautor]')");
+			} catch(PDOException $e) {
+				echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+			}
+		}
 	}
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Registo
+class Noticia
 {
 	protected $tabela = "noticia";
 	private $db;
@@ -17,6 +17,18 @@ class Registo
 		}
 	}
 
+	public function AllNot()
+	{
+		try
+		{
+			return $this->db->query("SELECT $this->tabela (idnoticia, titulo, artigo, data_noticia, extras, idcategoria)
+					VALUES('{$noticia[idnoticia]}', '{$noticia[titulo]}', '{$noticia[artigo]}', '{$noticia[data_noticia]}', '{$noticia[extras]}', '{$noticia[idcategoria]}')
+					");
+		} catch (PDOException $e) {
+			echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
+		}
+	}
+	
 	public function createNoticia($dados)
 	{
 		try
@@ -27,6 +39,28 @@ class Registo
 
 		} catch(PDOException $e) {
 			echo "Ocorreu um erro a aderir... [ERROR: ".$e->getMessage()."]";
+		}
+	}
+	
+	public function DeleteNot($noticia)
+	{
+		try
+		{
+			return $this->db->query("DELETE FROM $this->tabela WHERE idnoticia = $id");
+		} catch(PDOException $e) {
+			echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+		}
+	}
+	
+	public function UpdateNot()
+	{
+		try {
+			return $this->db->query("UPDATE $this->tabela
+					SET all = '$dados[titulo]', '$dados[artigo]', '$dados[data_noticia]', '$dados[extras]', '$dados[idcategoria]',
+					WHERE idnoticia = '$dados[idnoticia]'");
+		} catch (PDOException $e) {
+			echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+				
 		}
 	}
 	public function verifyNoticia($dados)

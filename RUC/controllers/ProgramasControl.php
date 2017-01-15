@@ -1,6 +1,6 @@
 <?php
 
-class LocutorController
+class ProgramaController
 {
   private $model;
 
