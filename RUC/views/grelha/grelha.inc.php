@@ -126,6 +126,37 @@
                 </div>
                 <div class="col_2 colt_1"></div>
             </section>
-        </main>
-    </body>
-</html>
+
+
+            <?php
+            include("Grelha_segunda.inc.php");
+            ?>
+
+            <div class="col_4 container_segunda">
+              <?
+                $grelhas = $controller->getAllGrelhas();
+
+                foreach ($diarias as $diaria) {
+                  $menus = $controller->getGrelhasLocutor($grelhas['id_locutor']);
+                  $comidas = $controller->getGrelhasProgramas($grelhas['id_programa']);
+              ?>
+                <div class="container_x">
+                    <h2>Diária de Hoje</h2>
+                    <?php foreach ($grelhas as $index => $grelha) { ?>
+                    <h4>Prato <?=($index + 1)?></h4>
+                      <p><?=$programa['id_programa']?></p>
+                    <?php } ?>
+                    <h4>Produtos</h4>
+                    <?php foreach ($comidas as $index => $comida) { ?>
+                      <p><?=$comida['id_locutor']?></p>
+                    <?php } ?>
+                    <br>
+                    <form action="">
+                      <input type="checkbox" name="diaria" value="1">
+                    </form>
+
+                </div>
+                <?
+                }
+                ?>
+            </div>

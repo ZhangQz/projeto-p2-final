@@ -97,30 +97,27 @@
 </div>
 
 <?php
-  $comidas = $controller->getAllComidas();
+  $grelhas = $controller->getAllComidas();
 
-  if ($_SESSION['user']['idperfil'] === 1):
-?>
-  <div class="Adicionar">
-  <a href="<?=$path?>?modelo=Comida&action=2">Adicionar Comida</a>
-  </div>
-<?php endif; ?>
 <div class="col_10 container_comidas">
   <div class="row">
-  <?php foreach ($comidas as $comida) { ?>
+  <?php foreach ($grelhas as $grelha) { ?>
     <div class="col_2 comidascomidas">
-        <h2><?=$comida['nomeproduto']?></h2>
+        <h2><?=$comida['iddias']?></h2>
         <img src="#">
-        <p><?=$comida['kcal']?></p>
-        <h2><?=$comida['preco']?> €</h2>
+        <p><?=$comida['data_inicio']?></p>
+        <p><?=$comida['data_fim']?></p>
+        <p><?=$comida['id_dia']?></p>
+        <p><?=$comida['id_programa']?></p>
+        <h2><?=$comida['id_locutor']?> €</h2>
         <div class="editaBtn">
-          <a href="<?=$path . '?modelo=Reserva&action=5&id=' . $comida['idproduto']?>">Reservar</a>
+          <a href="<?=$path . '?modelo=Reserva&&id=' . $comida['id_grelha']?>">Reservar</a>
         </div>
         <div class="editaBtn">
-          <a href="<?=$path . '?modelo=Comida&action=3&id=' . $comida['idproduto']?>">Editar</a>
+          <a href="<?=$path . '?modelo=Comida&3&id=' . $comida['id_grelha']?>">Editar</a>
         </div>
         <div class="removeBtn">
-          <a href="<?=$path . '?modelo=Comida&action=4&id=' . $comida['idproduto']?>">Remover</a>
+          <a href="<?=$path . '?modelo=Comida&&id=' . $comida['id_grelha']?>">Remover</a>
         </div>
     </div>
   <?php } ?>

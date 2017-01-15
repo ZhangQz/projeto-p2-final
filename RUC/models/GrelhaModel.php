@@ -18,16 +18,16 @@ class Grelha
 	}
 
 	/************************************
-	 * Modelo Diaria que é a ementa	*
+	 * Modelo Grelha *
 	 ************************************/
-	public function createGrelha($dados)
+	public function createGrelha($grelhas)
 	{
 		try
 		{
 			$dt_cria = date("Y-m-d H:i:s");
 			$dt_edit = $dt_cria;
-		    return  $this->db->query("INSERT INTO $this->tabela (id_grelha, nome, data_inicio, data_fim. id_dia, id_programa, .id_locutor)
-		    						  VALUES('{$dados[nome]}', '{$dados[preco]}', '{$dados[tipo]}', '{$dados[kcal]}', '{$dados[img]}', '{$dt_cria}', '{$dt_edit}', 1)");
+		    return  $this->db->query("INSERT INTO $this->tabela (id_grelha, nome, data_inicio, data_fim. id_dia, id_programa, id_locutor)
+		    						  VALUES('{$grelhas[id_grelha]}', '{$grelhas[nome]}', '{$grelhas[data_inicio]}', '{$grelhas[data_fim]}', '{$grelhas[id_dia]}', '{$grelhas[id_programa]}', '{$grelhas[id_locutor]}')");
 
 		} catch(PDOException $e) {
 		    echo "<strong>Ups! Ocorreu um erro a registar user</strong>... [ERROR: ".$e->getMessage()."]";
@@ -54,7 +54,7 @@ class Grelha
 		}
 	}
 
-	public function getLocutores($id_grelha) {
+	public function getLocutores($id_locutor) {
 		$stml = $this->db->prepare("SELECT * FROM grelha_locutor WHERE id_grelha = '{$id_grelha}'");
 		$stml->execute();
 		$results = $stml->fetchAll(PDO::FETCH_ASSOC);
@@ -62,7 +62,7 @@ class Grelha
 		return $results;
 	}
 
-	public function getProgramas($id_grelha) {
+	public function getProgramas($id_programa) {
 		$stml = $this->db->prepare("SELECT * FROM grelha_programa WHERE id_grelha = '{$id_grelha}'");
 		$stml->execute();
 		$results = $stml->fetchAll(PDO::FETCH_ASSOC);
