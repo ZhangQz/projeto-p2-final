@@ -769,6 +769,7 @@ select option{
     font-weight: bold;
     font-size: 1.4em;
     background-color: white;
+    border: 0px solid white;
 }
 
 .assis_tecn_submit:hover{
