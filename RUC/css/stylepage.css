@@ -669,6 +669,7 @@ footer{
 
 /* adicionar um hover ao prog e as pessoas*/
 
+
 .seg_hora, .seg_prog, .ter_hora, .ter_prog, .qua_hora, .qua_prog, .qui_hora, .qui_prog, .sex_hora, .sex_prog, .sab_hora, .sab_prog, .dom_hora, .dom_prog{
     border-right: 5px solid black;
 }
@@ -683,6 +684,96 @@ footer{
 
 .seg_hora{
     width: 4%;
+}
+
+/*Serviços*/
+
+.este_servico, .outros_servicos{
+    padding: 2%;
+    margin-top: 5%;
+    font-family: verdana, geneva, "sans-serif";
+}
+
+.outros_servicos{
+    text-align: right;
+}
+
+.outros_servicos img{
+    width: 50%;
+}
+
+.outros_p p{
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.outros_equip, .outros_prod, .outros_publicidade{
+    margin-top: 15%;
+    padding: 5%;
+    border: 5px solid white;
+}
+
+.outros_equip p, .outros_prod p, .outros_publicidade p{
+    color: white;
+    margin-top: 5%;
+}
+
+.outros_equip:hover, .outros_prod:hover, .outros_publicidade:hover{
+    background-color: #e32436;
+    cursor: pointer;
+}
+
+.assis_tecn_apresentacao{
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.assis_tecn_apresentacao h1{
+    color: #e32436;
+    margin-bottom: 5%;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.a_t_a_2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.assis_tecn_form{
+    color: white;
+}
+
+.assis_tecn_form input, .assis_tecn_form select, .descricao{
+    margin: 2.5%;
+    padding: 1%;
+    width: 75%;
+    font-family: verdana, geneva, "sans-serif";
+}
+
+select option{
+    font-family: Verdana, geneva, "sans-serif";
+}
+
+.descricao{
+    font-family: verdana, geneva, "sans-serif";
+}
+
+.assis_tecn_submit{
+    font-family: verdana, geneva, "sans-serif";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4em;
+    background-color: white;
+}
+
+.assis_tecn_submit:hover{
+    color: #e32436;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 991px) {
