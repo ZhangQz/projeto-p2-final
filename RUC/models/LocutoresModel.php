@@ -32,46 +32,13 @@
 		public function LocName()
 		{
 			try
-			{
 				return $this->db->query("SELECT $this->tabela (nome)
 					VALUES('{$locutor[nome]}')
 				");
+			{
 
 			} catch (PDOException $e) {
 					echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
-			}
-		}
-
-		public function LocDelete($locutor)
-		{
-			try
-			{
-					return $this->db->query("DELETE FROM $this->tabela WHERE idlocutor = $id");
-			} catch(PDOException $e) {
-					echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
-			}
-		}
-
-		public function LocUpdate($locutor)
-		{
-			try
-			{
-					return $this->db->query("UPDATE $this->tabela
-												SET nome = '$dados[locutor]',
-												WHERE idlocutor = '$dados[idlocutor]'");
-			} catch(PDOException $e) {
-					echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
-			}
-		}
-
-		public function LocNew($locutor)
-		{
-			try
-			{
-					return  $this->db->query("INSERT INTO $this->tabela(nome, idlocutor)
-												VALUES('$dados[locutor]', '$dados[idlocutor]')");
-			} catch(PDOException $e) {
-					echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
 			}
 		}
 	}
