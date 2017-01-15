@@ -152,7 +152,7 @@
                 <div class="col_8 colt_6 colm_5 preto_slide">
                     <div id="slideshow">
                        <div>
-                         <img src="http://www.ruc.pt/wp-content/uploads/2016/11/14720594_10154256761858393_4201544313377765259_n-600x192.png" class="bacanal">
+                         <img src="assets/Images/slide_1" class="bacanal">
                        </div>
                        <div>
                          <img src="http://www.ruc.pt/wp-content/uploads/2016/10/14330002_10154544568309530_1286348928535110057_n-600x192.jpg" class="bacanal_">

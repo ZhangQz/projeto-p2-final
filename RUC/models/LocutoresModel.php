@@ -25,7 +25,7 @@
 					VALUES('{$locutor[idlocutor]}','{$locutor[nome]}')
 				");
 			} catch(PDOException $e) {
-					echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+					echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
 			}
 		}
 
@@ -38,7 +38,7 @@
 			{
 
 			} catch (PDOException $e) {
-					echo "string";
+					echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
 			}
 		}
 	}
