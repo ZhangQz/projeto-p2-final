@@ -131,9 +131,9 @@
             </div>
         </header>
         <main class="row">
-        	<?php 
-        		require_once ('slideshow.inc.php');
-        		require_once ('ultimasInf.inc.php');
+        	<?php
+        		require_once ('views/noticia/slideshow.inc.php');
+        		require_once ('views/noticia/ultimasInf.inc.php');
         	?>
         </main>
         <footer class="row">

@@ -84,25 +84,23 @@
 
             <?php
             include("Grelha_segunda.inc.php");
-            ?>s
+            ?>
 
             <div class="col_4 container_segunda">
-              <?php
+              <?
                 $grelhas = $controller->getAllGrelhas();
 
                 foreach ($grelhas as $grelha) {
-                  $menus = $controller->getGrelhasLocutor($grelhas['id_locutor']);
-                  $comidas = $controller->getGrelhasProgramas($grelhas['id_programa']);
+                  $lucutor = $controller->getGrelhasLocutor($grelhas['id_locutor']);
+                  $programa = $controller->getGrelhasProgramas($grelhas['id_programa']);
               ?>
                 <div class="container_x">
-                    <h2>Diária de Hoje</h2>
                     <?php foreach ($grelhas as $index => $grelha) { ?>
-                    <h4>Prato <?=($index + 1)?></h4>
-                      <p><?=$programa['id_programa']?></p>
+                    <?=($index + 1)?>
+                    <?=$programa['id_programa']?>
                     <?php } ?>
-                    <h4>Produtos</h4>
                     <?php foreach ($comidas as $index => $comida) { ?>
-                      <p><?=$comida['id_locutor']?></p>
+                    <?=$locutor['id_locutor']?>
                     <?php } ?>
                     <br>
                     <form action="">
