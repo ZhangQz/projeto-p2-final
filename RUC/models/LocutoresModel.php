@@ -13,7 +13,7 @@
 				$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 			} catch (Exception $e) {
-				echo "Ocorreu um erro com a ligação ao servidor... [ERROR: ".$e->getMessage()."]";
+				echo "Ocorreu um erro com a  ligação ao servidor... [ERROR: ".$e->getMessage()."]";
 			}
 		}
 
@@ -29,7 +29,7 @@
 			}
 		}
 
-		public function LocName()
+		public function LocName($nome)
 		{
 			try
 			{
