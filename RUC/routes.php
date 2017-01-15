@@ -2,9 +2,9 @@
 
   $routes = array(
     "Registo" => array(
-      "model_file" => 'RegistoLoginModel.php',
-      "controller_file" => 'RegistoLoginControl.php',
-      "view_file" => 'RegistoLoginView.php'
+      "model_file" => 'AdereLoginModel.php',
+      "controller_file" => 'AdereLoginControl.php',
+      "view_file" => 'AdereLoginView.php'
     )
   );
 

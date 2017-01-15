@@ -1,7 +1,6 @@
 <?php
 	require_once('database.php');
 	require_once('routes.php');
-	require_once('handle.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +38,7 @@
                             <span class="inform">Informação</span>
                             <div class="info-content">
                                 <a class="ultimas" href="index.php?op=1">Últimas</a>
-                                <a class="universidade" href="index.php?op=2">Universidade</a> 
+                                <a class="universidade" href="index.php?op=2">Universidade</a>
                                 <a class="cultura" href="index.php?op=3">Cultura</a>
                                 <a class="desporto" href="index.pshp?op=4">Desporto</a>
                                 <a class="coimbra" href="index.php?op=5">Coimbra</a>
@@ -168,7 +167,7 @@
                     <div>
                         <p class="ultimastitulo">Últimas Notícias <a class="traco">-</a> <a>Informação</a></p>
                     </div>
-                                              <?php 
+                                              <?php
                                 strSQL = "SELECT noticia.titulo, noticia.artigo, noticia-data_noticia, noticia.extra, noticia.idcategoria, autor.idautor, categoria.idcategoria
 								FROM categoria, noticia, autor
 								WHERE noticia.idcategoria=categoria.idcategoria
@@ -195,6 +194,15 @@
                         </div>
                     </div>
                 </div>
+								<div class="col_3">
+									<div class="grelha">
+										<?php if (!isset $_SESSION('user')){
+											include('Grelha_segunda.inc.php');
+												
+											})
+										?>
+									</div>
+								</div>
                 <div class="col_2 colt_1"></div>
             </section>
         </main>
