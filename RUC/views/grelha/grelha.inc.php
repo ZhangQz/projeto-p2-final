@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <link rel="stylesheet" href="css/stylepage.css" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script> </script>
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <meta name="description" content="">
-        <meta title="RUC">
-    </head>
-    <body>
-        <main class="row">
+
             <div class="row ploco">
                 <div class="filtro"></div>
                 <video muted autoplay loop id="pvid" alt="video apresentação">
