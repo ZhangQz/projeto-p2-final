@@ -8,6 +8,8 @@ $(document).ready(function () {
         $(".info-content").hide();
     });*/
    /* $("#seg, #ter, #qua, #qui, #sex, #sab, #dom").hide();*/
+    $(".log_in").hide();
+
     $("#slideshow > div:gt(0)").hide();
     setInterval(function () {
         $('#slideshow > div:first')

@@ -103,7 +103,7 @@
 														$controller = new RegistoControl($model);
 														$view = new RegistoView($controller);
 													}
-														$data = $view->criaProduto();
+														$data = $view->Login_view();
 														include($data[0]);
 												?>
 										<?php if( isset($_SESSION['user']) ){ ?>
