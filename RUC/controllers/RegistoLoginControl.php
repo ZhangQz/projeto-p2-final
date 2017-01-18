@@ -1,6 +1,6 @@
 <?php
 
-class AderlogControl
+class RegistoControl
 {
 	private $model;
 
@@ -14,7 +14,7 @@ class AderlogControl
 		$dados = Array(
 			"nome" => $_REQUEST['nome'],
 			"email" => $_REQUEST['email'],
-			"pass" => $_REQUEST['password']
+			"password" => $_REQUEST['password']
 		);
 		if ($this->model->createUser($dados))
 			return 1;

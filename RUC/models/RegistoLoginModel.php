@@ -23,8 +23,8 @@
 			{
 				$password = $dados[pass];
 
-			    return  $this->db->query("INSERT INTO $this->tabela (nome, email, pass, num_est, tipo)
-			    						  VALUES('{$dados[nome]}', '{$dados[email]}', '{$password}', '{$dados[tipo]}')");
+			    return  $this->db->query("INSERT INTO $this->tabela (nome, password, email)
+			    						  VALUES('{$dados[nome]}', '{$dados[password]}', '{$dados[email]}')");
 
 			} catch(PDOException $e) {
 			    echo "Ocorreu um erro a aderir... [ERROR: ".$e->getMessage()."]";
@@ -36,7 +36,7 @@
 			{
 				$stml = $this->db->prepare("SELECT iduser,nome,email,pass FROM $this->tabela WHERE email = :email AND pass = :pass");
 				$stml->bindParam(':email', $dados['email'], PDO::PARAM_STR);
-				$stml->bindParam(':pass', $dados['pass'], PDO::PARAM_STR);
+				$stml->bindParam(':password', $dados['password'], PDO::PARAM_STR);
 				$stml->execute();
 				return $stml->fetch(PDO::FETCH_ASSOC);
 			} catch(PDOException $e) {

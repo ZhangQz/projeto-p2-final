@@ -16,7 +16,7 @@ class RegistoView
 
 	public function criaRegisto()
 	{
-		return array('views/users/Aderuc_create.inc.php');
+		return array('views/users/Registo_create.inc.php');
 	}
 
 	public function insereUser($dados)

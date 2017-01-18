@@ -1,6 +1,9 @@
 <?php
 	require_once('database.php');
-	require_once('routes.php');
+	//Login_Registo
+	require_once('views/RegistoLoginView.php');
+	require_once('controllers/RegistoLoginControl.php');
+	require_once('models/RegistoLoginModel.php');
 ?>
 
 <!DOCTYPE html>
@@ -93,30 +96,9 @@
                     <div class="loggedin">
                         <a class="login">login</a>
                     </div>
-                    <div class="log_in_cont">
-                        <div class="sign_in" id="sign_in">
-                            <img src="assets/Images/cross-24-512.png" class="exit">
-                            <form class="sign_form">
-                                <label>Email</label>
-                                <input type="text" name="e-mail" placeholder="convidado@ruc.pt" class="sign_email">
-                                <label>Palavra Passe</label>
-                                <input type="password" name="password" placeholder="*****" class="sign_password">
-                                <label>Confirmar <br>Palavra Passe</label>
-                                <input type="password" name="password" placeholder="*****" class="sign_confirm">
-                                <input type="submit" name="Submeter" value="Entrar" class="sign_submit">
-                            </form>
-                        </div>
-                        <div class="log_in">
-                            <form class="log_form">
-                                <label>Email</label>
-                                <input type="text" name="Email" placeholder="user@ruc.pt" class="log_email">
-                                <label>Password</label>
-                                <input type="password" name="password" placeholder="*****" class="log_password">
-                                <input type="submit" name="Entrar" value="Entrar" class="log_submit">
-                                <input class="acesso" name="subscribe" value="Aderuc-te">
-                            </form>
-                        </div>
-                    </div>
+												<?php
+												
+												?>
 										<?php if( isset($_SESSION['user']) ){ ?>
                     <div class="loggedout">
                         <img src="assets/Images/user_icon.png" alt="user icon" class="user_icon">
@@ -126,7 +108,9 @@
                         <p class="entrar_gestor">Entrar no Gestor</p>
                         <p class="log_out">Log out</p>
                     </div>
-										<?php } ?>
+										<?php
+									}
+									?>
                 </div>
             </div>
         </header>
