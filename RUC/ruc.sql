@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.3.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jan-2017 às 23:06
--- Versão do servidor: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: 17-Jan-2017 às 20:45
+-- Versão do servidor: 5.6.22
+-- PHP Version: 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `ruc`
@@ -26,10 +26,10 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `aluguer`
 --
 
-CREATE TABLE `aluguer` (
+CREATE TABLE IF NOT EXISTS `aluguer` (
   `idcliente` int(11) NOT NULL,
-  `idequipamento` int(11) NOT NULL DEFAULT '0',
-  `idkit` int(11) NOT NULL DEFAULT '0',
+  `idequipamento` int(11) DEFAULT '0',
+  `idkit` int(11) DEFAULT '0',
   `data_inicio` varchar(100) DEFAULT NULL,
   `data_fim` varchar(100) DEFAULT NULL,
   `preço_total` varchar(100) DEFAULT NULL
@@ -41,7 +41,7 @@ CREATE TABLE `aluguer` (
 -- Estrutura da tabela `autor`
 --
 
-CREATE TABLE `autor` (
+CREATE TABLE IF NOT EXISTS `autor` (
   `idautor` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -69,7 +69,7 @@ INSERT INTO `autor` (`idautor`, `nome`) VALUES
 -- Estrutura da tabela `categoria`
 --
 
-CREATE TABLE `categoria` (
+CREATE TABLE IF NOT EXISTS `categoria` (
   `idcategoria` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -94,7 +94,7 @@ INSERT INTO `categoria` (`idcategoria`, `nome`) VALUES
 -- Estrutura da tabela `categoria_noticia`
 --
 
-CREATE TABLE `categoria_noticia` (
+CREATE TABLE IF NOT EXISTS `categoria_noticia` (
   `idcategoria` int(11) NOT NULL,
   `idnoticia` int(11) NOT NULL,
   `idautor` int(11) NOT NULL
@@ -103,10 +103,10 @@ CREATE TABLE `categoria_noticia` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `clientes`
+-- Estrutura da tabela `cliente`
 --
 
-CREATE TABLE `clientes` (
+CREATE TABLE IF NOT EXISTS `cliente` (
   `idcliente` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -117,7 +117,7 @@ CREATE TABLE `clientes` (
 -- Estrutura da tabela `dia`
 --
 
-CREATE TABLE `dia` (
+CREATE TABLE IF NOT EXISTS `dia` (
   `iddia` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -141,7 +141,7 @@ INSERT INTO `dia` (`iddia`, `nome`) VALUES
 -- Estrutura da tabela `equipamento`
 --
 
-CREATE TABLE `equipamento` (
+CREATE TABLE IF NOT EXISTS `equipamento` (
   `idequipamento` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -181,7 +181,7 @@ INSERT INTO `equipamento` (`idequipamento`, `nome`, `descricao`, `marca`, `quant
 -- Estrutura da tabela `equipamento_kit`
 --
 
-CREATE TABLE `equipamento_kit` (
+CREATE TABLE IF NOT EXISTS `equipamento_kit` (
   `idequipamento` int(11) NOT NULL,
   `idkit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -192,50 +192,23 @@ CREATE TABLE `equipamento_kit` (
 -- Estrutura da tabela `grelha`
 --
 
-CREATE TABLE `grelha` (
-  `id_grelha` int(11) NOT NULL,
-  `nome` varchar(100) CHARACTER SET latin1 NOT NULL,
+CREATE TABLE IF NOT EXISTS `grelha` (
+  `idgrelha` int(11) DEFAULT NULL,
+  `nome` varchar(255) NOT NULL,
   `data_inicio` date NOT NULL,
-  `data_fim` date NOT NULL,
-  `id_dia` int(11) NOT NULL,
-  `id_programa` int(11) NOT NULL,
-  `id_locutor` int(11) NOT NULL
+  `data_fim` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `grelha_dia`
+-- Estrutura da tabela `grelhageral`
 --
 
-CREATE TABLE `grelha_dia` (
-  `grelha_rel_dia` int(11) NOT NULL,
-  `id_grelha` int(11) DEFAULT NULL,
-  `id_dia` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `grelha_locutor`
---
-
-CREATE TABLE `grelha_locutor` (
-  `id_rel_grelha_locutor` int(11) NOT NULL,
-  `id_grelha` int(11) DEFAULT NULL,
-  `id_locutor` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `grelha_programa`
---
-
-CREATE TABLE `grelha_programa` (
-  `id_rel_grelha_programa` int(11) NOT NULL,
-  `id_grelha` int(11) DEFAULT NULL,
-  `id_programa` int(11) DEFAULT NULL
+CREATE TABLE IF NOT EXISTS `grelhageral` (
+  `idgrelha` int(11) NOT NULL,
+  `iddia` int(11) NOT NULL,
+  `idprograma` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -244,7 +217,7 @@ CREATE TABLE `grelha_programa` (
 -- Estrutura da tabela `kit`
 --
 
-CREATE TABLE `kit` (
+CREATE TABLE IF NOT EXISTS `kit` (
   `idkit` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -257,7 +230,7 @@ CREATE TABLE `kit` (
 -- Estrutura da tabela `locutor`
 --
 
-CREATE TABLE `locutor` (
+CREATE TABLE IF NOT EXISTS `locutor` (
   `idlocutor` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -357,7 +330,7 @@ INSERT INTO `locutor` (`idlocutor`, `nome`) VALUES
 -- Estrutura da tabela `noticia`
 --
 
-CREATE TABLE `noticia` (
+CREATE TABLE IF NOT EXISTS `noticia` (
   `idnoticia` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `artigo` varchar(500) NOT NULL,
@@ -370,7 +343,7 @@ CREATE TABLE `noticia` (
 -- Estrutura da tabela `noticia_autor`
 --
 
-CREATE TABLE `noticia_autor` (
+CREATE TABLE IF NOT EXISTS `noticia_autor` (
   `idnoticia` int(11) NOT NULL,
   `idautor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -381,7 +354,7 @@ CREATE TABLE `noticia_autor` (
 -- Estrutura da tabela `produção`
 --
 
-CREATE TABLE `produção` (
+CREATE TABLE IF NOT EXISTS `produção` (
   `idprodução` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -396,7 +369,7 @@ CREATE TABLE `produção` (
 -- Estrutura da tabela `programa`
 --
 
-CREATE TABLE `programa` (
+CREATE TABLE IF NOT EXISTS `programa` (
   `idprograma` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -497,7 +470,7 @@ INSERT INTO `programa` (`idprograma`, `nome`, `descricao`, `link`, `horario`) VA
 -- Estrutura da tabela `programa_locutor`
 --
 
-CREATE TABLE `programa_locutor` (
+CREATE TABLE IF NOT EXISTS `programa_locutor` (
   `idprograma` int(11) NOT NULL,
   `idlocutor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -505,10 +478,10 @@ CREATE TABLE `programa_locutor` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `user`
+-- Estrutura da tabela `users`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `users` (
   `iduser` int(11) NOT NULL,
   `nome` varchar(255) CHARACTER SET latin1 NOT NULL,
   `password` varchar(100) CHARACTER SET latin1 NOT NULL,
@@ -520,261 +493,10 @@ CREATE TABLE `user` (
 --
 
 --
--- Indexes for table `aluguer`
+-- Indexes for table `grelhageral`
 --
-ALTER TABLE `aluguer`
-  ADD PRIMARY KEY (`idcliente`,`idequipamento`,`idkit`),
-  ADD KEY `idequipamento` (`idequipamento`),
-  ADD KEY `idkit` (`idkit`);
-
---
--- Indexes for table `autor`
---
-ALTER TABLE `autor`
-  ADD PRIMARY KEY (`idautor`);
-
---
--- Indexes for table `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`idcategoria`);
-
---
--- Indexes for table `categoria_noticia`
---
-ALTER TABLE `categoria_noticia`
-  ADD PRIMARY KEY (`idcategoria`,`idnoticia`),
-  ADD KEY `idautor` (`idautor`),
-  ADD KEY `idnoticia` (`idnoticia`);
-
---
--- Indexes for table `clientes`
---
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`idcliente`);
-
---
--- Indexes for table `dia`
---
-ALTER TABLE `dia`
-  ADD PRIMARY KEY (`iddia`);
-
---
--- Indexes for table `equipamento`
---
-ALTER TABLE `equipamento`
-  ADD PRIMARY KEY (`idequipamento`);
-
---
--- Indexes for table `equipamento_kit`
---
-ALTER TABLE `equipamento_kit`
-  ADD PRIMARY KEY (`idequipamento`,`idkit`),
-  ADD KEY `idkit` (`idkit`);
-
---
--- Indexes for table `grelha`
---
-ALTER TABLE `grelha`
-  ADD PRIMARY KEY (`id_grelha`),
-  ADD KEY `idlocutor` (`id_locutor`),
-  ADD KEY `idprograma` (`id_programa`),
-  ADD KEY `iddia` (`id_dia`);
-
---
--- Indexes for table `grelha_dia`
---
-ALTER TABLE `grelha_dia`
-  ADD PRIMARY KEY (`grelha_rel_dia`);
-
---
--- Indexes for table `grelha_locutor`
---
-ALTER TABLE `grelha_locutor`
-  ADD PRIMARY KEY (`id_rel_grelha_locutor`);
-
---
--- Indexes for table `grelha_programa`
---
-ALTER TABLE `grelha_programa`
-  ADD PRIMARY KEY (`id_rel_grelha_programa`);
-
---
--- Indexes for table `kit`
---
-ALTER TABLE `kit`
-  ADD PRIMARY KEY (`idkit`);
-
---
--- Indexes for table `locutor`
---
-ALTER TABLE `locutor`
-  ADD PRIMARY KEY (`idlocutor`);
-
---
--- Indexes for table `noticia`
---
-ALTER TABLE `noticia`
-  ADD PRIMARY KEY (`idnoticia`);
-
---
--- Indexes for table `noticia_autor`
---
-ALTER TABLE `noticia_autor`
-  ADD PRIMARY KEY (`idnoticia`),
-  ADD KEY `idautor` (`idautor`);
-
---
--- Indexes for table `produção`
---
-ALTER TABLE `produção`
-  ADD PRIMARY KEY (`idprodução`),
-  ADD KEY `idequipamento` (`idequipamento`);
-
---
--- Indexes for table `programa`
---
-ALTER TABLE `programa`
-  ADD PRIMARY KEY (`idprograma`);
-
---
--- Indexes for table `programa_locutor`
---
-ALTER TABLE `programa_locutor`
-  ADD PRIMARY KEY (`idprograma`,`idlocutor`),
-  ADD KEY `idlocutor` (`idlocutor`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`iduser`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `autor`
---
-ALTER TABLE `autor`
-  MODIFY `idautor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `categoria`
---
-ALTER TABLE `categoria`
-  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `categoria_noticia`
---
-ALTER TABLE `categoria_noticia`
-  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `clientes`
---
-ALTER TABLE `clientes`
-  MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `dia`
---
-ALTER TABLE `dia`
-  MODIFY `iddia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `equipamento`
---
-ALTER TABLE `equipamento`
-  MODIFY `idequipamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT for table `equipamento_kit`
---
-ALTER TABLE `equipamento_kit`
-  MODIFY `idequipamento` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `grelha_dia`
---
-ALTER TABLE `grelha_dia`
-  MODIFY `grelha_rel_dia` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `grelha_locutor`
---
-ALTER TABLE `grelha_locutor`
-  MODIFY `id_rel_grelha_locutor` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `grelha_programa`
---
-ALTER TABLE `grelha_programa`
-  MODIFY `id_rel_grelha_programa` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `kit`
---
-ALTER TABLE `kit`
-  MODIFY `idkit` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `locutor`
---
-ALTER TABLE `locutor`
-  MODIFY `idlocutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
---
--- AUTO_INCREMENT for table `noticia`
---
-ALTER TABLE `noticia`
-  MODIFY `idnoticia` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `produção`
---
-ALTER TABLE `produção`
-  MODIFY `idprodução` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `programa`
---
-ALTER TABLE `programa`
-  MODIFY `idprograma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
---
--- AUTO_INCREMENT for table `programa_locutor`
---
-ALTER TABLE `programa_locutor`
-  MODIFY `idprograma` int(11) NOT NULL AUTO_INCREMENT;
---
--- Constraints for dumped tables
---
-
---
--- Limitadores para a tabela `aluguer`
---
-ALTER TABLE `aluguer`
-  ADD CONSTRAINT `aluguer_ibfk_1` FOREIGN KEY (`idcliente`) REFERENCES `clientes` (`idcliente`),
-  ADD CONSTRAINT `aluguer_ibfk_2` FOREIGN KEY (`idequipamento`) REFERENCES `equipamento` (`idequipamento`),
-  ADD CONSTRAINT `aluguer_ibfk_3` FOREIGN KEY (`idkit`) REFERENCES `kit` (`idkit`);
-
---
--- Limitadores para a tabela `categoria_noticia`
---
-ALTER TABLE `categoria_noticia`
-  ADD CONSTRAINT `categoria_noticia_ibfk_1` FOREIGN KEY (`idautor`) REFERENCES `autor` (`idautor`),
-  ADD CONSTRAINT `categoria_noticia_ibfk_2` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`),
-  ADD CONSTRAINT `categoria_noticia_ibfk_3` FOREIGN KEY (`idnoticia`) REFERENCES `noticia` (`idnoticia`);
-
---
--- Limitadores para a tabela `equipamento_kit`
---
-ALTER TABLE `equipamento_kit`
-  ADD CONSTRAINT `equipamento_kit_ibfk_1` FOREIGN KEY (`idequipamento`) REFERENCES `equipamento` (`idequipamento`),
-  ADD CONSTRAINT `equipamento_kit_ibfk_2` FOREIGN KEY (`idkit`) REFERENCES `kit` (`idkit`);
-
---
--- Limitadores para a tabela `grelha`
---
-ALTER TABLE `grelha`
-  ADD CONSTRAINT `grelha_ibfk_1` FOREIGN KEY (`id_dia`) REFERENCES `dia` (`iddia`),
-  ADD CONSTRAINT `grelha_ibfk_2` FOREIGN KEY (`id_programa`) REFERENCES `programa` (`idprograma`),
-  ADD CONSTRAINT `grelha_ibfk_3` FOREIGN KEY (`id_locutor`) REFERENCES `locutor` (`idlocutor`);
-
---
--- Limitadores para a tabela `programa_locutor`
---
-ALTER TABLE `programa_locutor`
-  ADD CONSTRAINT `programa_locutor_ibfk_1` FOREIGN KEY (`idprograma`) REFERENCES `programa` (`idprograma`),
-  ADD CONSTRAINT `programa_locutor_ibfk_2` FOREIGN KEY (`idlocutor`) REFERENCES `locutor` (`idlocutor`);
+ALTER TABLE `grelhageral`
+ ADD PRIMARY KEY (`idgrelha`,`iddia`,`idprograma`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

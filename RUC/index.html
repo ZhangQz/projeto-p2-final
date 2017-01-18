@@ -168,7 +168,35 @@
                         </div>
                         <div class="new_content_">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
-                            <p>Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. When other websites give you text, they’re not sending the best. They’re not sending you, they’re sending words that have lots of problems and they’re bringing those problems with us. They’re bringing mistakes. They’re bringing misspellings. They’re typists… And some, I assume, are good wo</p>
+                            <p><h1>Adicionar notícia</h1>
+
+<?php
+    if (isset($_REQUEST['título']) && isset($_REQUEST['artigo']) && isset($_REQUEST['extra']))
+        {
+            if ($view->insereDado(array('titulo' => $_REQUEST['titulo'], 'artigo' => $_REQUEST['artigo'], 'extra' => $REQUEST['extra'])))
+  
+   	{ echo "<div class>A tua notícia já está na RUC!</div>"; 
+ } else { 
+ 	echo "<div> Mau Jornalismo!!! Erro com a notícia</div>";
+ }
+}
+?>
+
+<form method="POST">
+    <div class="">
+        <label for="titulo" class="">Título:</label>
+        <input type="text" id="titulo" name="titulo" class="" required>
+    </div>
+    <div class="">
+        <label for="artigo" class="">Artigo:</label>
+        <input type="text" id="artigo" name="artigo" class="" required>
+    </div>
+     <div class="">
+        <label for="extra" class="">Extras:</label>
+        <input type="text" id="extra" name="extra" class="" required>
+    </div>
+    <input type="submit" value="RUC e Segue" class="btn btn-primary">
+</form></p>
                         </div>
                         <div class="new_content_1">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
