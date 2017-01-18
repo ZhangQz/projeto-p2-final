@@ -97,7 +97,14 @@
                         <a class="login">login</a>
                     </div>
 												<?php
-												
+													if (!isset($model) || !isset($controller) || !isset($view))
+													{
+														$model = new Registo($conn);
+														$controller = new RegistoControl($model);
+														$view = new RegistoView($controller);
+													}
+														$data = $view->criaProduto();
+														include($data[0]);
 												?>
 										<?php if( isset($_SESSION['user']) ){ ?>
                     <div class="loggedout">

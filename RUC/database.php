@@ -2,10 +2,10 @@
 $server = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'ruc';
+$db = 'ruc';
 
 try {
-	$conn = new PDO("mysql:host=$server;dbname=$database", $username, $password);
+	$conn = new PDO("mysql:host=$server;dbname=$db", $username, $password);
 } catch (PDOException $e) {
 	die( "Connection failed: " . $e->getMessage());
 }
