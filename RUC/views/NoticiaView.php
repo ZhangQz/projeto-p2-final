@@ -19,7 +19,13 @@ class NoticiaView
 	public function atualizaAutor() {
 		return array('views/noticia/editAutor.inc.php');
 	}
-	public  function criaCategoria() {
+	public function criaCategoria() {
 		return array('views/noticia/createCategoria.inc.php');
+	}
+	public function verCronica() {
+		return array('views/noticia/slideshow.inc.php');
+	}
+	public function verUltimasIndex(){
+		return array('views/noticia/UltimasInf.inc.php');
 	}
 }

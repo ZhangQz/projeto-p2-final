@@ -7,7 +7,7 @@
       "view_file" => 'AdereLoginView.php'
     ),
     "Grelha" => array(
-      "model_file" => 'GrelhaModel.php',
+      "model_file" => 'Grelha.php',
       "controller_file" => 'GrelhaControl.php',
       "view_file" => 'GrelhaView.php'
     )

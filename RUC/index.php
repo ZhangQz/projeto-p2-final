@@ -3,7 +3,7 @@
 	//Login_Registo
 	require_once('views/RegistoLoginView.php');
 	require_once('controllers/RegistoLoginControl.php');
-	require_once('models/RegistoLoginModel.php');
+	require_once('models/RegistoLogin.php');
     //Grelha
     require_once('views/GrelhaView.php');
     require_once('controllers/GrelhaControl.php');
@@ -11,7 +11,7 @@
     //Noticia
     require_once('views/NoticiaView.php');
     require_once('controllers/NoticiaControl.php');
-    require_once('models/NoticiaModel.php');
+    require_once('models/Noticia.php');
 ?>
 
 <!DOCTYPE html>
@@ -114,19 +114,25 @@
 														$data = $view->Login_view();
 														include($data[0]);
 												?>
-										<?php if( isset($_SESSION['user']) ){ ?>
+                    <?php if( isset($_SESSION['user']) )
+                    {
 
-										<?php
-									}
-									?>
+                    }
+                    ?>
                 </div>
             </div>
         </header>
         <main class="row">
-        	<?php
-        		require_once ('views/noticia/slideshow.inc.php');
-        		require_once ('views/noticia/ultimasInf.inc.php');
-        	?>
+            <?php
+                if (!isset($model) || !isset($controller) || !isset($view))
+                {
+                    $model = new Noticia($conn);
+                    $controller = new NoticiaControl($model);
+                    $view = new NoticiaView($controller);
+                }
+                $data = $view->verCronica();
+                 include($data[0]);
+            ?>
         </main>
         <footer class="row">
             <div class="row">
