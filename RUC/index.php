@@ -1,9 +1,17 @@
 <?php
-	require_once('database.php');
+	require_once('db.php');
 	//Login_Registo
 	require_once('views/RegistoLoginView.php');
 	require_once('controllers/RegistoLoginControl.php');
 	require_once('models/RegistoLoginModel.php');
+    //Grelha
+    require_once('views/GrelhaView.php');
+    require_once('controllers/GrelhaControl.php');
+    require_once('models/Grelha.php');
+    //Noticia
+    require_once('views/NoticiaView.php');
+    require_once('controllers/NoticiaControl.php');
+    require_once('models/NoticiaModel.php');
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +62,7 @@
                         <div class="progd">
                             <span class="programa">Programação</span>
                             <div class="prog-content">
-                                <a class="grelha" href="index.php?op=8">Grelha Regular 16/17</a>
+                                <a class="grelham" href="index.php?op=8">Grelha Regular 16/17</a>
                                 <a class="programas" href="index.php?op=9">Programas</a>
                                 <a class="cronicas" href="index.php?op=10">Crónicas</a>
                             </div>
@@ -107,14 +115,7 @@
 														include($data[0]);
 												?>
 										<?php if( isset($_SESSION['user']) ){ ?>
-                    <div class="loggedout">
-                        <img src="assets/Images/user_icon.png" alt="user icon" class="user_icon">
-                    </div>
-                    <div class="user_cont">
-                        <p class="bem_vindo">Bem vindo Francisco!</p>
-                        <p class="entrar_gestor">Entrar no Gestor</p>
-                        <p class="log_out">Log out</p>
-                    </div>
+
 										<?php
 									}
 									?>
@@ -125,7 +126,6 @@
         	<?php
         		require_once ('views/noticia/slideshow.inc.php');
         		require_once ('views/noticia/ultimasInf.inc.php');
-                
         	?>
         </main>
         <footer class="row">

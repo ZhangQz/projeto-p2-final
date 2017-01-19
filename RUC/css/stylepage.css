@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
-* { 
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
 }
 
@@ -23,7 +23,7 @@ html, body{
 .row:before, .row:after {
     content: "";
     clear: both;
-    display: block;    
+    display: block;
 }
 
 body{
@@ -44,7 +44,7 @@ main{
 }
 
 .logod{
-    display: inline-block;  
+    display: inline-block;
 }
 .logo{
     margin-top: 10%;
@@ -82,7 +82,7 @@ nav a{
 nav a:hover{
     color: #e32436;
     cursor:pointer;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .infod, .progd, .tecnd, .cursosd{
@@ -105,7 +105,7 @@ nav a:hover{
     padding: 2%;
     margin-top: 5%;
     border: 2px solid black;
-    border-radius: 100%;  
+    border-radius: 100%;
 }
 
 .user_icon:hover{
@@ -151,7 +151,6 @@ nav a:hover{
     position: relative;
     text-align: left;
     left: 0;
-    display: none;
 }
 
 .loggedout p{
@@ -176,9 +175,6 @@ nav a:hover{
     font-family: Verdana, geneva, "sans-serif";
 }
 
-.log_in_cont{
-    display: none;
-}
 
 .exit{
     width: 15%;
@@ -261,7 +257,7 @@ nav a:hover{
     font-family: verdana, geneva, "sans-serif";
     font-weight: bold;
     margin: 5%;
-    
+
 }
 
 .ligar{
@@ -294,7 +290,7 @@ nav a:hover{
 
 .titulo{
     text-align: center;
-    position: relative; 
+    position: relative;
 }
 
 .filtro{
@@ -306,14 +302,14 @@ nav a:hover{
     font-size: 2em;
     font-family: verdana, geneva, "sans-serif";
     color: white;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 .centoesete{
     color: #e32437
 }
 
-video#pvid { 
+video#pvid {
     top: 50%;
     left: 50%;
     position:fixed;
@@ -323,7 +319,7 @@ video#pvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 
 header{
@@ -335,8 +331,8 @@ header{
 }
 
 .gradiend{
-    background-color:#0f0f0f; 
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, 
+    background-color:#0f0f0f;
+    -webkit-mask-image: -webkit-gradient(linear, left bottom,
     left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     height: 15vh;
 }
@@ -356,6 +352,19 @@ header{
     position: relative;
 }
 
+#slideshow p{
+    position: absolute;
+    padding: 2%;
+    background-color:
+    bottom: 10%;
+    left: 5%;
+    font-family: Verdana, Geneva, "sans-serif";
+    color:white;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
 .bacanal, .bacanal_, .bacanal_1{
     position: absolute;
     width: 100%;
@@ -366,7 +375,7 @@ header{
     filter: saturate(100%);
     transition: 2s;
 }
-    
+
 
 .ulinf{
     background-color: #0f0f0f;
@@ -388,7 +397,7 @@ header{
 .fb_feed iframe{
     width: 100%;
     height: 100%;
-    
+
 }
 
 .ultimastitulo, .grelhap{
@@ -482,7 +491,7 @@ header{
 }
 
 .logo_fb:hover{
-    background-color:#3b5998;   
+    background-color:#3b5998;
     cursor: pointer;
 }
 
@@ -679,7 +688,7 @@ footer{
 }
 
 .seg_autor{
-    width: 30%; 
+    width: 30%;
 }
 
 .seg_hora{
@@ -778,7 +787,7 @@ select option{
 }
 
 @media screen and (min-width: 991px) {
-    
+
     .col_1 {width: 8.33%;}
     .col_2 {width: 16.66%;}
     .col_3 {width: 25%;}
@@ -791,17 +800,17 @@ select option{
     .col_10 {width: 83.33%;}
     .col_11 {width: 91.66%;}
     .col_12 {width: 100%;}
-    
+
     [class*="col_"]:first-child {margin-left: 0;}
     [class*="col_"]:last-child {margin-right: 0;}
 
     [class*="col_"] {float:left;}
-    
-    
+
+
     .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
         position: absolute;
     }
-    
+
 
     .icon_ham, .cross{
         display: none;
@@ -837,14 +846,14 @@ select option{
         display: block;
     }
 
-    
+
 }
 
 /* Estilo Backoffice */
 
 ._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
     position: relative;
-   
+
     padding-right: 2%;
 }
 
@@ -860,7 +869,7 @@ _nav{
 _nav a:hover{
     color: #e32436;
     cursor:pointer;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 ._infod, ._progd, ._tecnd, ._cursosd, ._rucd{
@@ -888,7 +897,7 @@ _nav a:hover{
 
 
 @media screen and (min-width: 480px) and (max-width: 990px) {
-    
+
     .colt_1 {width: calc(11.1%);}
     .colt_2 {width: calc(23.8%);}
     .colt_3 {width: calc(36.5%);}
@@ -898,20 +907,20 @@ _nav a:hover{
     .colt_7 {width: calc(87.3%);}
     .colt_8 {width: calc(100%);}
 
-    
+
     [class*="colt_"]:first-child {margin-left: 0;}
     [class*="colt_"]:last-child {margin-right: 0;}
 
     [class*="colt_"] {float:left;}
-    
+
     video#pvid{
         top: 25%;
     }
-    
+
     .ploco{
         height: 25em;
     }
-    
+
     nav{
         height: 100vh;
         overflow: auto;
@@ -924,31 +933,31 @@ _nav a:hover{
         font-weight: bold;
         margin-top: 7.7%;
     }
-    
+
     .info-content a{
         padding-top: 1%;
     }
-    
+
     .prog-content a{
         padding-top: 1%;
     }
-    
+
     .tecn-content a{
         padding-top: 1%;
     }
-    
+
     .cursos-content a{
         padding-top: 1%;
     }
-    
+
     .ruc-content a{
         padding-top: 1%;
-    }   
-    
+    }
+
     .social{
         margin-bottom: 0;
     }
-    
+
     .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
         box-shadow: none;
         font-size: 0.8em;
@@ -956,23 +965,23 @@ _nav a:hover{
         text-align: center;
         margin-left: 2%;
     }
-    
+
     .icon_ham, .cross{
         display: inline-block;
         width: 35px;
     }
-    
+
     .icon_ham{
         margin-top: 15%;
         margin-left: 20%;
     }
-    
+
     .cross{
         position: absolute;
         margin-top: 1.5%;
         margin-left: 2%;
     }
-    
+
     nav a{
         width: 100%;
         display: inline-block;
@@ -980,75 +989,75 @@ _nav a:hover{
         font-size: 1em;
         text-align: left;
     }
-    
+
     .infod, .progd, .tecnd, .cursosd{
         border-right: 0px;
     }
-    
+
     .logod{
         position: relative;
         text-align: center;
     }
-    
+
     .logo{
         margin-top: 2%;
-    }    
-    
+    }
+
     .ultimastitulo, .grelhap{
         font-size: 1.2em;
     }
-    
+
     .preto_slide{
         min-height: 220px;
     }
-    
+
     #slideshow{
         height: auto;
         margin-top: 5%;
     }
-    
+
     .social img{
         width: 8%;
-        margin-bottom: 5%;  
+        margin-bottom: 5%;
     }
-    
+
     .radiouni{
         margin-top: 60%;
     }
-    
+
 }
 
 @media screen and (max-width: 480px) {
-    
+
     .colm_1 {width: calc(18.72%);}
     .colm_2 {width: calc(39.04%);}
     .colm_3 {width: calc(59.36%);}
     .colm_4 {width: calc(79.68%);}
     .colm_5 {width: calc(100%);}
-    
+
     [class*="colm_"]:first-child {margin-left: 0;}
     [class*="colm_"]:last-child {margin-right: 0;}
 
     [class*="colm_"] {float:left;}
-    
+
     video#pvid{
         top: 25%;
     }
-    
+
     .gradiend{
         height: 3vh;
-        
+
     }
-    
+
     .ploco{
         height: auto;
     }
-    
+
     .titulo{
         top: 0;
         font-size: 0.6em;
     }
-    
+
     nav{
         height: 100vh;
         overflow: auto;
@@ -1059,89 +1068,89 @@ _nav a:hover{
         opacity: 1;
         display: none;
     }
-    
+
     .info-content a{
         padding-top: 1%;
     }
-    
-    
+
+
     .prog-content a{
         padding-top: 1%;
     }
-    
+
     .tecn-content a{
         padding-top: 1%;
     }
-    
-    
+
+
     .cursos-content a{
         padding-top: 1%;
     }
-    
+
     .ruc-content a{
         padding-top: 1%;
-    }   
-    
+    }
+
     .social{
         margin-bottom: 0;
     }
-    
+
     .info-content, .prog-content, .tecn-content, .cursos-content, .ruc-content{
         box-shadow: none;
         font-size: 0.8em;
         text-align: center;
         margin-left: 2%;
     }
-    
+
     .icon_ham, .cross{
         display: inline-block;
         width: 35px;
     }
-    
+
     .icon_ham{
         margin-top: 20%;
         margin-left: 20%;
     }
-    
+
     .cross{
         position: absolute;
         margin-top: 4%;
         margin-left: 4%;
     }
-    
+
     nav a{
         display: inline-block;
         line-height: 2;
         font-size: 1em;
         text-align: left;
     }
-    
+
     .info, .rucd{
         padding-top: 5%;
     }
-    
+
     .infod, .progd, .tecnd, .cursosd{
         border-right: 0px;
         width: 100%;
     }
-    
+
     .logod{
         position: relative;
         text-align: center;
     }
-    
+
     .logo{
         margin-top: 3%;
     }
-    
+
     .emissao{
         margin-top: 6%;
     }
-    
+
     .traco{
         display: none;
     }
-    
+
     .ultimastitulo{
         text-align: center;
         line-height: 1.2;
@@ -1149,31 +1158,31 @@ _nav a:hover{
         margin-bottom: 5%;
         margin-top: 10%;
     }
-    
+
     .content_title{
         font-size: 1em;
     }
-    
+
     #slideshow{
         margin-left: 2.5%;
         width: 95vw;
         height: auto;
         margin-bottom: 30%;
     }
-    
+
     .widgets{
         margin-left: 4%;
         margin-right: 4%;
     }
-    
+
     .bacanal, .bacanal_, .bacanal_1{
         margin-top: 0;
     }
-    
+
     .new_content, .new_content_1, .new_content_{
         margin-left: 4%;
     }
-    
+
     .separador{
         width: 80%;
         margin-bottom: 10%;
@@ -1181,12 +1190,12 @@ _nav a:hover{
         margin-left: 10%;
         margin-right: 10%;
     }
-    
+
     .ler_mais{
         margin-left: 4%;
         margin-right: 4%;
     }
-    
+
     .fb_feed{
         display: none;
     }
