@@ -14,11 +14,6 @@ class RegistoView
 		return array('views/users/Login_create.inc.php');
 	}
 
-	public function Logout_view()
-	{
-		return array('views/users/log_out.inc.php');
-	}
-
 	public function Registo_view()
 	{
 		return array('views/users/Registo_create.inc.php');

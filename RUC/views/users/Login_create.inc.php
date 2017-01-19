@@ -16,6 +16,7 @@
         <input type="submit" name="Entrar" value="Entrar" class="log_submit">
         <input class="acesso" name="subscribe" value="Aderuc-te">
     </form>
+    <?php include($view->Registo_view()[0]); ?>
 </div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
