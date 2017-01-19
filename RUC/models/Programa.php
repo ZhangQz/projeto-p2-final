@@ -1,6 +1,6 @@
 <?php
 
-  class Programas
+  class Programa
   {
     protected $tabela = "programa";
     private $db;
@@ -18,16 +18,15 @@
 		}
 
     public function AllProg()
-    {
-      try
-      {
-        return $this->db->query("SELECT $this->tabela (idprograma, nome, descricao, link, horario)
-          VALUES('{$programa[idprograma]}', '{$programa[nome]}', '{$programa[descricao]}', '{$programa[link]}', '{$programa[horário]}')
-        ");
-      } catch (PDOException $e) {
-          echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
-      }
-    }
+	{
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor");
+		} catch(PDOException $e) {
+		    echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
+		}
+	}
+
 
     public function ProgName()
     {

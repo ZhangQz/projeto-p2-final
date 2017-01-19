@@ -33,7 +33,7 @@ class Grelha
 		    echo "<strong>Ups! Ocorreu um erro a registar user</strong>... [ERROR: ".$e->getMessage()."]";
 		}
 	}
-	public function getGrelha($id = null)
+	/*public function getGrelha($id = null)
 	{
 		try
 		{
@@ -51,24 +51,19 @@ class Grelha
 
 		} catch(PDOException $e) {
 			echo "<strong>Ups! Ocorreu um erro</strong>... [ERROR: ".$e->getMessage()."]";
-		}
-	}
+		}*/
+    
+    public function AllGrelha()
+    {
+        try
+        {
+            return $this->db->query("SELECT dia.*, programa.*, locutor.* FROM dia JOIN grelhageral ON dia.iddia = grelhageral.iddia JOIN programa ON grelhageral.idprograma = programa.idprograma JOIN locutor ON grelhageral.idlocutor = locutor.idlocutor");
+        } catch(PDOException $e) {
+        echo"<strong>Ups! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";}
+    }
 
-	public function getLocutores($id_locutor) {
-		$stml = $this->db->prepare("SELECT * FROM grelha_locutor WHERE id_grelha = '{$id_grelha}'");
-		$stml->execute();
-		$results = $stml->fetchAll(PDO::FETCH_ASSOC);
+	
 
-		return $results;
-	}
-
-	public function getProgramas($id_programa) {
-		$stml = $this->db->prepare("SELECT * FROM grelha_programa WHERE id_grelha = '{$id_grelha}'");
-		$stml->execute();
-		$results = $stml->fetchAll(PDO::FETCH_ASSOC);
-
-		return $results;
-	}
 
 }
 ?>

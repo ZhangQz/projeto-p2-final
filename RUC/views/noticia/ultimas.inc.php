@@ -36,7 +36,14 @@
                         <div class="new_content_1_info">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
                             <p class="data_noticia">11/11/11</p>
-                            <p>The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive. Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.</p>
+                            <p><?php
+
+	$sql = "SELECT noticia.idnoticia, autor.idautor
+			FROM noticia, autor
+			JOIN noticia_autor IN noticia.idnoticia=noticia_autor.idnoticia
+			JOIN noticia_autor IN autor.idautor=noticia_autor.idautor
+			WHERE noticia.idnoticia=noticia_autor.idnoticia"
+?></p>
                         </div>
                         <div class="new_content_1_info">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>

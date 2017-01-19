@@ -1,5 +1,5 @@
 <?php
-class Grelha
+class GrelhaView
 	{
 		private $controller;
 

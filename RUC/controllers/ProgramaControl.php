@@ -1,6 +1,6 @@
 <?php
 
-class ProgramaController
+class ProgramaControl
 {
   private $model;
 

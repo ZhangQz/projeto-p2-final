@@ -21,14 +21,12 @@ class Noticia
 	{
 		try
 		{
-			return $this->db->query("SELECT $this->tabela (idnoticia, titulo, artigo, data_noticia, extras, idcategoria)
-					VALUES('{$noticia[idnoticia]}', '{$noticia[titulo]}', '{$noticia[artigo]}', '{$noticia[data_noticia]}', '{$noticia[extras]}', '{$noticia[idcategoria]}')
-					");
-		} catch (PDOException $e) {
-			echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
-		}
-	}
-	
+			return $this->db->query("SELECT categoria.*, noticia.*, autor.* FROM categoria JOIN categoria_noticia ON categoria_noticia.idcategoria = categoria.idcategoria JOIN noticia ON categoria_noticia.idnoticia = noticia.idnoticia JOIN autor ON categoria_noticia.idautor = autor.idautor");
+        } catch(PDOException $e) {
+            echo"<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
+        }
+    }
+    
 	public function createNoticia($dados)
 	{
 		try

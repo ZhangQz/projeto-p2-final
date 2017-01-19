@@ -1,5 +1,5 @@
 <?php
-class Noticia 
+class NoticiaView 
 	{
 		private $controller;
 

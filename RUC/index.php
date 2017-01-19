@@ -125,6 +125,7 @@
         	<?php
         		require_once ('views/noticia/slideshow.inc.php');
         		require_once ('views/noticia/ultimasInf.inc.php');
+                
         	?>
         </main>
         <footer class="row">
