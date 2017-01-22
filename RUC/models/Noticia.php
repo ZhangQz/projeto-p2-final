@@ -61,6 +61,7 @@ class Noticia
 				
 		}
 	}
+
 	public function verifyNoticia($dados)
 	{
 		try

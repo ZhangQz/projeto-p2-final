@@ -16,7 +16,7 @@ class LocutorController
 
   public function locutordestroy()
   {
-    if ($->model->LocDelete($locutor))
+    if ($this->model->LocDelete($locutor))
       return 1;
     else
       return 0;
