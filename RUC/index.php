@@ -48,13 +48,13 @@
                         <div class="infod">
                             <span class="inform">Informação</span>
                             <div class="info-content">
-                                <a class="ultimas" href="index.php?op=1">Últimas</a>
-                                <a class="universidade" href="index.php?op=2">Universidade</a>
-                                <a class="cultura" href="index.php?op=3">Cultura</a>
-                                <a class="desporto" href="index.pshp?op=4">Desporto</a>
-                                <a class="coimbra" href="index.php?op=5">Coimbra</a>
-                                <a class="nacional" href="index.php?op=6">Nacional</a>
-                                <a class="internacional" href="index.php?op=7">Internacinal</a>
+                                <a class="ultimas" href="index.php?op=2">Últimas</a>
+                                <a class="universidade" href="index.php?op=3">Universidade</a>
+                                <a class="cultura" href="index.php?op=4">Cultura</a>
+                                <a class="desporto" href="index.pshp?op=5">Desporto</a>
+                                <a class="coimbra" href="index.php?op=6">Coimbra</a>
+                                <a class="nacional" href="index.php?op=7">Nacional</a>
+                                <a class="internacional" href="index.php?op=8">Internacinal</a>
                             </div>
                         </div>
                     </a>
@@ -62,9 +62,9 @@
                         <div class="progd">
                             <span class="programa">Programação</span>
                             <div class="prog-content">
-                                <a class="grelham" href="index.php?op=8">Grelha Regular 16/17</a>
-                                <a class="programas" href="index.php?op=9">Programas</a>
-                                <a class="cronicas" href="index.php?op=10">Crónicas</a>
+                                <a class="grelham" href="index.php?op=2">Grelha Regular 16/17</a>
+                                <a class="programas" href="index.php?op=3">Programas</a>
+                                <a class="cronicas" href="index.php?op=4">Crónicas</a>
                             </div>
                         </div>
                     </a>
@@ -72,10 +72,10 @@
                         <div class="tecnd">
                             <span class="servi">Serviços</span>
                             <div class="tecn-content">
-                                <a class="tecnicos" href="index.php?op=11">Assistência Técnica</a>
-                                <a class="equipamentos" href="index.php?op=12">Equipamentos</a>
-                                <a class="producao" href="index.php?op=13">Produção</a>
-                                <a class="publicidade" href="index.php?op=14">Publicidade</a>
+                                <a class="tecnicos" href="index.php?op=2">Assistência Técnica</a>
+                                <a class="equipamentos" href="index.php?op=3">Equipamentos</a>
+                                <a class="producao" href="index.php?op=4">Produção</a>
+                                <a class="publicidade" href="index.php?op=5">Publicidade</a>
                             </div>
                         </div>
                     </a>
@@ -83,9 +83,9 @@
                         <div class="cursosd">
                             <span class="curs">Cursos</span>
                             <div class="cursos-content">
-                                <a class="locucao" href="index.php?op=15">Locução e Realização</a>
-                                <a class="informacao" href="index.php?op=16">Informação</a>
-                                <a class="tecnica" href="index.php?op=17">Técnica de Radiodifusão</a>
+                                <a class="locucao" href="index.php?op=2">Locução e Realização</a>
+                                <a class="informacao" href="index.php?op=3">Informação</a>
+                                <a class="tecnica" href="index.php?op=4">Técnica de Radiodifusão</a>
                             </div>
                         </div>
                     </a>
@@ -93,9 +93,9 @@
                         <div class="rucd">
                             <span class="ru">Ruc</span>
                             <div class="ruc-content">
-                                <a class="contactos" href="index.php?op=18">Contactos</a>
-                                <a class="pessoas" href="index.php?op=19">Pessoas</a>
-                                <a class="historia" href="index.php?op=20">História</a>
+                                <a class="contactos" href="index.php?op=2">Contactos</a>
+                                <a class="pessoas" href="index.php?op=3">Pessoas</a>
+                                <a class="historia" href="index.php?op=4">História</a>
                             </div>
                         </div>
                     </a>
@@ -104,16 +104,16 @@
                     <div class="loggedin">
                         <a class="login">login</a>
                     </div>
-												<?php
-													if (!isset($model) || !isset($controller) || !isset($view))
-													{
-														$model = new Registo($conn);
-														$controller = new RegistoControl($model);
-														$view = new RegistoView($controller);
-													}
-														$data = $view->Login_view();
-														include($data[0]);
-												?>
+						<?php
+							if (!isset($model) || !isset($controller) || !isset($view))
+							{
+								$model = new Registo($conn);
+								$controller = new RegistoControl($model);
+								$view = new RegistoView($controller);
+							}
+							$data = $view->Login_view();
+							include($data[0]);
+						?>
                     <?php if( isset($_SESSION['user']) )
                     {
 
@@ -132,6 +132,50 @@
                 }
                 $data = $view->verCronica();
                  include($data[0]);
+            ?>
+
+            <?php
+            /*** VALORES DE OP (1 - GERIR PRODUTOS, 2 - GERIR CATEGORIAS, ...) ***/
+            if(isset($_REQUEST['op']) && $_REQUEST['op'] == 2) //GERIR PRODUTOS
+            {
+                /*** VERIFICA SE O MODEL, CONTROLLER E VIEW JÁ FORAM INICIADOS ***/
+                if (!isset($model) || !isset($controller) || !isset($view))
+                {
+                    $model = new Produto();
+                    $controller = new ProdutoController($model);
+                    $view = new ProdutoView($controller);
+                }
+
+                /*** DEFINIÇÃO DOS COMPORTAMENTOS DA VIEW (neste caso, PRODUTO) - CRIAR, EDITAR, APAGAR E LISTAR ***/
+                if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 2) //criar produto
+                {
+                    $data = $view->criaProduto();
+                    include($data[0]);
+                }
+                else if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 3 && isset($_REQUEST['id'])) //editar produto
+                {
+                    $data = $view->editaProduto($_REQUEST['id']);
+                    $produto = $data[1];
+                    include($data[0]);
+                }
+                else if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 4 && isset($_REQUEST['id'])) //apagar produto
+                {
+                    $data = $view->apagaProduto($_REQUEST['id']);
+                    $produtos = $data[1];
+                    include($data[0]);
+                }
+                else //listar produtos (por defeito)
+                {
+                    $data = $view->listaProdutos();
+                    $produtos = $data[1];
+                    include($data[0]);
+                }
+
+            }
+            else if (isset($_REQUEST['op']) && $_REQUEST['op'] == 3) //GERIR CATEGORIAS
+            {
+                /* por implementar... */
+            }
             ?>
         </main>
         <footer class="row">
