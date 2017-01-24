@@ -2,7 +2,7 @@
 
 class Noticia
 {
-	protected $tabela = "noticia";
+	protected $tabela = "categoria_noticia";
 	private $db;
 
 	public function __construct($conn)

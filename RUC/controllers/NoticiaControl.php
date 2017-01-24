@@ -35,5 +35,10 @@ class NoticiaControl
 			return 0;
 		}
 	}
+
+	public function getAllCronicaImage()
+	{
+		return $this->model->slideshowimg($dados);
+	}
 }
 ?>

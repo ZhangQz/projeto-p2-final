@@ -105,12 +105,18 @@
                         <a class="login">login</a>
                     </div>
                     <?php
-						$data = $view->Login_view();
+                    if (!isset($Usermodel) || !isset($Usercontroller) || !isset($Userview))
+                    {
+                        $Usermodel = new Registo($conn);
+                        $Usercontroller = new RegistoControl($Usermodel);
+                        $Userview = new RegistoView($Usercontroller);
+                    }
+						$data = $Userview->Login_view();
 						include($data[0]);
 					?>
                     <?php if( isset($_SESSION['user']) )
                     {
-                        $data = $view->Logout_view();
+                        $data = $Userview->Logout_view();
                         include($data[0]);
                     }
                     ?>
