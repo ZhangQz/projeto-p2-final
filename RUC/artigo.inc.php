@@ -4,9 +4,9 @@
     </div>
     <div class="newsfeed">
         <?php
-        foreach ($row = $produtos->fetch(PDO::FETCH_ASSOC))
-        echo <div class="new_content\">
+        foreach ($row = $Noticia->fetch(PDO::FETCH_ASSOC))
+        echo <div class=\"new_content\">
             <p class=\"content_title\"><a>$row[categoria]</a>$row[titulo]</p>
             <p>$row[artigo]</p>
-        </div> ?>
+        </div>" ?>
     </div>
