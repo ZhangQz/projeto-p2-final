@@ -11,7 +11,7 @@
                         </div>
                         <div class="new_content_">
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
-                            <p><?php$sql = "SELECT programa.idprograma, programa_locutor.idprograma
+                            <p> <?php$sql = "SELECT programa.idprograma, programa_locutor.idprograma
                                     FROM programa, programa_locutor
                                     WHERE programa.idprograma=programa_locutor.idprograma";?>
                                 Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. When other websites give you text, they’re not sending the best. They’re not sending you, they’re sending words that have lots of problems and they’re bringing those problems with us. They’re bringing mistakes. They’re bringing misspellings. They’re typists… And some, I assume, are good wo</p>

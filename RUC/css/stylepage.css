@@ -362,7 +362,7 @@ header{
     font-size: 4em;
     font-weight: bold;
     bottom:5%;
-    opacity: 0%;
+    display: none;
 }
 
 .bacanal, .bacanal_, .bacanal_1{
@@ -376,9 +376,8 @@ header{
 }
 
 .bacanal:hover p, .bacanal_:hover p, .bacanal_1:hover p{
-    opacity: 100%;
+    display: block;
 }
-
 
 .ulinf{
     background-color: #0f0f0f;
@@ -434,7 +433,7 @@ header{
 }
 
 .new_content, .new_content_, .new_content_1{
-    background-color: #d8d8d8;
+    background-color: #e6e6e6;
     padding:4%;
     line-height: 1.5;
 }
@@ -451,8 +450,6 @@ header{
     background-color: white;
     transition: .5s;
     cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: black;
 }
 
 .content_title{
