@@ -54,39 +54,39 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Noticia.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Noticia.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/models/Noticia.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.30114943">
-                  <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+                <state vertical-scroll-proportion="-29.692308">
+                  <caret line="104" column="162" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="162" />
                   <folding>
-                    <marker date="1485299712945" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
-                    <marker date="1485299712945" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
-                    <marker date="1485299712945" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
-                    <marker date="1485299712945" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
-                    <marker date="1485299712945" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
-                    <marker date="1485299712945" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
-                    <marker date="1485299712945" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
+                    <marker date="1485299730670" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
+                    <marker date="1485299730670" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
+                    <marker date="1485299730670" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
+                    <marker date="1485299730670" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
+                    <marker date="1485299730670" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
+                    <marker date="1485299730670" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ruc.sql" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ruc.sql" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ruc.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.116667">
-                  <caret line="346" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.14593302">
+                  <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -116,11 +116,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="slideshow.inc.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="slideshow.inc.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/noticia/slideshow.inc.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.23448277">
-                  <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+                <state vertical-scroll-proportion="-7.8461537">
+                  <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.1923075">
+                  <caret line="170" column="30" selection-start-line="162" selection-start-column="16" selection-end-line="170" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="artigo.inc.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/artigo.inc.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.17586207">
+                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="createNoticia.inc.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/noticia/createNoticia.inc.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-12.423077">
+                  <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
                   <folding />
                 </state>
               </provider>
@@ -180,6 +210,7 @@
         <option value="$PROJECT_DIR$/css/stylepage.css" />
         <option value="$PROJECT_DIR$/ruc.sql" />
         <option value="$PROJECT_DIR$/models/Noticia.php" />
+        <option value="$PROJECT_DIR$/artigo.inc.php" />
       </list>
     </option>
   </component>
@@ -454,35 +485,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/exemplo_mvc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="10" selection-start-line="34" selection-start-column="8" selection-end-line="76" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Noticia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding>
-            <marker date="1485299712945" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
-            <marker date="1485299712945" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
-            <marker date="1485299712945" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
-            <marker date="1485299712945" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
-            <marker date="1485299712945" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
+            <marker date="1485299730670" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
+            <marker date="1485299730670" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
+            <marker date="1485299730670" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
+            <marker date="1485299730670" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
           </folding>
         </state>
       </provider>
@@ -508,23 +532,23 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding>
-            <marker date="1485299712945" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
-            <marker date="1485299712945" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
-            <marker date="1485299712945" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
-            <marker date="1485299712945" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
-            <marker date="1485299712945" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
+            <marker date="1485299730670" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
+            <marker date="1485299730670" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
+            <marker date="1485299730670" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
+            <marker date="1485299730670" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
           </folding>
         </state>
       </provider>
@@ -585,23 +609,23 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding>
-            <marker date="1485299712945" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
-            <marker date="1485299712945" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
-            <marker date="1485299712945" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
-            <marker date="1485299712945" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
-            <marker date="1485299712945" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
+            <marker date="1485299730670" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
+            <marker date="1485299730670" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
+            <marker date="1485299730670" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
+            <marker date="1485299730670" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
           </folding>
         </state>
       </provider>
@@ -706,13 +730,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/noticia/createCategoria.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/noticia/createNoticia.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -838,14 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/noticia/slideshow.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23448277">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/stylepage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -862,37 +871,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/Noticia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.692308">
+          <caret line="104" column="162" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="162" />
+          <folding>
+            <marker date="1485299730670" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
+            <marker date="1485299730670" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
+            <marker date="1485299730670" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
+            <marker date="1485299730670" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
+            <marker date="1485299730670" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
+            <marker date="1485299730670" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
+            <marker date="1485299730670" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ruc.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.116667">
-          <caret line="346" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.14593302">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Noticia.php">
+    <entry file="file://$PROJECT_DIR$/views/noticia/createNoticia.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30114943">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding>
-            <marker date="1485299712945" expanded="true" signature="475:813" placeholder="SELECT categ..categoria..." />
-            <marker date="1485299712945" expanded="true" signature="1032:1405" placeholder="SELECT notic..noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1727" placeholder="SELECT } not..." />
-            <marker date="1485299712945" expanded="true" signature="1607:1728" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="1921:2042" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2230:2351" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2660" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2540:2661" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="2856:2977" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3294" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3174:3295" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3617" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3497:3618" placeholder="SELECT * FRO..categoria_noticia..." />
-            <marker date="1485299712945" expanded="true" signature="3815:4015" placeholder="INSERT INTO ..." />
-            <marker date="1485299712945" expanded="true" signature="4205:4249" placeholder="DELETE FROM ..." />
-            <marker date="1485299712945" expanded="true" signature="4835:4898" placeholder="SELECT idnot..." />
-            <marker date="1485299712945" expanded="true" signature="5156:5277" placeholder="SELECT * FRO..categoria_noticia..." />
-          </folding>
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/noticia/slideshow.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="170" column="30" selection-start-line="162" selection-start-column="16" selection-end-line="170" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artigo.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17586207">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
