@@ -349,31 +349,34 @@ header{
 #slideshow {
     height: 45vh;
     margin-top: 5%;
+    cursor: pointer;
     position: relative;
 }
 
 #slideshow p{
     position: absolute;
     padding: 2%;
-    background-color:
-    bottom: 10%;
-    left: 5%;
+    color: #e32437;
     font-family: Verdana, Geneva, "sans-serif";
     color:white;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: bold;
-    
+    bottom:5%;
+    opacity: 0%;
 }
 
 .bacanal, .bacanal_, .bacanal_1{
     position: absolute;
     width: 100%;
-    filter: saturate(0%);
 }
 
 .bacanal:hover, .bacanal_:hover, .bacanal_1:hover{
-    filter: saturate(100%);
-    transition: 2s;
+    filter: saturate(0);
+    transition: 1s;
+}
+
+.bacanal:hover p, .bacanal_:hover p, .bacanal_1:hover p{
+    opacity: 100%;
 }
 
 
@@ -431,7 +434,7 @@ header{
 }
 
 .new_content, .new_content_, .new_content_1{
-    background-color: #f9f9f9;
+    background-color: #d8d8d8;
     padding:4%;
     line-height: 1.5;
 }
@@ -442,6 +445,14 @@ header{
 
 .new_content_1{
     margin-bottom: 5%;
+}
+
+.new_content:hover, .new_content_:hover, .new_content_1:hover{
+    background-color: white;
+    transition: .5s;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
 .content_title{
@@ -519,8 +530,6 @@ footer{
     min-height: 5px;
 }
 
-.radiofim{
-}
 
 .fim{
     color: #f9f9f9;
@@ -528,7 +537,6 @@ footer{
 }
 
 .e_separador{
-    display:in;
     height: 5px;
 }
 

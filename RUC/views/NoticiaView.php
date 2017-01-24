@@ -32,3 +32,4 @@ class NoticiaView
 		return array('views/noticia/intro.inc.php');
 	}
 }
+?>

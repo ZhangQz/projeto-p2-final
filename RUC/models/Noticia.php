@@ -66,7 +66,7 @@ class Noticia
 	{
 		try
 		{
-			$stml = $this->db->prepare("SELECT idnoticia,titulo,artigo,data_noticia, extras, idcategoria FROM $this->tabela");
+			$stml = $this->db->prepare("SELECT idnoticia,titulo,data_noticia, extras, idcategoria FROM $this->tabela");
 			$stml->execute();
 			return $stml->fetch(PDO::FETCH_ASSOC);
 		} catch(PDOException $e) {
@@ -76,7 +76,11 @@ class Noticia
 
 	public function slideshowimg ()
 	{
-		SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia
+		try {
+            return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=8");
+            } catch(PDOException $e) {
+            echo "<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
+        }
 	}
 	
 }

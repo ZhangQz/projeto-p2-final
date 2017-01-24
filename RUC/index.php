@@ -137,6 +137,9 @@
             $SlideData = $NoticiaView->VerCronica();
             include($SlideData[0]);
 
+            $IntroUltimas = $NoticiaView->verUltimasIndex();
+            include($IntroUltimas[0]);
+
             /*** VALORES DE OP (1 - GERIR PRODUTOS, 2 - GERIR CATEGORIAS, ...) ***/
             if(isset($_REQUEST['op']) && $_REQUEST['op'] == 2) //Ultimas
             {
@@ -184,10 +187,10 @@
             <div class="row">
                 <div class="col_2 colt_1"></div>
                 <div class="col_8 colt_6 colm_5 social">
-                    <img src="assets/Images/facebook.png" alt="logótipo do facebook" class="logo_fb">
-                    <img src="assets/Images/twitter.png" alt="logótipo do twitter" class="logo_tw">
-                    <img src="assets/Images/youtube.png" alt="logótipo do youtube" class="logo_yt">
-                    <img src="assets/Images/tunein.png" alt="logótipo do Tunein" class="logo_tu">
+                    <a href="https://www.facebook.com/RUC107.9FM" target="_blank"><img src="assets/Images/facebook.png" alt="logótipo do facebook" class="logo_fb"></a>
+                    <a href="https://twitter.com/radioruc" target="_blank"><img src="assets/Images/twitter.png" alt="logótipo do twitter" class="logo_tw"></a>
+                    <a href="https://www.youtube.com/user/radiouc25" target="_blank"><img src="assets/Images/youtube.png" alt="logótipo do youtube" class="logo_yt"></a>
+                    <a href="http://tunein.com/radio/R%C3%A1dio-Universidade-de-Coimbra-1079-s1834/" target="_blank"><img src="assets/Images/tunein.png" alt="logótipo do Tunein" class="logo_tu"></a>
                 </div>
                 <div class="col_2 colt_1"></div>
             </div>
