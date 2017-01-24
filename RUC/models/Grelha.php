@@ -62,8 +62,68 @@ class Grelha
         echo"<strong>Ups! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";}
     }
 
+    public  function ViewDomingo(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 1 ORDER BY programa.horario ASC");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
 	
-
+    public  function ViewSegunda(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 2 ORDER BY programa.horario ASC");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+    
+    public  function ViewTerça(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 3 ORDER BY programa.horario ASC ");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+    
+    public  function ViewQuarta(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 4 ORDER BY programa.horario ASC");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+    
+    public  function ViewQuinta(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 5 ORDER BY programa.horario ASCC");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+    
+    public  function ViewSexta(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 6 ORDER BY programa.horario ASC");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+    
+    public  function ViewSábado(){
+		try
+		{
+			return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha WHERE dia.iddia = 7 ORDER BY programa.horario ASC    ");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
 
 }
 ?>
