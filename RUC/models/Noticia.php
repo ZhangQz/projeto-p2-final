@@ -79,6 +79,7 @@ DESC");
 		} catch(PDOException $e) {
 			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
 		}
+    }
 
 		public  function ViewCategoryCultura(){
 			try
@@ -106,13 +107,6 @@ DESC");
 				echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
 			}
 		}
-
-
-
-
-
-
-	}
 
 
 
