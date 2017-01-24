@@ -73,6 +73,11 @@ class Noticia
 			echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";
 		}
 	}
+
+	public function slideshowimg ()
+	{
+		SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia
+	}
 	
 }
 ?>

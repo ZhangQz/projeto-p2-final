@@ -28,4 +28,7 @@ class NoticiaView
 	public function verUltimasIndex(){
 		return array('views/noticia/UltimasInf.inc.php');
 	}
+	public function IntroIndex() {
+		return array('views/noticia/intro.inc.php');
+	}
 }

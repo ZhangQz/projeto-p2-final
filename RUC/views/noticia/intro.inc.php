@@ -6,7 +6,7 @@
     </video>
     <div class="col_3 colt_1"></div>
     <div class="col_6 colt_6 colm_5 titulo">
-        <p class="radiouni">Rádio Universidade de Coimbra <a class="centoesete">Informação</a></p>
+        <p class="radiouni">Rádio Universidade de Coimbra <a class="centoesete">107.9FM</a></p>
     </div>
     <div class="col_3 colt_1"></div>
 </div>

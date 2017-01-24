@@ -104,19 +104,20 @@
                     <div class="loggedin">
                         <a class="login">login</a>
                     </div>
-						<?php
-							if (!isset($model) || !isset($controller) || !isset($view))
-							{
-								$model = new Registo($conn);
-								$controller = new RegistoControl($model);
-								$view = new RegistoView($controller);
-							}
-							$data = $view->Login_view();
-							include($data[0]);
-						?>
+                    <?php
+						if (!isset($model) || !isset($controller) || !isset($view))
+						{
+					    	$model = new Registo($conn);
+							$controller = new RegistoControl($model);
+							$view = new RegistoView($controller);
+						}
+						$data = $view->Login_view();
+						include($data[0]);
+					?>
                     <?php if( isset($_SESSION['user']) )
                     {
-
+                        $data = $view->Logout_view();
+                        include($data[0]);
                     }
                     ?>
                 </div>
@@ -124,26 +125,27 @@
         </header>
         <main class="row">
             <?php
-                if (!isset($model) || !isset($controller) || !isset($view))
-                {
-                    $model = new Noticia($conn);
-                    $controller = new NoticiaControl($model);
-                    $view = new NoticiaView($controller);
-                }
-                $data = $view->verCronica();
-                 include($data[0]);
-            ?>
+            if (!isset($NoticiaModel) || !isset($NoticiaController) || !isset($NoticiaView))
+            {
+                $NoticiaModel = new Noticia($conn);
+                $NoticiaController = new NoticiaControl($NoticiaModel);
+                $NoticiaView = new NoticiaView($NoticiaController);
+            }
+            $IntroData = $NoticiaView->IntroIndex();
+            include($IntroData[0]);
 
-            <?php
+            $SlideData = $NoticiaView->VerCronica();
+            include($SlideData[0]);
+
             /*** VALORES DE OP (1 - GERIR PRODUTOS, 2 - GERIR CATEGORIAS, ...) ***/
-            if(isset($_REQUEST['op']) && $_REQUEST['op'] == 2) //GERIR PRODUTOS
+            if(isset($_REQUEST['op']) && $_REQUEST['op'] == 2) //Ultimas
             {
                 /*** VERIFICA SE O MODEL, CONTROLLER E VIEW JÁ FORAM INICIADOS ***/
-                if (!isset($model) || !isset($controller) || !isset($view))
+                if (!isset($Noticia_model) || !isset($Noticia_controller) || !isset($Noticia_view))
                 {
-                    $model = new Produto();
-                    $controller = new ProdutoController($model);
-                    $view = new ProdutoView($controller);
+                    $Noticia_model = new Noticia($conn);
+                    $Noticia_controller = new NoticiaControl($model);
+                    $Noticia_view = new NoticiaView($controller);
                 }
 
                 /*** DEFINIÇÃO DOS COMPORTAMENTOS DA VIEW (neste caso, PRODUTO) - CRIAR, EDITAR, APAGAR E LISTAR ***/
