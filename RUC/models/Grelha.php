@@ -57,7 +57,7 @@ class Grelha
     {
         try
         {
-            return $this->db->query("SELECT dia.*, programa.*, locutor.* FROM dia JOIN grelhageral ON dia.iddia = grelhageral.iddia JOIN programa ON grelhageral.idprograma = programa.idprograma JOIN locutor ON grelhageral.idlocutor = locutor.idlocutor");
+            return $this->db->query("SELECT programa.*, locutor.*, programa_locutor.*, dia.*, grelha.* FROM programa JOIN programa_locutor ON programa.idprograma = programa_locutor.idprograma JOIN locutor ON programa_locutor.idlocutor = locutor.idlocutor JOIN grelhageral ON grelhageral.programa = programa_locutor.idprograma JOIN dia ON grelhageral.iddia = dia.iddia JOIN grelha ON grelhageral.idgrelha = grelha.idgrelha");
         } catch(PDOException $e) {
         echo"<strong>Ups! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";}
     }
