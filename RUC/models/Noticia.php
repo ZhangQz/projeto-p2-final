@@ -21,12 +21,101 @@ class Noticia
 	{
 		try
 		{
-			return $this->db->query("SELECT categoria.*, noticia.*, autor.* FROM categoria JOIN categoria_noticia ON categoria_noticia.idcategoria = categoria.idcategoria JOIN noticia ON categoria_noticia.idnoticia = noticia.idnoticia JOIN autor ON categoria_noticia.idautor = autor.idautor");
+			return $this->db->query("SELECT noticia.*, autor.*, noticia_autor.*, categoria.* FROM noticia JOIN
+noticia_autor ON noticia.idnoticia = noticia_autor.idnoticia JOIN autor ON
+noticia_autor.idautor = autor.idautor JOIN categoria_noticia ON
+categoria_noticia.idnoticia = noticia_autor.idnoticia JOIN categoria ON
+categoria_noticia.idcategoria = categoria.idcategoria");
         } catch(PDOException $e) {
             echo"<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
         }
     }
-    
+
+	public function UltimasNoticia(){
+		try
+		{
+			return $this->db->query("SELECT noticia.*, autor.*, noticia_autor.*, categoria.* FROM noticia JOIN
+noticia_autor ON noticia.idnoticia = noticia_autor.idnoticia JOIN autor ON
+noticia_autor.idautor = autor.idautor JOIN categoria_noticia ON
+categoria_noticia.idnoticia = noticia_autor.idnoticia JOIN categoria ON
+categoria_noticia.idcategoria = categoria.idcategoria ORDER BY noticia.data_noticia
+DESC");
+		} catch(PDOException $e) {
+			echo"<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
+		}
+	}
+
+	public  function ViewCategoryAcademia(){
+		try
+		{
+			return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=1");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+
+	public  function ViewCategoryUniversidade(){
+		try
+		{
+			return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=2");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+
+	public  function ViewCategoryCoimbra(){
+		try
+		{
+			return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=3");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+	}
+
+	public  function ViewCategoryNacional(){
+		try
+		{
+			return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=4");
+		} catch(PDOException $e) {
+			echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+		}
+
+		public  function ViewCategoryCultura(){
+			try
+			{
+				return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=5");
+			} catch(PDOException $e) {
+				echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+			}
+		}
+
+		public  function ViewCategoryDesporto(){
+			try
+			{
+				return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=6");
+			} catch(PDOException $e) {
+				echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+			}
+		}
+
+		public  function ViewCategoryInternacional(){
+			try
+			{
+				return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=7");
+			} catch(PDOException $e) {
+				echo "Ocorreu um erro, tente novamente...".$e->getMessage()."]";
+			}
+		}
+
+
+
+
+
+
+	}
+
+
+
 	public function createNoticia($dados)
 	{
 		try

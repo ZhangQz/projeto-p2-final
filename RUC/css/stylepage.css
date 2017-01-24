@@ -1161,9 +1161,9 @@ _nav a:hover{
     .ultimastitulo{
         text-align: center;
         line-height: 1.2;
-        font-size: 1em;
-        margin-bottom: 5%;
-        margin-top: 10%;
+        font-size: 1.5em;
+        margin-bottom: 15%;
+        margin-top: 15%;
     }
 
     .content_title{
