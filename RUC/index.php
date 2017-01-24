@@ -105,12 +105,6 @@
                         <a class="login">login</a>
                     </div>
                     <?php
-						if (!isset($model) || !isset($controller) || !isset($view))
-						{
-					    	$model = new Registo($conn);
-							$controller = new RegistoControl($model);
-							$view = new RegistoView($controller);
-						}
 						$data = $view->Login_view();
 						include($data[0]);
 					?>

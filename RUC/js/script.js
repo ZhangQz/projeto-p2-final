@@ -32,6 +32,7 @@ $(document).ready(function () {
                     .appendTo('#slideshow');
             }, 3000);
         });
+    });
 
         $(".icon_ham").click(function () {
             $("#menu").animate({
@@ -99,5 +100,4 @@ $(document).ready(function () {
         $(".user_icon").click(function () {
             $(".user_cont").toggle("slide");
         });
-    });
 });

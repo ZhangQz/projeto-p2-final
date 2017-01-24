@@ -82,6 +82,5 @@ class Noticia
             echo "<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
         }
 	}
-	
 }
 ?>

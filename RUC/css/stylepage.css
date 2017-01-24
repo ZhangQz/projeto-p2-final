@@ -353,7 +353,8 @@ header{
     position: relative;
 }
 
-#slideshow p{
+
+/*.slitext, .slitext_, .sitext_1{
     position: absolute;
     padding: 2%;
     color: #e32437;
@@ -361,9 +362,14 @@ header{
     color:white;
     font-size: 4em;
     font-weight: bold;
-    bottom:5%;
+    bottom:10%;
+    left: 10%;
     display: none;
 }
+
+.bacanal:hover .slitext, .bacanal_:hover .slitext_, .bacanal_1:hover .slitext_1{
+    display: block;
+}*/
 
 .bacanal, .bacanal_, .bacanal_1{
     position: absolute;
@@ -373,10 +379,6 @@ header{
 .bacanal:hover, .bacanal_:hover, .bacanal_1:hover{
     filter: saturate(0);
     transition: 1s;
-}
-
-.bacanal:hover p, .bacanal_:hover p, .bacanal_1:hover p{
-    display: block;
 }
 
 .ulinf{
