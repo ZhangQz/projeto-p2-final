@@ -48,13 +48,13 @@
                         <div class="infod">
                             <span class="inform">Informação</span>
                             <div class="info-content">
-                                <a class="ultimas" href="index.php?op=2">Últimas</a>
-                                <a class="universidade" href="index.php?op=3">Universidade</a>
-                                <a class="cultura" href="index.php?op=4">Cultura</a>
-                                <a class="desporto" href="index.pshp?op=5">Desporto</a>
-                                <a class="coimbra" href="index.php?op=6">Coimbra</a>
-                                <a class="nacional" href="index.php?op=7">Nacional</a>
-                                <a class="internacional" href="index.php?op=8">Internacinal</a>
+                                <a class="ultimas" href="index.php?opi=2">Últimas</a>
+                                <a class="universidade" href="index.php?opi=3">Universidade</a>
+                                <a class="cultura" href="index.php?opi=4">Cultura</a>
+                                <a class="desporto" href="index.pshp?opi=5">Desporto</a>
+                                <a class="coimbra" href="index.php?opi=6">Coimbra</a>
+                                <a class="nacional" href="index.php?opi=7">Nacional</a>
+                                <a class="internacional" href="index.php?opi=8">Internacinal</a>
                             </div>
                         </div>
                     </a>
@@ -62,9 +62,9 @@
                         <div class="progd">
                             <span class="programa">Programação</span>
                             <div class="prog-content">
-                                <a class="grelham" href="index.php?op=2">Grelha Regular 16/17</a>
-                                <a class="programas" href="index.php?op=3">Programas</a>
-                                <a class="cronicas" href="index.php?op=4">Crónicas</a>
+                                <a class="grelham" href="index.php?opp=2">Grelha Regular 16/17</a>
+                                <a class="programas" href="index.php?opp=3">Programas</a>
+                                <a class="cronicas" href="index.php?opp=4">Crónicas</a>
                             </div>
                         </div>
                     </a>
@@ -72,10 +72,10 @@
                         <div class="tecnd">
                             <span class="servi">Serviços</span>
                             <div class="tecn-content">
-                                <a class="tecnicos" href="index.php?op=2">Assistência Técnica</a>
-                                <a class="equipamentos" href="index.php?op=3">Equipamentos</a>
-                                <a class="producao" href="index.php?op=4">Produção</a>
-                                <a class="publicidade" href="index.php?op=5">Publicidade</a>
+                                <a class="tecnicos" href="index.php?opt=2">Assistência Técnica</a>
+                                <a class="equipamentos" href="index.php?opt=3">Equipamentos</a>
+                                <a class="producao" href="index.php?opt=4">Produção</a>
+                                <a class="publicidade" href="index.php?opt=5">Publicidade</a>
                             </div>
                         </div>
                     </a>
@@ -83,9 +83,9 @@
                         <div class="cursosd">
                             <span class="curs">Cursos</span>
                             <div class="cursos-content">
-                                <a class="locucao" href="index.php?op=2">Locução e Realização</a>
-                                <a class="informacao" href="index.php?op=3">Informação</a>
-                                <a class="tecnica" href="index.php?op=4">Técnica de Radiodifusão</a>
+                                <a class="locucao" href="index.php?opc=2">Locução e Realização</a>
+                                <a class="informacao" href="index.php?opc=3">Informação</a>
+                                <a class="tecnica" href="index.php?opc=4">Técnica de Radiodifusão</a>
                             </div>
                         </div>
                     </a>
@@ -93,9 +93,9 @@
                         <div class="rucd">
                             <span class="ru">Ruc</span>
                             <div class="ruc-content">
-                                <a class="contactos" href="index.php?op=2">Contactos</a>
-                                <a class="pessoas" href="index.php?op=3">Pessoas</a>
-                                <a class="historia" href="index.php?op=4">História</a>
+                                <a class="contactos" href="index.php?opr=2">Contactos</a>
+                                <a class="pessoas" href="index.php?opr=3">Pessoas</a>
+                                <a class="historia" href="index.php?opr=4">História</a>
                             </div>
                         </div>
                     </a>

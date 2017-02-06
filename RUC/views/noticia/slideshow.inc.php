@@ -2,9 +2,14 @@
     <div class="col_2 colt_1"></div>
     <div class="col_8 colt_6 colm_5 preto_slide">
             <div id="slideshow">
-                <div>
-                    <img src="assets/images/slide_1" class="bacanal">
-                </div>
+                <?php
+                    foreach ($row = $noticia->fetch(PDO::FETCH_ASSOC))
+                    {
+                        echo "<div>
+                                <img src="$row->VerSlideshow();">
+                            </div> ";
+                    }
+                ?>
                 <div>
                     <img src="assets/images/slide_2" class="bacanal_">
                 </div>

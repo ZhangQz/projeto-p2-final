@@ -177,9 +177,9 @@
     if (isset($_REQUEST['título']) && isset($_REQUEST['artigo']) && isset($_REQUEST['extra']))
         {
             if ($view->insereDado(array('titulo' => $_REQUEST['titulo'], 'artigo' => $_REQUEST['artigo'], 'extra' => $REQUEST['extra'])))
-  
-   	{ echo "<div class>A tua notícia já está na RUC!</div>"; 
- } else { 
+
+   	{ echo "<div class>A tua notícia já está na RUC!</div>";
+ } else {
  	echo "<div> Mau Jornalismo!!! Erro com a notícia</div>";
  }
 }

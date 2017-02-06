@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Jan-2017 às 03:32
--- Versão do servidor: 5.6.22
--- PHP Version: 5.3.29
+-- Generation Time: 06-Fev-2017 às 12:54
+-- Versão do servidor: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,11 +14,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `ruc`
 --
+CREATE DATABASE IF NOT EXISTS `ruc` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `ruc`;
 
 -- --------------------------------------------------------
 
@@ -26,7 +28,9 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `aluguer`
 --
 
-CREATE TABLE IF NOT EXISTS `aluguer` (
+DROP TABLE IF EXISTS `aluguer`;
+CREATE TABLE `aluguer` (
+  `id_aluguer` int(11) NOT NULL,
   `idcliente` int(11) NOT NULL,
   `idequipamento` int(11) DEFAULT '0',
   `idkit` int(11) DEFAULT '0',
@@ -41,29 +45,28 @@ CREATE TABLE IF NOT EXISTS `aluguer` (
 -- Estrutura da tabela `autor`
 --
 
-CREATE TABLE IF NOT EXISTS `autor` (
-`idautor` int(11) NOT NULL,
+DROP TABLE IF EXISTS `autor`;
+CREATE TABLE `autor` (
+  `idautor` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `autor`
 --
 
 INSERT INTO `autor` (`idautor`, `nome`) VALUES
-(1, 'André Pinheiro'),
-(2, 'Camila Vidal'),
-(3, 'Catarina Antunes'),
-(4, 'Diogo Resende'),
-(5, 'Fabíola Pretel'),
-(6, 'Guilherme Queiroz'),
-(7, 'Isabel Simões'),
-(8, 'João André Oliveira'),
-(9, 'João Baptista'),
-(10, 'Ricardo Vaz'),
-(11, 'Tomás Nogueira');
-
-
+(1, 'Camila Vidal\r\n'),
+(2, 'João André Oliveira'),
+(3, 'André Pinheiro'),
+(4, 'Ricardo Vaz'),
+(5, 'Isabel Simões'),
+(6, 'Fabíola Pretel'),
+(7, 'Tomás Nogueira'),
+(9, 'Diogo Resende'),
+(10, 'Guilherme Queiroz'),
+(11, 'Catarina Antunes'),
+(12, 'João Baptista');
 
 -- --------------------------------------------------------
 
@@ -71,7 +74,8 @@ INSERT INTO `autor` (`idautor`, `nome`) VALUES
 -- Estrutura da tabela `categoria`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria` (
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE `categoria` (
   `idcategoria` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -96,7 +100,8 @@ INSERT INTO `categoria` (`idcategoria`, `nome`) VALUES
 -- Estrutura da tabela `categoria_noticia`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria_noticia` (
+DROP TABLE IF EXISTS `categoria_noticia`;
+CREATE TABLE `categoria_noticia` (
   `idcategoria` int(11) NOT NULL,
   `idnoticia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -127,10 +132,11 @@ INSERT INTO `categoria_noticia` (`idcategoria`, `idnoticia`) VALUES
 (7, 19),
 (7, 20),
 (7, 21),
-(8, 22),
+(7, 22),
 (8, 23),
-(8, 24);
-
+(8, 24),
+(8, 25),
+(8, 25);
 
 -- --------------------------------------------------------
 
@@ -138,7 +144,8 @@ INSERT INTO `categoria_noticia` (`idcategoria`, `idnoticia`) VALUES
 -- Estrutura da tabela `cliente`
 --
 
-CREATE TABLE IF NOT EXISTS `cliente` (
+DROP TABLE IF EXISTS `cliente`;
+CREATE TABLE `cliente` (
   `idcliente` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -149,7 +156,8 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 -- Estrutura da tabela `dia`
 --
 
-CREATE TABLE IF NOT EXISTS `dia` (
+DROP TABLE IF EXISTS `dia`;
+CREATE TABLE `dia` (
   `iddia` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -173,7 +181,8 @@ INSERT INTO `dia` (`iddia`, `nome`) VALUES
 -- Estrutura da tabela `equipamento`
 --
 
-CREATE TABLE IF NOT EXISTS `equipamento` (
+DROP TABLE IF EXISTS `equipamento`;
+CREATE TABLE `equipamento` (
   `idequipamento` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -213,7 +222,9 @@ INSERT INTO `equipamento` (`idequipamento`, `nome`, `descricao`, `marca`, `quant
 -- Estrutura da tabela `equipamento_kit`
 --
 
-CREATE TABLE IF NOT EXISTS `equipamento_kit` (
+DROP TABLE IF EXISTS `equipamento_kit`;
+CREATE TABLE `equipamento_kit` (
+  `equipamento_rel_kit` int(11) NOT NULL,
   `idequipamento` int(11) NOT NULL,
   `idkit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -224,20 +235,13 @@ CREATE TABLE IF NOT EXISTS `equipamento_kit` (
 -- Estrutura da tabela `grelha`
 --
 
-CREATE TABLE IF NOT EXISTS `grelha` (
-  `idgrelha` int(11) DEFAULT NULL,
+DROP TABLE IF EXISTS `grelha`;
+CREATE TABLE `grelha` (
+  `idgrelha` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `data_inicio` date NOT NULL,
   `data_fim` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `grelha`
---
-
-INSERT INTO `grelha` (`idgrelha`, `nome`, `data_inicio`, `data_fim`) VALUES
-(1, 'Semana Par', '0000-00-00', '0000-00-00'),
-(2, 'Semana Ímpar', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -245,7 +249,8 @@ INSERT INTO `grelha` (`idgrelha`, `nome`, `data_inicio`, `data_fim`) VALUES
 -- Estrutura da tabela `grelhageral`
 --
 
-CREATE TABLE IF NOT EXISTS `grelhageral` (
+DROP TABLE IF EXISTS `grelhageral`;
+CREATE TABLE `grelhageral` (
   `iddia` int(11) NOT NULL,
   `programa` int(11) NOT NULL,
   `idgrelha` int(11) NOT NULL
@@ -348,10 +353,50 @@ INSERT INTO `grelhageral` (`iddia`, `programa`, `idgrelha`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `grelha_dia`
+--
+
+DROP TABLE IF EXISTS `grelha_dia`;
+CREATE TABLE `grelha_dia` (
+  `grelha_rel_dia` int(11) NOT NULL,
+  `id_grelha` int(11) DEFAULT NULL,
+  `id_dia` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `grelha_locutor`
+--
+
+DROP TABLE IF EXISTS `grelha_locutor`;
+CREATE TABLE `grelha_locutor` (
+  `id_rel_grelha_locutor` int(11) NOT NULL,
+  `id_grelha` int(11) DEFAULT NULL,
+  `id_locutor` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `grelha_programa`
+--
+
+DROP TABLE IF EXISTS `grelha_programa`;
+CREATE TABLE `grelha_programa` (
+  `id_rel_grelha_programa` int(11) NOT NULL,
+  `id_grelha` int(11) DEFAULT NULL,
+  `id_programa` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `kit`
 --
 
-CREATE TABLE IF NOT EXISTS `kit` (
+DROP TABLE IF EXISTS `kit`;
+CREATE TABLE `kit` (
   `idkit` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -364,7 +409,8 @@ CREATE TABLE IF NOT EXISTS `kit` (
 -- Estrutura da tabela `locutor`
 --
 
-CREATE TABLE IF NOT EXISTS `locutor` (
+DROP TABLE IF EXISTS `locutor`;
+CREATE TABLE `locutor` (
   `idlocutor` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -464,7 +510,8 @@ INSERT INTO `locutor` (`idlocutor`, `nome`) VALUES
 -- Estrutura da tabela `noticia`
 --
 
-CREATE TABLE IF NOT EXISTS `noticia` (
+DROP TABLE IF EXISTS `noticia`;
+CREATE TABLE `noticia` (
   `idnoticia` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `artigo` varchar(500) NOT NULL,
@@ -492,15 +539,15 @@ INSERT INTO `noticia` (`idnoticia`, `titulo`, `artigo`, `data_noticia`, `extra`)
 (13, 'ÚLTIMA REPRESENTAÇÃO DA ÓPERA “PIMPINONE” NO TAGV ESTE SÁBADO', 'A Ritornello – Associação Cultural leva ao palco do Teatro Académico de Gil Vicente (TAGV) a ópera “Pimpinone” no próximo sábado, dia 14, ás 18 horas. Esta é a última representação na cidade, depois a associação leva o espetáculo em digressão pelo país. A ópera teve a sua última récita em Coimbra em outubro de 2016, o diretor musical, António Ramos afirma que esta atuação “vai ser ainda melhor”.\r\n\r\nUma ópera cómica, em três atos, para toda a família, cantada em português com música do músico e c', '2017-01-13', ''),
 (14, 'COLECTIVO 84 APRESENTA “SÓCRATES TEM DE MORRER – PARTE I” NO TAGV', 'A peça sobe a palco do Teatro Académico de Gil Vicente (TAGV), esta quinta-feira, pelas 21h30. O TAGV estreia a nova coprodução com o Teatro Municipal São Luiz de Lisboa e o Centro Cultural Vila Flor de Guimarães.\r\n\r\nO autor do texto e encenador, Mickaël de Oliveira, enumerou para a RUC as facetas da personalidade do filósofo Grego em destaque.\r\n\r\nSegundo a sinopse o espetáculo conta “os últimos três dias de Sócrates na prisão”. Durante um mês Sócrates pensou escreveu poesia e recebeu a visita d', '2017-01-12', ''),
 (15, 'SALÃO BRAZIL RECEBE “ARQUIVO VIVO É ANARQUIVO”', 'Acontece amanhã no Salão Brazil a apresentação “Arquivo Vivo é Anarquivo”. O projeto Arquivo Digital da Po-ex em parceria com o Serviço Educativo JACC promove três atividades durante o dia de amanhã no Salão Brazil. O responsável pela programação do espaço, José Miguel, sublinha a importância do projeto.\r\n\r\nUma oficina coordenada por Américo Rodrigues marca o início da programação. Com “As vozes da Voz” pretende-se que os participantes explorem as potencialidades expressivas da voz. O representa', '2017-01-06', ''),
-(16, 'MANCHA NEGRA EM CAMPO PELOS SEM ABRIGO DE COIMBRA', 'A Mancha Negra promoveu ontem um jantar solidário dirigido à comunidade menos favorecida da cidade de Coimbra. A iniciativa resulta numa parceria entre a claque academista e a associação Integrar, e reuniu cerca de 75 pessoas na sede da Mancha Negra, no Pavilhão Jorge Anjinhos. Este é já o sexto jantar solidário promovido pela histórica claque da briosa. A ementa contou com sopa de legumes, feijoada, sumos e água. A RUC falou com o presidente da histórica claque de apoio à Briosa. João Paulo Fer', '2016-12-28', ''),
-(17, 'AAC/OAF DISCUTE EM ASSEMBLEIA GERAL EXTRAORDINÁRIA ESTRATÉGIAS DE FINANCIAMENTO', 'A Associação Académica de Coimbra/Organismo Autónomo de Futebol (AAC/OAF), convocou os sócios da instituição para uma assembleia geral extraordinária a realizar esta noite pelas 20h30 no Estádio Cidade de Coimbra. Estivemos à conversa com o presidente da Mesa da Assembleia Geral, João Vasco Ribeiro, que nos fez a antevisão.\r\n\r\nA “Missão Briosa” convidava os sócios a, através de uma participação financeira, adquirirem a antiga sede do clube, situada junto aos Arcos do Jardim, pelo valor de um mil', '2016-12-16', ''),
-(18, 'AAAC/OAF DEFRONTA PENAFIEL PARA A TAÇA DE PORTUGAL', 'A Associação Académica de Coimbra Organismo Autónomo de Futebol (AAC/OAF) recebe daqui a pouco, às 18 horas, a equipa do Penafiel a contar para os oitavos de final da Taça de Portugal (TP). Durante a tarde de ontem o treinador dos estudantes fez, em conferência de imprensa, a antevisão da partida. Costinha percebe o entusiasmo gerado pelo sorteio mas garante que os jogadores estão de sobreaviso.\r\n\r\nAté esta etapa da competição os estudantes tiveram de ultrapassar a equipa do Gouveia e os primodi', '2016-12-14', ''),
-(19, 'MANUEL PIRES DA ROCHA: “OBAMA FOI UM MAU PRESIDENTE”', 'O comentário à atualidade do Alvorada de hoje (5), quinta-feira, esteve a cargo do diretor do Conservatório de Música de Coimbra e deputado municipal na Câmara de Coimbra, Manuel Pires da Rocha.\r\n\r\nO aumento do salário mínimo nacional para 557 euros entrou em vigor este mês. O aumento de 27 euros que corresponde a uma subida em cadeia de 5% relativamente a 2016 e 16% desde 2014, com a descida constante do desemprego, contraria as teorias económicas que concluem que uma subida dos salários implic', '2017-01-06', ''),
-(20, 'RUI ANTUNES: “O MUNDO ESTÁ A CONSTRUIR A REALIDADE DO MEDO”', 'No Alvorada de hoje (4), quarta-feira, o comentário à atualidade esteve a cargo do Presidente do Instituto Politécnico de Coimbra, Rui Antunes.\r\n\r\nA federação dos sindicatos dos funcionários públicos convocou uma greve para o dia 3 de fevereiro dos trabalhadores não docentes das escolas e jardins de infância em protesto contra a precariedade laboral, dentre as reinvidicações a mais urgente segundo os funcionários seria o reajuste dos salários. Rui Antunes realça a importância de rever a situação', '2017-01-04', ''),
-(21, 'ELISABETE RAMOS: “OBAMA IMPUTA À RÚSSIA INTERFERÊNCIAS SIGNIFICATIVAS NAS ELEIÇÕES”', 'O último Alvorada de 2016 decorreu esta sexta-feira (30) e contou com o comentário à atualidade da docente da Faculdade de Economia da Universidade de Coimbra (FEUC), Elisabete Ramos.\r\n\r\nDe acordo com a Associação de Bolseiros de Investigação Científica, bolseiros de doutoramento e pós-doutoramento a darem aulas gratuitamente é prática comum. A Universidade do Porto contratou, no ano de 2016, 40 professores sem remuneração e a Universidade Nova de Lisboa tem voluntários a dar aulas. Elisabete Ra', '2016-12-30', ''),
-(22, 'RUC @ AMEN DUNES | ZDB | 24.11.2016', 'A voz de Amen Dunes enche tudo.\r\n\r\nSozinho em palco, com uma guitarra, polo aberto e fato de treino. Sozinho, acústico, num mundo pós 9 de Novembro. Sozinho, sem banda, ano e meio após o seu último concerto, ano e meio entre Nova Iorque e LA, e agora semana e meia em Lisboa, em gravações do novo disco.\r\n\r\n\r\nSozinho, voou entre Roma e Lisboa no início da semana. Como habitual, para disfarçar a ansiedade que sente em viagens de avião, viu um documentário sobre música. Este sobre Townes Van Zandt. ', '2016-11-28', '//assets/images/croni1'),
-(23, 'RUC @ NORBERTO LOBO APRESENTA “MUXAMA” | TEATRO MARIA MATOS | 23.11.2016', 'Imerso em breu, uma luz débil pulsa no centro do palco. Adivinham-se os vislumbres do guitarrista que o ocupa sozinho. No meio de todo um labirinto de pedais, de guitarra semiacústica ao colo, Norberto Lobo estreia no Maria Matos “Muxama”, o seu último longa duração, editado este ano pela three:four. Perante um teatro cheio, mostra-nos porque continua a ser um dos mais valiosos músicos que cresceram por cá.\r\n\r\nChamar a Norberto Lobo um guitarrista será limitá-lo a uma imagética que nunca ocupou ', '2016-11-28', '//assets/images/croni2'),
-(24, 'RUC @ SEMIBREVE 2016', 'Se 5 minutos a percorrer as ruas de Braga são suficientes para alguém se sentir em casa ou acolhido, então o que dizer quando ocorre ao mesmo tempo um evento (já com estatuto de culto) de música exploratória e arte digital?! Acrescentando ainda o facto de ser verão no meio do outono (28 a 30 de Outubro). Falamos de algo que cada vez mais dispensa apresentações, o festival Semibreve. Este ano acrescentando a belíssima Capela Imaculada do Seminário Menor aos habituais locais de performance (Theatr', '2016-11-12', '//assets/images/croni3');
+(17, 'MANCHA NEGRA EM CAMPO PELOS SEM ABRIGO DE COIMBRA', 'A Mancha Negra promoveu ontem um jantar solidário dirigido à comunidade menos favorecida da cidade de Coimbra. A iniciativa resulta numa parceria entre a claque academista e a associação Integrar, e reuniu cerca de 75 pessoas na sede da Mancha Negra, no Pavilhão Jorge Anjinhos. Este é já o sexto jantar solidário promovido pela histórica claque da briosa. A ementa contou com sopa de legumes, feijoada, sumos e água. A RUC falou com o presidente da histórica claque de apoio à Briosa. João Paulo Fer', '2016-12-28', ''),
+(18, 'AAC/OAF DISCUTE EM ASSEMBLEIA GERAL EXTRAORDINÁRIA ESTRATÉGIAS DE FINANCIAMENTO', 'A Associação Académica de Coimbra/Organismo Autónomo de Futebol (AAC/OAF), convocou os sócios da instituição para uma assembleia geral extraordinária a realizar esta noite pelas 20h30 no Estádio Cidade de Coimbra. Estivemos à conversa com o presidente da Mesa da Assembleia Geral, João Vasco Ribeiro, que nos fez a antevisão.\r\n\r\nA “Missão Briosa” convidava os sócios a, através de uma participação financeira, adquirirem a antiga sede do clube, situada junto aos Arcos do Jardim, pelo valor de um mil', '2016-12-16', ''),
+(19, 'AAAC/OAF DEFRONTA PENAFIEL PARA A TAÇA DE PORTUGAL', 'A Associação Académica de Coimbra Organismo Autónomo de Futebol (AAC/OAF) recebe daqui a pouco, às 18 horas, a equipa do Penafiel a contar para os oitavos de final da Taça de Portugal (TP). Durante a tarde de ontem o treinador dos estudantes fez, em conferência de imprensa, a antevisão da partida. Costinha percebe o entusiasmo gerado pelo sorteio mas garante que os jogadores estão de sobreaviso.\r\n\r\nAté esta etapa da competição os estudantes tiveram de ultrapassar a equipa do Gouveia e os primodi', '2016-12-14', ''),
+(20, 'MANUEL PIRES DA ROCHA: “OBAMA FOI UM MAU PRESIDENTE”', 'O comentário à atualidade do Alvorada de hoje (5), quinta-feira, esteve a cargo do diretor do Conservatório de Música de Coimbra e deputado municipal na Câmara de Coimbra, Manuel Pires da Rocha.\r\n\r\nO aumento do salário mínimo nacional para 557 euros entrou em vigor este mês. O aumento de 27 euros que corresponde a uma subida em cadeia de 5% relativamente a 2016 e 16% desde 2014, com a descida constante do desemprego, contraria as teorias económicas que concluem que uma subida dos salários implic', '2017-01-06', ''),
+(21, 'RUI ANTUNES: “O MUNDO ESTÁ A CONSTRUIR A REALIDADE DO MEDO”', 'No Alvorada de hoje (4), quarta-feira, o comentário à atualidade esteve a cargo do Presidente do Instituto Politécnico de Coimbra, Rui Antunes.\r\n\r\nA federação dos sindicatos dos funcionários públicos convocou uma greve para o dia 3 de fevereiro dos trabalhadores não docentes das escolas e jardins de infância em protesto contra a precariedade laboral, dentre as reinvidicações a mais urgente segundo os funcionários seria o reajuste dos salários. Rui Antunes realça a importância de rever a situação', '2017-01-04', ''),
+(22, 'ELISABETE RAMOS: “OBAMA IMPUTA À RÚSSIA INTERFERÊNCIAS SIGNIFICATIVAS NAS ELEIÇÕES”', 'O último Alvorada de 2016 decorreu esta sexta-feira (30) e contou com o comentário à atualidade da docente da Faculdade de Economia da Universidade de Coimbra (FEUC), Elisabete Ramos.\r\n\r\nDe acordo com a Associação de Bolseiros de Investigação Científica, bolseiros de doutoramento e pós-doutoramento a darem aulas gratuitamente é prática comum. A Universidade do Porto contratou, no ano de 2016, 40 professores sem remuneração e a Universidade Nova de Lisboa tem voluntários a dar aulas. Elisabete Ra', '2016-12-30', ''),
+(23, 'RUC @ AMEN DUNES | ZDB | 24.11.2016', 'A voz de Amen Dunes enche tudo.\r\n\r\nSozinho em palco, com uma guitarra, polo aberto e fato de treino. Sozinho, acústico, num mundo pós 9 de Novembro. Sozinho, sem banda, ano e meio após o seu último concerto, ano e meio entre Nova Iorque e LA, e agora semana e meia em Lisboa, em gravações do novo disco.\r\n\r\n\r\nSozinho, voou entre Roma e Lisboa no início da semana. Como habitual, para disfarçar a ansiedade que sente em viagens de avião, viu um documentário sobre música. Este sobre Townes Van Zandt. ', '2016-11-28', 'assets/images/slide_1'),
+(24, 'RUC @ NORBERTO LOBO APRESENTA “MUXAMA” | TEATRO MARIA MATOS | 23.11.2016', 'Imerso em breu, uma luz débil pulsa no centro do palco. Adivinham-se os vislumbres do guitarrista que o ocupa sozinho. No meio de todo um labirinto de pedais, de guitarra semiacústica ao colo, Norberto Lobo estreia no Maria Matos “Muxama”, o seu último longa duração, editado este ano pela three:four. Perante um teatro cheio, mostra-nos porque continua a ser um dos mais valiosos músicos que cresceram por cá.\r\n\r\nChamar a Norberto Lobo um guitarrista será limitá-lo a uma imagética que nunca ocupou ', '2016-11-28', 'assets/images/slide_2'),
+(25, 'RUC @ SEMIBREVE 2016', 'Se 5 minutos a percorrer as ruas de Braga são suficientes para alguém se sentir em casa ou acolhido, então o que dizer quando ocorre ao mesmo tempo um evento (já com estatuto de culto) de música exploratória e arte digital?! Acrescentando ainda o facto de ser verão no meio do outono (28 a 30 de Outubro). Falamos de algo que cada vez mais dispensa apresentações, o festival Semibreve. Este ano acrescentando a belíssima Capela Imaculada do Seminário Menor aos habituais locais de performance (Theatr', '2016-11-12', 'assets/images/slide_3');
 
 -- --------------------------------------------------------
 
@@ -508,10 +555,15 @@ INSERT INTO `noticia` (`idnoticia`, `titulo`, `artigo`, `data_noticia`, `extra`)
 -- Estrutura da tabela `noticia_autor`
 --
 
-CREATE TABLE IF NOT EXISTS `noticia_autor` (
+DROP TABLE IF EXISTS `noticia_autor`;
+CREATE TABLE `noticia_autor` (
   `idnoticia` int(11) NOT NULL,
   `idautor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `noticia_autor`
+--
 
 INSERT INTO `noticia_autor` (`idnoticia`, `idautor`) VALUES
 (1, 2),
@@ -538,13 +590,38 @@ INSERT INTO `noticia_autor` (`idnoticia`, `idautor`) VALUES
 (22, 6),
 (23, 6),
 (24, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `perfil`
+--
+
+DROP TABLE IF EXISTS `perfil`;
+CREATE TABLE `perfil` (
+  `id_perfil` int(11) NOT NULL,
+  `nome` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `ler` tinyint(1) NOT NULL,
+  `inserir` tinyint(1) NOT NULL,
+  `apagar` tinyint(1) NOT NULL,
+  `editar` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `perfil`
+--
+
+INSERT INTO `perfil` (`id_perfil`, `nome`, `ler`, `inserir`, `apagar`, `editar`) VALUES
+(1, 'admin', 1, 1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `produção`
 --
 
-CREATE TABLE IF NOT EXISTS `produção` (
+DROP TABLE IF EXISTS `produção`;
+CREATE TABLE `produção` (
   `idprodução` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
@@ -559,12 +636,13 @@ CREATE TABLE IF NOT EXISTS `produção` (
 -- Estrutura da tabela `programa`
 --
 
-CREATE TABLE IF NOT EXISTS `programa` (
+DROP TABLE IF EXISTS `programa`;
+CREATE TABLE `programa` (
   `idprograma` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `descricao` text,
   `link` text,
-  `horario` time NOT NULL
+  `horario` datetime(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -572,89 +650,87 @@ CREATE TABLE IF NOT EXISTS `programa` (
 --
 
 INSERT INTO `programa` (`idprograma`, `nome`, `descricao`, `link`, `horario`) VALUES
-(1, '-0', '(Menos Zero)', NULL, '22:10:00'),
-(2, '1111', NULL, NULL, '21:00:00'),
-(3, 'A Word na Street', NULL, NULL, '20:00:00'),
-(4, 'Alvorada', NULL, NULL, '09:00:00'),
-(5, 'Automático para o Povo', NULL, NULL, '10:00:00'),
-(6, 'Binário', NULL, NULL, '02:00:00'),
-(7, 'Bling Beat', NULL, NULL, '20:00:00'),
-(8, 'Brasil', NULL, NULL, '13:00:00'),
-(9, 'Cadeira de Cinema', NULL, NULL, '12:00:00'),
-(10, 'Café Olé', '(Vasta equipa de locutores especialistas em cafeína)', NULL, '10:00:00'),
-(11, 'Candomblé', NULL, NULL, '13:00:00'),
-(12, 'Capitão Américo', NULL, NULL, '12:00:00'),
-(13, 'Chill Pill', NULL, NULL, '01:00:00'),
-(14, 'Chronos', NULL, NULL, '23:00:00'),
-(15, 'Claudio Gentile', NULL, NULL, '22:00:00'),
-(16, 'Clepsidra', NULL, NULL, '22:00:00'),
-(17, 'Compacto Informativo', NULL, NULL, '22:00:00'),
-(18, 'Compasso', NULL, NULL, '17:00:00'),
-(19, 'Contrabando Latino', NULL, NULL, '11:00:00'),
-(20, 'Cover de Bruxelas', NULL, NULL, '20:00:00'),
-(21, 'Culturama', NULL, NULL, '16:00:00'),
-(22, 'Destino & Fortuna', NULL, NULL, '11:00:00'),
-(23, 'Drip', NULL, NULL, '20:00:00'),
-(24, 'Dubplate', NULL, NULL, '00:00:00'),
-(25, 'Elevador Copacabana', NULL, NULL, '16:00:00'),
-(26, 'Fahrenheit 107.9', NULL, NULL, '14:00:00'),
-(27, 'Framework', NULL, NULL, '10:00:00'),
-(28, 'GeekFreak', NULL, NULL, '16:00:00'),
-(29, 'Gold Diggers', NULL, NULL, '17:00:00'),
-(30, 'Gondwana', NULL, NULL, '15:00:00'),
-(31, 'Hipocicloide', NULL, NULL, '01:00:00'),
-(32, 'Hipoglote', NULL, NULL, '01:00:00'),
-(33, 'Indiexposto', NULL, NULL, '18:00:00'),
-(34, 'Jazzmatazz', NULL, NULL, '13:00:00'),
-(35, 'Kalundu', NULL, NULL, '22:00:00'),
-(36, 'Kepler', NULL, NULL, '18:00:00'),
-(37, 'LSD', NULL, NULL, '00:00:00'),
-(38, 'Livros que os Pariu', NULL, NULL, '01:00:00'),
-(39, 'Locomotiva', NULL, NULL, '00:00:00'),
-(40, 'Loja de Discos', NULL, NULL, '15:00:00'),
-(41, 'Magia Negra', NULL, NULL, '13:00:00'),
-(42, 'Mala Educación', NULL, NULL, '14:00:00'),
-(43, 'Mellow', NULL, NULL, '00:00:00'),
-(44, 'Minerva', NULL, NULL, '21:00:00'),
-(45, 'Música Moderna', NULL, NULL, '11:00:00'),
-(46, 'Narita', NULL, NULL, '21:00:00'),
-(47, 'Noticiário', NULL, NULL, '18:50:00'),
-(48, 'Null', NULL, NULL, '02:00:00'),
-(49, 'O meu Disco Azul', NULL, NULL, '22:00:00'),
-(50, 'Orelha Extra', NULL, NULL, '12:00:00'),
-(51, 'Pangrama', NULL, NULL, '23:00:00'),
-(52, 'Peta-Zetas', NULL, NULL, '17:05:00'),
-(53, 'Portuguese Pedro Radio Show', NULL, NULL, '12:00:00'),
-(54, 'Preto no Branco', NULL, NULL, '23:00:00'),
-(55, 'Prognósticos', NULL, NULL, '00:00:00'),
-(56, 'Pé de Atleta', NULL, NULL, '21:00:00'),
-(57, 'Radio Killed the Video Star', NULL, NULL, '12:00:00'),
-(58, 'Randomizer', NULL, NULL, '12:00:00'),
-(59, 'Re-Make', NULL, NULL, '15:00:00'),
-(60, 'Re-Model', NULL, NULL, '15:00:00'),
-(61, 'Ricochete', NULL, NULL, '14:00:00'),
-(62, 'RoadMap', NULL, NULL, '16:00:00'),
-(63, 'Ruclub', NULL, NULL, '00:00:00'),
-(64, 'Sala de Pânico', NULL, NULL, '20:00:00'),
-(65, 'Santos da Casa', NULL, NULL, '19:00:00'),
-(66, 'Singularidades', NULL, NULL, '12:00:00'),
-(67, 'Sonnenstrahl Club Music', NULL, NULL, '00:00:00'),
-(68, 'Spinning Jenny', NULL, NULL, '23:00:00'),
-(69, 'Spinoff', NULL, NULL, '16:00:00'),
-(70, 'Suburbano', NULL, NULL, '20:00:00'),
-(71, 'Síntese Informativa I', NULL, NULL, '09:55:00'),
-(72, 'Síntese Informativa II', NULL, NULL, '17:00:00'),
-(73, 'Síntese Informativa III', NULL, NULL, '21:50:00'),
-(74, 'Tabacaria', NULL, NULL, '00:00:00'),
-(75, 'Tema Livre', NULL, NULL, '21:00:00'),
-(76, 'Tempo e Espaço', NULL, NULL, '01:00:00'),
-(77, 'Terreiro da Erva', NULL, NULL, '17:00:00'),
-(78, 'The Devil Blues', NULL, NULL, '13:00:00'),
-(79, 'The Music Makers', NULL, NULL, '23:00:00'),
-(80, 'The Office', NULL, NULL, '16:00:00'),
-(81, 'Twee América', NULL, NULL, '22:10:00'),
-(82, 'U-Quem?', NULL, NULL, '17:00:00'),
-(83, 'Whisky com Água', NULL, NULL, '18:00:00');
+(1, '-0', '(Menos Zero)', NULL, '0000-00-00 00:00:00.0000'),
+(2, '1111', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(3, 'A Word na Street', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(4, 'Alvorada', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(5, 'Automático para o Povo', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(6, 'Binário', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(7, 'Bling Beat', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(8, 'Brasil', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(9, 'Cadeira de Cinema', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(10, 'Café Olé', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(11, 'Candomblé', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(12, 'Capitão América', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(13, 'Chill Pill', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(14, 'Chronos', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(15, 'Claudio Gentile', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(16, 'Clepsidra', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(17, 'Compacto Informativo', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(18, 'Compasso', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(19, 'Contrabando Latino', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(20, 'Cover de Bruxelas', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(21, 'Culturama', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(22, 'Destino & Fortuna', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(23, 'Drip', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(24, 'Dubplate', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(25, 'Elevador Copacabana', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(26, 'Fahrenheit 107.9', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(27, 'Framework', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(28, 'GeekFreak', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(29, 'Gold Diggers', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(30, 'Gondwana', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(31, 'Hipocicloide', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(32, 'Hipoglote', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(33, 'Indiexposto', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(34, 'Jazzmatazz', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(35, 'Kalundu', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(36, 'Kepler', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(37, 'LSD', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(38, 'Livros que os Pariu', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(39, 'Locomotiva', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(40, 'Loja de Discos', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(41, 'Magia Negra', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(42, 'Mala Educación', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(43, 'Mellow', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(44, 'Minerva', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(45, 'Música Moderna', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(46, 'Narita', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(47, 'Noticiário', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(48, 'Null', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(49, 'O meu Disco Azul', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(50, 'Orelha Extra', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(51, 'Pangrama', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(52, 'Peta-Zetas', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(53, 'Portuguese Pedro Radio Show', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(54, 'Preto no Branco', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(55, 'Prognósticos', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(56, 'Pé de Atleta', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(57, 'Radio Killed the Video Star', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(58, 'Randomizer', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(59, 'Re-Make', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(60, 'Re-Model', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(61, 'Ricochete', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(62, 'RoadMap', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(63, 'Ruclub', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(64, 'Sala de Pânico', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(65, 'Santos da Casa', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(66, 'Singularidades', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(67, 'Sonnenstrahl Club Music', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(68, 'Spinning Jenny', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(69, 'Spinoff', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(70, 'Suburbano', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(71, 'Síntese Informativa', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(72, 'Tabacaria', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(73, 'Tema Livre', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(74, 'Tempo e Espaço', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(75, 'Terreiro da Erva', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(76, 'The Devil Blues', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(77, 'The Music Makers', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(78, 'The Office', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(79, 'Twee América', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(80, 'U-Quem?', NULL, NULL, '0000-00-00 00:00:00.0000'),
+(81, 'Whisky com Água', NULL, NULL, '0000-00-00 00:00:00.0000');
 
 -- --------------------------------------------------------
 
@@ -662,7 +738,8 @@ INSERT INTO `programa` (`idprograma`, `nome`, `descricao`, `link`, `horario`) VA
 -- Estrutura da tabela `programa_locutor`
 --
 
-CREATE TABLE IF NOT EXISTS `programa_locutor` (
+DROP TABLE IF EXISTS `programa_locutor`;
+CREATE TABLE `programa_locutor` (
   `idprograma` int(11) NOT NULL,
   `idlocutor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -816,35 +893,222 @@ INSERT INTO `programa_locutor` (`idprograma`, `idlocutor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura da tabela `user`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
   `iduser` int(11) NOT NULL,
   `nome` varchar(255) CHARACTER SET latin1 NOT NULL,
   `password` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `email` text CHARACTER SET latin1 NOT NULL
+  `email` text CHARACTER SET latin1 NOT NULL,
+  `id_perfil` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `user`
+--
+
+INSERT INTO `user` (`iduser`, `nome`, `password`, `email`, `id_perfil`) VALUES
+(0, 'admin', 'admin', 'admin@nimda.com', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `aluguer`
+--
+ALTER TABLE `aluguer`
+  ADD PRIMARY KEY (`id_aluguer`);
+
+--
 -- Indexes for table `autor`
 --
 ALTER TABLE `autor`
- ADD PRIMARY KEY (`idautor`);
+  ADD PRIMARY KEY (`idautor`);
+
+--
+-- Indexes for table `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`idcategoria`);
+
+--
+-- Indexes for table `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`idcliente`);
+
+--
+-- Indexes for table `dia`
+--
+ALTER TABLE `dia`
+  ADD PRIMARY KEY (`iddia`);
+
+--
+-- Indexes for table `equipamento`
+--
+ALTER TABLE `equipamento`
+  ADD PRIMARY KEY (`idequipamento`);
+
+--
+-- Indexes for table `equipamento_kit`
+--
+ALTER TABLE `equipamento_kit`
+  ADD PRIMARY KEY (`equipamento_rel_kit`);
+
+--
+-- Indexes for table `grelha`
+--
+ALTER TABLE `grelha`
+  ADD PRIMARY KEY (`idgrelha`);
+
+--
+-- Indexes for table `grelha_dia`
+--
+ALTER TABLE `grelha_dia`
+  ADD PRIMARY KEY (`grelha_rel_dia`);
+
+--
+-- Indexes for table `grelha_locutor`
+--
+ALTER TABLE `grelha_locutor`
+  ADD PRIMARY KEY (`id_rel_grelha_locutor`);
+
+--
+-- Indexes for table `grelha_programa`
+--
+ALTER TABLE `grelha_programa`
+  ADD PRIMARY KEY (`id_rel_grelha_programa`);
+
+--
+-- Indexes for table `kit`
+--
+ALTER TABLE `kit`
+  ADD PRIMARY KEY (`idkit`);
+
+--
+-- Indexes for table `locutor`
+--
+ALTER TABLE `locutor`
+  ADD PRIMARY KEY (`idlocutor`);
+
+--
+-- Indexes for table `noticia`
+--
+ALTER TABLE `noticia`
+  ADD PRIMARY KEY (`idnoticia`);
+
+--
+-- Indexes for table `perfil`
+--
+ALTER TABLE `perfil`
+  ADD PRIMARY KEY (`id_perfil`);
+
+--
+-- Indexes for table `produção`
+--
+ALTER TABLE `produção`
+  ADD PRIMARY KEY (`idprodução`),
+  ADD KEY `idequipamento` (`idequipamento`);
+
+--
+-- Indexes for table `programa`
+--
+ALTER TABLE `programa`
+  ADD PRIMARY KEY (`idprograma`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`iduser`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `aluguer`
+--
+ALTER TABLE `aluguer`
+  MODIFY `id_aluguer` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `autor`
 --
 ALTER TABLE `autor`
-MODIFY `idautor` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `idautor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `dia`
+--
+ALTER TABLE `dia`
+  MODIFY `iddia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `equipamento`
+--
+ALTER TABLE `equipamento`
+  MODIFY `idequipamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `equipamento_kit`
+--
+ALTER TABLE `equipamento_kit`
+  MODIFY `equipamento_rel_kit` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `grelha`
+--
+ALTER TABLE `grelha`
+  MODIFY `idgrelha` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `grelha_dia`
+--
+ALTER TABLE `grelha_dia`
+  MODIFY `grelha_rel_dia` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `grelha_locutor`
+--
+ALTER TABLE `grelha_locutor`
+  MODIFY `id_rel_grelha_locutor` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `grelha_programa`
+--
+ALTER TABLE `grelha_programa`
+  MODIFY `id_rel_grelha_programa` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `kit`
+--
+ALTER TABLE `kit`
+  MODIFY `idkit` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `locutor`
+--
+ALTER TABLE `locutor`
+  MODIFY `idlocutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+--
+-- AUTO_INCREMENT for table `noticia`
+--
+ALTER TABLE `noticia`
+  MODIFY `idnoticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+--
+-- AUTO_INCREMENT for table `produção`
+--
+ALTER TABLE `produção`
+  MODIFY `idprodução` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `programa`
+--
+ALTER TABLE `programa`
+  MODIFY `idprograma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

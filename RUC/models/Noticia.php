@@ -157,10 +157,10 @@ DESC");
 		}
 	}
 
-	public function slideshowimg ()
+	public function VerSlideshow ()
 	{
 		try {
-            return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=8");
+            return $this->db->query("SELECT * FROM categoria_noticia INNER join noticia ON noticia.idnoticia = categoria_noticia.idnoticia WHERE idcategoria=8 LIMIT 3");
             } catch(PDOException $e) {
             echo "<strong>UPS! Ocorreu um erro!</strong>...[ERROR: ".$e->getMessage()."]";
         }
