@@ -150,6 +150,8 @@
                 if($_REQUEST['opi'] == 2)
                 $Infotab = $NoticiaView ->verUltimas();
                 include($Infotab[0]);
+
+
             }
 
             else if(isset($_REQUEST['opp'])) {

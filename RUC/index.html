@@ -124,94 +124,67 @@
             </div>
         </header>
         <main class="row">
-
-            <div class="row ploco">
+<div class="row ploco">
                 <div class="filtro"></div>
                 <video muted autoplay loop id="pvid" alt="video apresentação">
                 <source src="assets/media/ruc.mp4" type="video/mp4">
                  Your browser does not support the video tag.
                 </video>
                 <div class="col_3 colt_1"></div>
-                <div class="col_6 colt_6 colm_5 titulo">
-                    <p class="radiouni">Rádio Universidade de Coimbra <a class="centoesete">107.9FM</a></p>
+                <div class="col_6 colt_6 colm_5 titulo_info">
+                    <p class="radioni_info">Rádio Universidade de Coimbra<p>
+                    <p class="informacaorow1">Informação</p>
+                    <audio controls src="http://ruc1.cidadedecoimbra.com:8000/listen.pls" type="audio/mpeg"></audio>
                 </div>
                 <div class="col_3 colt_1"></div>
             </div>
             <div class="row gradiend"></div>
-            <section class="row preto">
-                <div class="col_2 colt_1"></div>
-                <div class="col_8 colt_6 colm_5 preto_slide">
-                    <div id="slideshow">
-                       <div>
-                         <img src="http://www.ruc.pt/wp-content/uploads/2016/11/14720594_10154256761858393_4201544313377765259_n-600x192.png" class="bacanal">
-                        <p>Bacanal</p>
-                       </div>
-                       <div>
-                         <img src="http://www.ruc.pt/wp-content/uploads/2016/10/14330002_10154544568309530_1286348928535110057_n-600x192.jpg" class="bacanal_">
-                        <p>Bacanal_1</p>
-                       </div>
-                       <div>
-                         <img src="http://www.ruc.pt/wp-content/uploads/2016/11/amen16-600x192.jpg" class="bacanal_1">
-                           <p>Bacanal_2</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="col_2 colt_1"></div>
-            </section>
             <section class="row preto_">
-                <div class="col_2 colt_1"></div>
-                <div class="col_5 colt_4 colm_5">
-                    <div>
-                        <p class="ultimastitulo">Última Hora <a class="traco">-</a> <a>Informação</a></p>
+                <div class="row">
+                    <div class="col_2 colt_1"></div>
+                    <div class="col_8 colt_6 colm_5">
+                        <p class="noticias_ultimas">Última Hora</p>
                     </div>
+                    <div class="col_2 colt_1"></div>
+                </div>
+                <div class="col_2 colt_1"></div>
+                <div class="col_8 colt_6 colm_5">
                     <div class="newsfeed">
-                        <div class="new_content">
-                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
-                            <p>Ainda assim, existem dúvidas a respeito de como a adoção de políticas descentralizadoras causa impacto indireto na reavaliação dos paradigmas corporativos.</p>
+                        <div class="info_square">
+                            <div class="square_content">
+                                <p class="content_title"><a>Nacional</a></p>
+                                <p class="noticias_titulo">Carlos Cortes reeleito para a secção regional do centro da ordem dos médicos</p>
+                                <p class="data_noticia">11/11/11</p>
+                            </div>
                         </div>
-                        <div class="new_content_">
-                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
-                            <p><h1>Adicionar notícia</h1>
+                        <div class="colt_6 colm_5 conteudo_noticia">
+                            <img src="assets/Images/cross-24-512.png" alt="exit cross" class="exit_noticia">
+                            <p class="titulo_noticia">Carlos Cortes reeleito para a secção regional do centro da ordem dos médicos</p>
+                            <p class="text_noticia">Carlos Cortes tomou ontem posse como presidente da Secção Regional do Centro da Ordem dos Médicos. O médico e diretor de Serviço de Patologia Clínica do Centro Hospitalar Médio Tejo explicou em entrevista à Rádio Universidade de Coimbra os objetivos do mandato.<br><br>
 
-<?php
-    if (isset($_REQUEST['título']) && isset($_REQUEST['artigo']) && isset($_REQUEST['extra']))
-        {
-            if ($view->insereDado(array('titulo' => $_REQUEST['titulo'], 'artigo' => $_REQUEST['artigo'], 'extra' => $REQUEST['extra'])))
 
-   	{ echo "<div class>A tua notícia já está na RUC!</div>";
- } else {
- 	echo "<div> Mau Jornalismo!!! Erro com a notícia</div>";
- }
-}
-?>
 
-<form method="POST">
-    <div class="">
-        <label for="titulo" class="">Título:</label>
-        <input type="text" id="titulo" name="titulo" class="" required>
-    </div>
-    <div class="">
-        <label for="artigo" class="">Artigo:</label>
-        <input type="text" id="artigo" name="artigo" class="" required>
-    </div>
-     <div class="">
-        <label for="extra" class="">Extras:</label>
-        <input type="text" id="extra" name="extra" class="" required>
-    </div>
-    <input type="submit" value="RUC e Segue" class="btn btn-primary">
-</form></p>
-                        </div>
-                        <div class="new_content_1">
-                            <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
-                            <p>The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive. Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.</p>
-                        </div>
-                        <div class="ler_mais">
-                            <p>Ler mais</p>
+                            Eleito com a maior votação de sempre, com 1.883 votos, mais 856 do que nas anteriores eleições, Carlos Cortes afirmou que os problemas são comuns aos anteriores mandatos.<br><br>
+
+
+
+                            As eleições para este cargo decorreram a 19 de janeiro de 2017 e foram de lista única. Em relação às condições de trabalho da medicina em Portugal o médico disse que existem grandes falhas.<br><br>
+
+
+
+                            Carlos Cortes foi eleito para este cargo pela primeira vez a 12 de dezembro de 2013, num resultado inédito que o tornou o mais jovem médico eleito presidente da Secção Regional do Centro. No que toca à Ordem dos Médicos, Carlos Cortes defendeu que existiu uma mudança necessária.<br><br>
+
+
+
+                            A Ordem dos Médicos foi fundada em 1896. Em 2016 estavam registados 48 487 clínicos, a sua função é assegurar a formação pós-graduada técnico-científica dos seus inscritos.</p>
+
+                            <p class="autor_noticia">Inês Baptista</p>
                         </div>
                     </div>
                 </div>
                 <div class="col_2 colt_1"></div>
             </section>
+
         </main>
         <footer class="row">
             <div class="row">
