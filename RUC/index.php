@@ -40,7 +40,7 @@
                 </div>
                 <div class = "col_1 colt_6 colm_3 logod">
                     <div class= "logoc">
-                        <a href="index.html"><img src="assets/Images/RUC_LOGO-01.png" class="logo"></a>
+                        <a href="index.php"><img src="assets/Images/RUC_LOGO-01.png" class="logo"></a>
                     </div>
                 </div>
                 <nav class="col_8 colt_4 colm_4" id="menu">
@@ -131,55 +131,50 @@
                 $NoticiaController = new NoticiaControl($NoticiaModel);
                 $NoticiaView = new NoticiaView($NoticiaController);
             }
-            $IntroData = $NoticiaView->IntroIndex();
-            include($IntroData[0]);
 
-            $SlideData = $NoticiaView->VerCronica();
-            include($SlideData[0]);
-
-            $IntroUltimas = $NoticiaView->verUltimasIndex();
-            include($IntroUltimas[0]);
-
-            /*** VALORES DE OP (1 - GERIR PRODUTOS, 2 - GERIR CATEGORIAS, ...) ***/
-            if(isset($_REQUEST['op']) && $_REQUEST['op'] == 2) //Ultimas
+            if (!isset($GrelhaModel) || !isset($GrelhaController) || !isset($GrelhaView))
             {
-                /*** VERIFICA SE O MODEL, CONTROLLER E VIEW JÁ FORAM INICIADOS ***/
-                if (!isset($Noticia_model) || !isset($Noticia_controller) || !isset($Noticia_view))
-                {
-                    $Noticia_model = new Noticia($conn);
-                    $Noticia_controller = new NoticiaControl($model);
-                    $Noticia_view = new NoticiaView($controller);
-                }
-
-                /*** DEFINIÇÃO DOS COMPORTAMENTOS DA VIEW (neste caso, PRODUTO) - CRIAR, EDITAR, APAGAR E LISTAR ***/
-                if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 2) //criar produto
-                {
-                    $data = $view->criaProduto();
-                    include($data[0]);
-                }
-                else if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 3 && isset($_REQUEST['id'])) //editar produto
-                {
-                    $data = $view->editaProduto($_REQUEST['id']);
-                    $produto = $data[1];
-                    include($data[0]);
-                }
-                else if (isset($_REQUEST['opt']) && $_REQUEST['opt'] == 4 && isset($_REQUEST['id'])) //apagar produto
-                {
-                    $data = $view->apagaProduto($_REQUEST['id']);
-                    $produtos = $data[1];
-                    include($data[0]);
-                }
-                else //listar produtos (por defeito)
-                {
-                    $data = $view->listaProdutos();
-                    $produtos = $data[1];
-                    include($data[0]);
-                }
-
+                $GrelhaModel = new Grelha($conn);
+                $GrelhaController = new GrelhaControl($NoticiaModel);
+                $GrelhaView = new GrelhaView($NoticiaController);
             }
-            else if (isset($_REQUEST['op']) && $_REQUEST['op'] == 3) //GERIR CATEGORIAS
+
+            if (!isset($NoticiaModel) || !isset($NoticiaController) || !isset($NoticiaView))
             {
-                /* por implementar... */
+                $NoticiaModel = new Noticia($conn);
+                $NoticiaController = new NoticiaControl($NoticiaModel);
+                $NoticiaView = new NoticiaView($NoticiaController);
+            }
+
+            if(isset($_REQUEST['opi'])) {
+                if($_REQUEST['opi'] == 2)
+                $Infotab = $NoticiaView ->verUltimas();
+                include($Infotab[0]);
+            }
+
+            else if(isset($_REQUEST['opp'])) {
+                if($_REQUEST['opp'] == 2)
+                    $Grelhatab = $GrelhaView ->VerGrelha();
+                include($Infotab[0]);
+            }
+
+            else if(isset($_REQUEST['opt'])) {
+                if($_REQUEST['opt'] == 2)
+                    $Infotab = $NoticiaView ->verUltimas();
+                include($Infotab[0]);
+            }
+
+            else {
+
+                $IntroData = $NoticiaView->IntroIndex();
+                include($IntroData[0]);
+
+                $SlideData = $NoticiaView->VerCronica();
+                include($SlideData[0]);
+
+                $IntroUltimas = $NoticiaView->verUltimasIndex();
+                include($IntroUltimas[0]);
+
             }
             ?>
         </main>

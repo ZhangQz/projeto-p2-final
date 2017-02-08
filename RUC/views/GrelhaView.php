@@ -19,4 +19,7 @@ class GrelhaView
 	public  function criaPrograma() {
 		return array('views/grelha/createGrelha.inc.php');
 	}
+	public  function VerGrelha() {
+		return array('views/grelha/grelha.inc.php');
+	}
 }
