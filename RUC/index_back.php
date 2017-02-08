@@ -1,6 +1,17 @@
 <?php
-	require_once('database.php');
-	require_once('routes.php');
+	require_once('db.php');
+	//Login_Registo
+	require_once('views/RegistoLoginView.php');
+	require_once('controllers/RegistoLoginControl.php');
+	require_once('models/RegistoLogin.php');
+    //Grelha
+    require_once('views/GrelhaView.php');
+    require_once('controllers/GrelhaControl.php');
+    require_once('models/Grelha.php');
+    //Noticia
+    require_once('views/NoticiaView.php');
+    require_once('controllers/NoticiaControl.php');
+    require_once('models/Noticia.php');
 ?>
 
 <!DOCTYPE html>
