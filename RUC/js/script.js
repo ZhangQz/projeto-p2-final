@@ -9,7 +9,13 @@ $(document).ready(function () {
      });*/
     /* $("#seg, #ter, #qua, #qui, #sex, #sab, #dom").hide();*/
     $(".log_in").hide();
-
+    $(".conteudo_noticia").hide();
+    $(".square_content").click(function () {
+       $(".conteudo_noticia").slideToggle();
+    });
+    $(".exit_noticia").click(function (){
+       $(".conteudo_noticia").slideToggle ();
+    });
     $(function () {
         var interval = setInterval(function () {
             $('#slideshow > div:first')

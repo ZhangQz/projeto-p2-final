@@ -566,9 +566,11 @@ footer{
 
 .conteudo_noticia{
     background-color: white;
-    position: absolute;
+    position: fixed;
+    z-index:100;
     width: 50%;
     margin-bottom:5%;
+    top: 50%;
     padding: 5%;
     left: 50%;
     margin-right: -50%;
@@ -634,9 +636,6 @@ footer{
     transform: translate(-50%, -50%);
 }
 
-.conteudo_noticia{
-}
-
 .noticias_titulo{
     font-size: 0.8em;
     text-transform: uppercase;
@@ -644,7 +643,7 @@ footer{
     margin-bottom: 5%;
     line-height: 1.2;
     margin-top: 5%;
-    
+
 }
 
 .informacaorow1{
@@ -665,7 +664,7 @@ footer{
 }
 
 .noticias_ultimas{
-    color:white;
+    color:#e32436;
     font-size: 2em;
     font-family: Verdana, Geneva,"sans-serif";
     font-weight: bold;
