@@ -13,7 +13,6 @@
     require_once('controllers/NoticiaControl.php');
     require_once('models/Noticia.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="pt">
     <head>
@@ -63,7 +62,19 @@
         </header>
         <div class="col_9">
         <main class="row">
-           
+           <form id="_infoback">
+        <select>
+                <option value="criar"><action href="ind1.html">Criar Novo</action></option>
+                <option value="atua">Atualizar</option>
+                <option value="apagar">Apagar</option>
+        </select>
+        <select>    
+                <option value="categ"><action href="ind2.html">Categoria</action></option>
+                <option value="not">Notícia</option>
+                <option value="aut">Autor</option>
+        </select>
+            <input type=submit value="Segue!"></input>
+        </form>
         </main>
         <footer class="row">
             <div class="row">
