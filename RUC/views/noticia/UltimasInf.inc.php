@@ -20,7 +20,7 @@
                             <p class="content_title"><a>TEMA</a> / TITULO DA NOTICIA</p>
                             <p>The concept of Lorem Ipsum was created by and for the Chinese in order to make U.S. design jobs non-competitive. Some people have an ability to write placeholder text... It's an art you're basically born with. You either have it or you don't. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.</p>
                         </div>
-                        <div class="ler_mais">
+                        <div class="ler_mais" href="index.php?opi=2">
                             <p>Ler mais</p>
 
                         </div>

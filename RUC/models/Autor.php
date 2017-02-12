@@ -32,10 +32,10 @@
 		public function AutorName()
 		{
 			try
+			{
 				return $this->db->query("SELECT $this->tabela (nome)
 					VALUES('{$autor[nome]}')
 				");
-			{
 
 			} catch (PDOException $e) {
 					echo "Ocorreu um erro... [ERROR: ".$e->getMessage()."]";

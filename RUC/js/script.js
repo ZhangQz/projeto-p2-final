@@ -100,9 +100,12 @@ $(document).ready(function () {
             $(".log_in_cont").toggle("slide");
         });
         $(".login").click(function () {
-            $(".log_in_cont").toggle("slide");
+            $(".log_in").toggle("slide");
             $(".sign_in").hide("slide");
         });
+
+        $(".user_icon").hide();
+
         $(".user_icon").click(function () {
             $(".user_cont").toggle("slide");
         });

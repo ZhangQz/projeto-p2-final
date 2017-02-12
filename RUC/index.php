@@ -104,22 +104,25 @@
                     <div class="loggedin">
                         <a class="login">login</a>
                     </div>
-                    <?php
-                    if (!isset($Usermodel) || !isset($Usercontroller) || !isset($Userview))
-                    {
-                        $Usermodel = new Registo($conn);
-                        $Usercontroller = new RegistoControl($Usermodel);
-                        $Userview = new RegistoView($Usercontroller);
-                    }
-						$data = $Userview->Login_view();
-						include($data[0]);
-					?>
-                    <?php if( isset($_SESSION['user']) )
-                    {
-                        $data = $Userview->Logout_view();
-                        include($data[0]);
-                    }
-                    ?>
+                    <div class="">
+                        <?php
+                        if (!isset($Usermodel) || !isset($Usercontroller) || !isset($Userview))
+                        {
+                            $Usermodel = new Registo($conn);
+                            $Usercontroller = new RegistoControl($Usermodel);
+                            $Userview = new RegistoView($Usercontroller);
+                        }
+                            $data = $Userview->Login_view();
+                            include($data[0]);
+
+                        ?>
+                        <?php if( isset($_SESSION['user']) )
+                        {
+                            $data = $Userview->Logout_view();
+                            include($data[0]);
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </header>
@@ -162,7 +165,7 @@
 
             else if(isset($_REQUEST['opt'])) {
                 if($_REQUEST['opt'] == 2)
-                    $Infotab = $NoticiaView ->verUltimas();
+                    $servicostab = $NoticiaView ->verUltimas();
                 include($Infotab[0]);
             }
 
